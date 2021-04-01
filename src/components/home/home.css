@@ -1,0 +1,141 @@
+
+.mainPage {
+    width: 100%;
+    height: auto;
+}
+
+
+.mainHome-div {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    /* background-color: rgb(46, 44, 44); */
+    position: relative;
+    display: block;
+}
+
+.mainHome-div::after {
+    /* position: absolute; */
+    /* width: 100%;
+    height: 100%; */
+    /* background-color: red; */
+    content: "";
+    background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)),url("../../images//home4.jpg");
+    background-size: 100% 100%;
+    /* opacity: 0.5; */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.mainHome-header {
+    height: 20%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+}
+
+.mainHead-inner {
+    width: 95%;    
+    height: 100%;
+    /* background-color: brown; */
+    display: inline-flex;
+}
+
+.mainHead-left {
+    width: 50%;
+    height: 100%;
+    /* background-color: orange; */
+}
+
+.mainHead-right {
+    width: 50%;
+    height: 100%;
+    /* background-color: aliceblue; */
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headLeft-span {
+    width: 30%;
+    height: 100%;
+    /* background-color:aqua; */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.mainHead-logo {
+    width: 70%;
+}
+
+.mainHead-right span {
+    width: 20%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainHead-right a {
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    color: #f1f1f1;
+    display: inline-block;
+    text-decoration: none;
+    /* background-color: red; */
+}
+
+.mainHead-right a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(173, 150, 14);
+    transition: width .3s;
+    color: rgb(173, 150, 14);
+}
+
+.mainHead-right a:hover::after {
+    color: rgb(173, 150, 14);
+    width: 100%;
+    transition: width .3s;
+}
+
+.mainHead-right a:focus::after {
+    color: rgb(173, 150, 14);
+    width: 100%;
+    transition: width .3s;
+}
+
+.mainHead-right a:hover {
+    color: rgb(173, 150, 14);
+    font-weight: bold;
+}
+
+.mainHead-right a:focus {
+    color: rgb(173, 150, 14);
+    font-weight: bold;
+    /* border-bottom: 2px solid rgb(173, 150, 14);
+    transition: 0.5s; */
+}
+
+.mainHome-body {
+    width: 100%;
+    height: 70%;
+    background-color: red;
+    display: flex;
+    justify-content: center;    
+}
+
+.mainBody-inner {
+    margin-top: 20px;
+    width: 80%;
+    height: 80%;
+    background-color:aquamarine
+}
