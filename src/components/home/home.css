@@ -72,6 +72,13 @@
     align-items: center;
 }
 
+.mainHead-rightInner{
+    width: 47vw !important;
+    height: inherit;
+    /* background-color:red; */
+    display: inline-flex;
+}
+
 .headLeft-span {
     width: 30%;
     height: 100%;
@@ -144,11 +151,12 @@
     height: 70%;
     /* background-color: red; */
     display: flex;
-    justify-content: center;    
+    justify-content: center;   
+    align-items: center; 
 }
 
 .mainBody-inner {
-    margin-top: 40px;
+    margin-top: 30px;
     width: 75%;
     height: 80%;
     font-family: 'Kiwi Maru';
@@ -162,7 +170,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.9em;
+    font-size: 2.7em;
+    word-spacing: 5px;
     letter-spacing: 3px;
     color: rgb(173, 150, 14);
     transform: scaleY(1.2);
@@ -245,17 +254,25 @@
       color: #fff;
   }
 
-  .mainInner-four span {
+  .mainInner-four span:first-child {
     font-size: 17px;
     letter-spacing: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
-  .mainAbout-div {
-    width: 100%;
-    height: 100vh;
-    min-height: 600px;
+  .dropDownIcon {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+    animation-name: bounce-1;
+    animation-timing-function: linear;
   }
+
+  @keyframes bounce-1 {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
 
   ::-webkit-scrollbar {
     width: 10px;
@@ -278,4 +295,36 @@
     background: rgb(148, 127, 11); 
   }
 
+
+  .mainHome-foot {
+      height: 10%;
+      width:100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      /* background: red;  */
+      position: fixed;     
+  }
+
+  .mainHome-foot span {
+      margin-right: 30px;
+      cursor: pointer;
+      /* background: red; */
+      
+  }
+
+  .mainHome-foot span:hover {
+    animation: shake 1s;
+    color: rgb(173, 150, 14);
+    animation-iteration-count: infinite;
+  }
+
+  .mainAbout-div {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+  }
+
+
+ 
   

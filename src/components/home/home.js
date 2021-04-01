@@ -1,8 +1,9 @@
 import React from "react";
 import "./home.css";
 import Logo from "../../images/dbl-logo.png";
-import { DownOutlined } from "@ant-design/icons";
-import { Redirect } from "react-router";
+import { DownOutlined, PhoneTwoTone } from "@ant-design/icons";
+import { Avatar, Tooltip } from "antd";
+import ScrollspyNav from "react-scrollspy-nav";
 
 export default class Home extends React.Component {
   constructor() {
@@ -19,9 +20,9 @@ export default class Home extends React.Component {
   handleScroll = (e) => {
     // console.log(window.pageYOffset);
     if (window.pageYOffset >= 50) {
-      this.setState({ position: "fixed" });
+      this.setState({ position: "fixed", margin: "130px" });
     } else {
-      this.setState({ position: "" });
+      this.setState({ position: "", margin: "0px" });
     }
   };
 
@@ -34,7 +35,7 @@ export default class Home extends React.Component {
     return (
       <>
         <div className="mainPage">
-          <div className="mainHome-div">
+          <div id="section_1" className="mainHome-div">
             <div
               className="mainHome-header"
               style={{
@@ -51,21 +52,29 @@ export default class Home extends React.Component {
                   </div>
                 </div>
                 <div className="mainHead-right">
-                  <span>
-                    <a href="#">Introduction</a>
-                  </span>
-                  <span>
-                    <a href="#about">About me</a>
-                  </span>
-                  <span>
-                    <a href="#projects">Projects</a>
-                  </span>
-                  <span>
-                    <a href="#mentorship">Mentorship</a>
-                  </span>
-                  <span>
-                    <a href="#contact">Let's talk</a>
-                  </span>
+                  <ScrollspyNav
+                    scrollTargetIds={["section_1", "section_2", "section_3"]}
+                    activeNavClass="is-active"
+                    // style={{ width: "100%" }}
+                  >
+                    <div className="mainHead-rightInner">
+                      <span>
+                        <a href="#section_1">Introduction</a>
+                      </span>
+                      <span>
+                        <a href="#section_2">About me</a>
+                      </span>
+                      <span>
+                        <a href="#section_3">Projects</a>
+                      </span>
+                      <span>
+                        <a href="#mentorship">Mentorship</a>
+                      </span>
+                      <span>
+                        <a href="#contact">Let's talk</a>
+                      </span>
+                    </div>
+                  </ScrollspyNav>
                 </div>
               </div>
             </div>
@@ -80,20 +89,38 @@ export default class Home extends React.Component {
                   "I love designing and make web applications more beautiful in
                   my simple ways".
                 </div>
-                <a href="#about" className="mainInner-four">
+                <a href="#section_2" className="mainInner-four">
                   <span>Want to know more about me?</span>
-                  <DownOutlined
-                    className="dropdownIcon"
-                    style={{ color: "rgb(173, 150, 14)", fontSize: "30px" }}
-                  />
+                  <span className="dropDownIcon">
+                    <DownOutlined
+                      className="dropdownIcon"
+                      style={{ color: "rgb(173, 150, 14)", fontSize: "30px" }}
+                    />
+                  </span>
                   {/* <DownCircleTwoTone className="dropdownIcon" /> */}
                 </a>
               </div>
             </div>
+            <div
+              className="mainHome-foot"
+              style={{ marginTop: this.state.margin }}
+            >
+              <span>
+                <Tooltip title="Let's have a talk" placement="top">
+                  <Avatar
+                    size="large"
+                    style={{
+                      backgroundColor: "rgb(173, 150, 14)",
+                    }}
+                    icon={<PhoneTwoTone twoToneColor="#fff" />}
+                  />
+                </Tooltip>
+              </span>
+            </div>
           </div>
 
-          <div id="about" className="mainAbout-div"></div>
-          <div id="projects" className="mainAbout-div"></div>
+          <div id="section_2" className="mainAbout-div"></div>
+          <div id="section_3" className="mainAbout-div"></div>
         </div>
       </>
     );
