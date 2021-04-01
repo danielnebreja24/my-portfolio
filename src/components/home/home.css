@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+
+/* *{
+    font-family: 'Kiwi Maru', serif;
+} */
 
 .mainPage {
     width: 100%;
     height: auto;
+    overflow: auto;
 }
 
 
@@ -22,6 +29,7 @@
     content: "";
     background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)),url("../../images//home4.jpg");
     background-size: 100% 100%;
+    background-attachment: fixed;
     /* opacity: 0.5; */
     top: 0;
     left: 0;
@@ -33,9 +41,13 @@
 
 .mainHome-header {
     height: 20%;
+    width: 100%;
     /* background-color: red; */
     display: flex;
     justify-content: center;
+    z-index: 99;
+    transition: 0.4s;
+    /* position: fixed; */
 }
 
 .mainHead-inner {
@@ -71,6 +83,7 @@
 
 .mainHead-logo {
     width: 70%;
+    cursor: pointer;
 }
 
 .mainHead-right span {
@@ -79,10 +92,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Acme', serif !important;
 }
 
 .mainHead-right a {
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 1.2px;
     cursor: pointer;
     color: #f1f1f1;
@@ -102,13 +116,13 @@
 }
 
 .mainHead-right a:hover::after {
-    color: rgb(173, 150, 14);
+    /* color: rgb(173, 150, 14); */
     width: 100%;
     transition: width .3s;
 }
 
 .mainHead-right a:focus::after {
-    color: rgb(173, 150, 14);
+    /* color: rgb(173, 150, 14); */
     width: 100%;
     transition: width .3s;
 }
@@ -128,14 +142,140 @@
 .mainHome-body {
     width: 100%;
     height: 70%;
-    background-color: red;
+    /* background-color: red; */
     display: flex;
     justify-content: center;    
 }
 
 .mainBody-inner {
-    margin-top: 20px;
-    width: 80%;
+    margin-top: 40px;
+    width: 75%;
     height: 80%;
-    background-color:aquamarine
+    font-family: 'Kiwi Maru';
+    /* background-color:aquamarine */
 }
+
+
+.mainInner-one {
+    height: 30%;
+    /* background-color: orange;     */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.9em;
+    letter-spacing: 3px;
+    color: rgb(173, 150, 14);
+    transform: scaleY(1.2);
+    font-weight: 600;
+}
+
+.mainInner-one a {
+    text-decoration: none;
+    color: rgb(173, 150, 14);
+    
+}
+
+.mainInner-one a:hover {
+    animation: shake 0.7s;
+    color: rgb(173, 150, 14);
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+  .mainInner-two {
+    /* background-color: red; */
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    letter-spacing: 3px;
+    color: #fff; 
+    font-size: 2.2em;
+    /* border-top: 1px solid; */
+    /* font-weight: bold; */
+      
+  }
+
+  .mainInner-divider {
+      width: 60%;
+      height: 2px;
+      background-color: #ccc;
+      margin: auto;
+  }
+
+  .mainInner-three {
+      height: 20%;
+      /* background-color: orchid; */
+      font-style: italic;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 2px;
+      color: #fff;
+  }
+
+  .mainInner-four {
+      height: 29%;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;      
+      cursor: pointer;
+      text-decoration: none;
+      /* background-color: red; */
+  }
+
+  .mainInner-four:hover {
+      text-decoration: none;
+      color: #fff;
+  }
+
+  .mainInner-four span {
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .mainAbout-div {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(173, 150, 14); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(148, 127, 11); 
+  }
+
+  
