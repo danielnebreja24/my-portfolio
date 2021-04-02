@@ -59,9 +59,9 @@ export default class Home extends React.Component {
               className="mainHome-header"
               style={{
                 position: this.state.position,
-                height: this.state.position == "fixed" ? "13%" : "20%",
+                height: this.state.position === "fixed" ? "13%" : "20%",
                 backgroundColor:
-                  this.state.position == "fixed" ? "#111" : "transparent",
+                  this.state.position === "fixed" ? "#111" : "transparent",
               }}
             >
               <div className="mainHead-inner">
