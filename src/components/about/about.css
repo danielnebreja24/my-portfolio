@@ -1,0 +1,277 @@
+.mainAbout-div {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px; 
+    background-color: #f1f1f1;   
+  }
+
+  .mainAbout-inner {
+      height: 100%;
+      width: 100%;
+      /* margin-top: 100px; */
+      /* background-color: aquamarine; */
+      display: inline-flex;      
+  }
+
+  .divider {
+      height: 87px;
+      width: 100%;
+      background-color: #f1f1f1;
+      /* background-color: blanchedalmond; */
+  }
+
+  .aboutInner-left {
+      width: 45%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background-color: orange; */
+  }
+
+  .aboutInner-right {
+      width: 55%;
+      height: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      /* background-color: brown; */
+  }
+
+  .aboutLeft-item {
+      height: 80%;
+      width: 85%;
+      background-color:#f1f1f1;           
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 1px 10px 8px #999;
+  }
+
+  .aboutLeft-avatar {
+    
+    width: 100%;
+    height: 20%;    
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .aboutLeft-avatar span {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background-color: rgb(173, 150, 14);
+    top: -70px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+  }
+
+  .aboutAvatar {
+    width: 100%;
+    height: 100%;        
+    margin: auto;
+    
+    
+  }
+
+  .aboutLeft-info {
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* background-color: orange; */
+  }
+
+  .leftInfo-name {
+      height: 15%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      /* background-color: red;; */
+  }
+
+  .leftInfo-name span:first-child {
+      font-family: Acme;
+      font-size: 1.9em;
+      word-spacing: 3px;
+      letter-spacing: 1.5px;
+      /* text-decoration: underline; */
+  }
+
+  .leftInfo-name span:nth-child(2) {
+      font-family: Acme;
+      font-size: 15px;
+      color: #444;
+      letter-spacing: 1.1px;
+  }
+
+  .leftInfo-skills {
+      height: 82%;
+      /* background-color: red; */
+  }
+
+  .leftSkills-inner {
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-image: url("../../images/laptop.png");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .leftSkills-slick {
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+    /* flex-wrap: wrap; */    
+    margin-top: -30px;
+    height: 80%;
+    width: 80%;
+    /* background-color: orange; */
+  }
+
+  .leftSkills-img {
+      width: 70px;
+      height: 55px;
+  }
+
+  .innerRight-line {
+      height: 95%;
+      width: 10px;
+      /* background-color: #444; */
+  }
+
+  .innerRight-about {
+      width: 93%;
+      height: 95%;
+      /* background-color: red; */
+  }
+
+  .rightAbout-one {
+    width: 90%;
+    height: 35%;
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+
+  .rightAbout-one div:first-child {
+      font-family: Acme;
+      /* font-family: Kiwi Maru; */
+      font-size: 23px;
+      letter-spacing: 1.5px;
+  }
+
+  .rightAbout-one div:nth-child(2){
+    /* font-family: Kiwi Maru; */
+    font-family: Acme;
+    font-size: 17px;
+    letter-spacing: 1.2px;
+  }
+
+
+  .rightAbout-two {
+    width: 90%;
+    height: 30%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+  .aboutTwo-title {
+      height: 30%;
+      font-family: Acme;
+      font-size: 23px;
+      display: flex;
+      /* flex-direction: column; */
+      /* justify-content: center; */
+      align-items: center !important;
+      /* background-color: red; */
+  }
+
+  .aboutTwo-inner {
+      height: 70%;
+      width: 100%;
+      display: inline-flex;
+
+      /* background-color: red; */
+  }
+
+  .aboutTwo-inner > div {
+      height: 100%;
+      width: 50%;
+      /* background-color: orange; */
+  }
+
+  .aboutTwo-inner > div:first-child > div:first-child {
+      height: 30%;
+      display: flex;
+      align-items: center;
+      font-family: Acme;
+      font-size: 16px;
+      letter-spacing: 1.2px;
+      /* background-color: green; */
+  }
+
+  .aboutTwo-inner > div:nth-child(2) > div:first-child  {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    font-family: Acme;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    /* background-color: violet; */
+  }
+  
+.slickDiv {
+    height: 65%;
+    width: 100%;
+    /* background-color: palegreen; */
+}
+
+.slickDiv2 {
+    height: 35%;
+    width: 100%;
+    /* background-color: green; */
+    display: inline-flex;
+    align-items: center;
+}
+
+  .slickItem {
+    width: 110px;
+    height: 90px;
+    margin-right: 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 6px 7px #999;
+    border-radius: 5px;
+    /* border: 1px ridge #999; */
+      /* margin-right: 10px; */
+  }
+
+  .slickItem-big {
+      height: 180px;
+      width: 100%;
+      /* z-index: 999; */
+      /* background-color: red; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+
+  
+
+  .rightAbout-three {
+    width: 90%;
+    height: 35%;
+    background-color: burlywood;
+  }
