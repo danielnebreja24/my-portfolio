@@ -110,7 +110,7 @@ export default class Home extends React.Component {
               <span>
                 <Tooltip title="Let's have a talk" placement="top">
                   <Avatar
-                    size="large"
+                    size={50}
                     style={{
                       backgroundColor: "rgb(173, 150, 14)",
                     }}
@@ -122,7 +122,11 @@ export default class Home extends React.Component {
           </div>
           <div id="section_2" className="divider"></div>
           <About />
-          <div id="section_3" className="mainAbout-div"></div>
+          <div
+            id="section_3"
+            style={{ width: "100%", height: "100vh" }}
+            // className="mainAbout-div"
+          ></div>
         </div>
       </>
     );
