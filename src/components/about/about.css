@@ -2,7 +2,24 @@
     width: 100%;
     height: 100vh;
     min-height: 600px; 
-    background-color: #f1f1f1;   
+    background-color: #f1f1f1;    
+    position: relative; 
+    z-index: -1;
+
+  }
+
+  .mainAbout-div::after {    
+    content: '';
+    position: absolute;
+    margin-top: -125vh;
+    border-top: 80px solid transparent;
+    border-left: 100vw solid #f1f1f1;
+    /* top: 0 !important; */
+    width: 0;
+    height: 100px;
+    /* z-index: 12; */
+    z-index: -1 !important;
+    
   }
 
   .mainAbout-inner {
@@ -10,7 +27,8 @@
       width: 100%;
       /* margin-top: 100px; */
       /* background-color: aquamarine; */
-      display: inline-flex;      
+      display: inline-flex;    
+      z-index: 99 !important;  
   }
 
   .divider {
@@ -45,6 +63,7 @@
       border: 1px solid #ccc;
       border-radius: 5px;
       box-shadow: 1px 10px 8px #999;
+      
   }
 
   .aboutLeft-avatar {
@@ -244,8 +263,8 @@
 }
 
   .slickItem {
-    width: 110px;
-    height: 90px;
+    width: 100px;
+    height: 80px;
     margin-right: 20px;
     background-color: #fff;
     display: flex;
@@ -266,8 +285,6 @@
       justify-content: center;
       align-items: center;
   }
-  
-
   
 
   .rightAbout-three {
