@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+
+.mainProjects-div {
+    /* height: 130vh; */
+    width: 100%;
+    min-height: 900px;
+    background-color: #ddd;
+}
+
+.mainProject-title {
+    height: 100px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Acme;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    font-size: 2.4em;
+    /* z-index: 99 !important; */
+    
+}
+
+.mainProject-title > span {
+    position: relative;
+    z-index: 2;
+}
+
+.mainProject-title > span::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: -0.5rem;
+    right: -0.5rem;
+    height: 20px;
+    z-index: -1;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/664131/underline.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainProject-body {    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* background-color: red; */
+}
+
+.timeLine-item {
+    height: 400px;
+    /* background-color: red; */
+}
+
+.timeLine-title {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* background-color: orange; */
+    font-family: Acme;
+    /* font-size: 17px; */
+}
+
+.timeLine-title > span:first-child {
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    word-spacing: 3px;
+    font-size: 20px;
+}
+
+.timeLine-title > span:nth-child(2) {
+    font-size: 15px;
+    letter-spacing: 1.1px;
+}
+
+.timeLine-body {
+    height: 80%;
+    display: flex;
+    /* justify-content: center; */
+    /* background-color: thistle; */
+}
+
+.timeLine-img {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.imgLaptop {
+    background: url("../../images/laptop1.png");
+    background-size: 100% 100%;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.laptopInner {
+    width: 75%;
+    height: 85%;
+    margin-top: 16px;
+    background-color: green;
+}
+
+.timeLine-desc {
+    width: 35%;
+    height: 100%;
+    /* background-color: red; */
+    padding-right: 20px;
+    font-family: Acme;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}

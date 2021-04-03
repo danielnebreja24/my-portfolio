@@ -6,6 +6,7 @@ import { Avatar, Tooltip } from "antd";
 import ScrollspyNav from "react-scrollspy-nav";
 
 import About from "../about/about";
+import Projects from "../projects/projects.js";
 
 export default class Home extends React.Component {
   constructor() {
@@ -122,11 +123,8 @@ export default class Home extends React.Component {
           </div>
           <div id="section_2" className="divider"></div>
           <About />
-          <div
-            id="section_3"
-            style={{ width: "100%", height: "100vh" }}
-            // className="mainAbout-div"
-          ></div>
+          <div id="section_3" className="divider"></div>
+          <Projects />
         </div>
       </>
     );
