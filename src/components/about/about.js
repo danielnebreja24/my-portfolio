@@ -95,19 +95,6 @@ export default class About extends React.Component {
                 <div className="leftInfo-skills">
                   <div className="leftSkills-inner">
                     <div className="leftSkills-slick">
-                      {/* {this.state.skills.map((item, i) => (
-                        <img
-                          key={i}
-                          src={item}
-                          alt="item"
-                          className="leftSkills-img"
-                        />
-                      ))} */}
-                      {/* <Slider {...settings}>
-                        {this.state.skills.map((item, i) => (
-                          <CustomSlide index={i + 1} src={item} />
-                        ))}
-                      </Slider> */}
                       <Slider
                         arrows={false}
                         asNavFor={this.state.nav2}
