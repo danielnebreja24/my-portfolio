@@ -3,11 +3,7 @@ import "./about.css";
 import MyAvatar from "../../images/avatar2.png";
 import Slider from "react-slick";
 import { Tag, Button } from "antd";
-import {
-  FilePdfOutlined,
-  FacebookOutlined,
-  LinkedinOutlined,
-} from "@ant-design/icons";
+import { FilePdfOutlined, LinkedinOutlined } from "@ant-design/icons";
 
 import Resume from "../../files/my_resume.pdf";
 
