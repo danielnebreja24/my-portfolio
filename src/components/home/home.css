@@ -46,7 +46,7 @@
     display: flex;
     justify-content: center;
     z-index: 99;
-    transition: 0.4s;
+    transition: 0.2s;
     /* position: fixed; */
 }
 
@@ -304,7 +304,7 @@
       align-items: flex-start;
       /* background: red;  */
       position: fixed;   
-      z-index: 99 im !important;  
+      z-index: 99 !important;  
   }
 
   .mainHome-foot span {

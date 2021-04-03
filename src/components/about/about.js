@@ -2,6 +2,14 @@ import React from "react";
 import "./about.css";
 import MyAvatar from "../../images/avatar2.png";
 import Slider from "react-slick";
+import { Tag, Button } from "antd";
+import {
+  FilePdfOutlined,
+  FacebookOutlined,
+  LinkedinOutlined,
+} from "@ant-design/icons";
+
+import Resume from "../../files/my_resume.pdf";
 
 class CustomSlide extends React.Component {
   render() {
@@ -23,7 +31,12 @@ class CustomSlide2 extends React.Component {
     // console.log(this.props);
     return (
       <div className="slickItem-big">
-        <img src={src} alt="item" style={{ width: "50%", height: "40%" }} />
+        {src ===
+        "https://seeklogo.com/images/P/puppeteer-logo-254C5F1692-seeklogo.com.png" ? (
+          <img src={src} alt="item" style={{ width: "30%", height: "40%" }} />
+        ) : (
+          <img src={src} alt="item" style={{ width: "50%", height: "40%" }} />
+        )}
       </div>
     );
   }
@@ -55,6 +68,28 @@ export default class About extends React.Component {
       ],
       nav1: null,
       nav2: null,
+      frontend: [
+        "React JS",
+        "Javascript",
+        "JQuery",
+        "HTML",
+        "CSS",
+        "Material-UI",
+        "Ant Design",
+        "Bootstrap",
+      ],
+      backend: [
+        "PHP",
+        "Node JS",
+        "AWS-Amplify",
+        "PostgreSQL",
+        "Puppeteer",
+        "Express JS",
+        "GraphQL",
+        "AJAX",
+        "MySQL",
+      ],
+      versionControl: ["Git", "GitLab", "GitHub"],
     };
   }
 
@@ -78,83 +113,185 @@ export default class About extends React.Component {
       className: "slickDiv2",
     };
     return (
-      <div className="mainAbout-div">
-        <div className="mainAbout-inner">
-          <div className="aboutInner-left">
-            <div className="aboutLeft-item">
-              <div className="aboutLeft-avatar">
-                <span>
-                  <img src={MyAvatar} alt="avatar" className="aboutAvatar" />
-                </span>
-              </div>
-              <div className="aboutLeft-info">
-                <div className="leftInfo-name">
-                  <span>Daniel Nebreja</span>
-                  <span>Frontend Web Developer</span>
+      <>
+        <div className="mainAbout-div">
+          <div className="mainAbout-inner">
+            <div className="aboutInner-left">
+              <div className="aboutLeft-item">
+                <div className="aboutLeft-avatar">
+                  <span>
+                    <img src={MyAvatar} alt="avatar" className="aboutAvatar" />
+                  </span>
                 </div>
-                <div className="leftInfo-skills">
-                  <div className="leftSkills-inner">
-                    <div className="leftSkills-slick">
-                      <Slider
-                        arrows={false}
-                        asNavFor={this.state.nav2}
-                        ref={(slider) => (this.slider1 = slider)}
-                        className="slickDiv"
-                      >
-                        {this.state.skills.map((item, i) => (
-                          <CustomSlide2 index={i + 1} key={i} src={item} />
-                        ))}
-                      </Slider>
-                      <Slider
-                        asNavFor={this.state.nav1}
-                        ref={(slider) => (this.slider2 = slider)}
-                        {...settings}
-                      >
-                        {this.state.skills.map((item, i) => (
-                          <CustomSlide index={i + 1} key={i} src={item} />
-                        ))}
-                      </Slider>
+                <div className="aboutLeft-info">
+                  <div className="leftInfo-name">
+                    <span>Daniel Nebreja</span>
+                    <span>Frontend Web Developer</span>
+                  </div>
+                  <div className="leftInfo-skills">
+                    <div className="leftSkills-inner">
+                      <div className="leftSkills-slick">
+                        <Slider
+                          arrows={false}
+                          asNavFor={this.state.nav2}
+                          ref={(slider) => (this.slider1 = slider)}
+                          className="slickDiv"
+                        >
+                          {this.state.skills.map((item, i) => (
+                            <CustomSlide2 index={i + 1} key={i} src={item} />
+                          ))}
+                        </Slider>
+                        <Slider
+                          asNavFor={this.state.nav1}
+                          ref={(slider) => (this.slider2 = slider)}
+                          {...settings}
+                        >
+                          {this.state.skills.map((item, i) => (
+                            <CustomSlide index={i + 1} key={i} src={item} />
+                          ))}
+                        </Slider>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="aboutInner-right">
-            <div className="innerRight-line"></div>
-            <div className="innerRight-about">
-              <div className="rightAbout-one">
-                <div>A little bit about me,</div>
-                <div>
-                  My name is Daniel Nebreja, a frontend developer based here in
-                  the Philippines. I love designing web applications and making
-                  visualize designs into reality. Though my passion is to focus
-                  on frontend developing I also have background in backend, in
-                  my previous and current jobs as a frontend developer. I am
-                  doing fullstack, working on front and back end of the project
-                  to test every functionalities of the app.{" "}
-                </div>
-              </div>
-              <div className="rightAbout-two">
-                <div className="aboutTwo-title">
-                  Some languages and technologies that I use
-                </div>
-                <div className="aboutTwo-inner">
+            <div className="aboutInner-right">
+              <div className="innerRight-line"></div>
+              <div className="innerRight-about">
+                <div className="rightAbout-one">
                   <div>
-                    <div>For frontend :</div>
-                    <div></div>
+                    <span>A little bit about me,</span>
                   </div>
                   <div>
-                    <div>For backend :</div>
-                    <div></div>
+                    My name is Daniel Nebreja, a frontend developer who loves to
+                    create web, mobile and user friendly applications. I love
+                    designing web applications and making visualize designs into
+                    reality. Though my passion is frontend developing I also
+                    have background in backend, in my previous and current jobs
+                    as a frontend developer. I am doing fullstack, working on
+                    front and back end of the project to test every
+                    functionalities of the app.{" "}
+                  </div>
+                </div>
+                <div className="rightAbout-two">
+                  <div className="aboutTwo-title">
+                    <span>Some languages and technologies that I use,</span>
+                  </div>
+                  <div className="aboutTwo-inner">
+                    <div>
+                      <div>For frontend :</div>
+                      <div>
+                        {this.state.frontend.map((item, i) => (
+                          <Tag
+                            key={i}
+                            color="cyan"
+                            style={{
+                              borderRadius: "5px",
+                              fontSize: "16px",
+                              padding: "3px 6px",
+                            }}
+                          >
+                            {item}
+                          </Tag>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <div>For backend :</div>
+                      <div>
+                        {this.state.backend.map((item, i) => (
+                          <Tag
+                            key={i}
+                            color="gold"
+                            style={{
+                              borderRadius: "5px",
+                              fontSize: "16px",
+                              padding: "3px 6px",
+                            }}
+                          >
+                            {item}
+                          </Tag>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <div>For version control and others :</div>
+                      <div>
+                        {this.state.versionControl.map((item, i) => (
+                          <Tag
+                            key={i}
+                            color="success"
+                            style={{
+                              borderRadius: "5px",
+                              fontSize: "16px",
+                              padding: "3px 6px",
+                            }}
+                          >
+                            {item}
+                          </Tag>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="rightAbout-three">
+                  <div>
+                    <span>A little bit of my experience,</span>
+                  </div>
+                  <div>
+                    I started to learn programming way back 2016 when I was on
+                    college. Before learning about it I had to struggle first on
+                    my studies and failed on my subject. One day a teacher
+                    assured that me and my team in thesis will going to fail, I
+                    made that as a motivation to learn how to code. Though it's
+                    really hard for me to catch up but I am eager to prove not
+                    just for my teacher but to my groupmates that we will going
+                    to pass that subject no matter what. Little by little I
+                    started to understand the basics of the system that we're
+                    going to develop, the first language that I learned is PHP
+                    on backend and HTML, CSS on frontend. In God's help and
+                    through hard work we manage to pass that subject. On my
+                    succeeding years as an IT I can say that I and my team
+                    succeeded in terms of learnings and challenges, we passed
+                    and graduated. After that the rest is history.
+                  </div>
+                  <div>
+                    <span>Wanna check my profile,</span>
+                  </div>
+                  <div className="profileBtns">
+                    <Button
+                      // size="small"
+                      type="danger"
+                      href={Resume}
+                      target="_blank"
+                      icon={<FilePdfOutlined />}
+                    >
+                      Resume
+                    </Button>
+                    {/* <Button
+                      size="small"
+                      // type="primary"\
+                      style={{ backgroundColor: "#3b5999", color: "#fff" }}
+                      icon={<FacebookOutlined />}
+                    >
+                      Facebook
+                    </Button> */}
+                    <Button
+                      style={{ backgroundColor: "#55acee", color: "#fff" }}
+                      icon={<LinkedinOutlined />}
+                      target="_blank"
+                      href="https://www.linkedin.com/in/danielcalisinnebreja/"
+                    >
+                      LinkedIn
+                    </Button>
                   </div>
                 </div>
               </div>
-              <div className="rightAbout-three"></div>
             </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }
