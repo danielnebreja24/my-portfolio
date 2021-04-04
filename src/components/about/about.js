@@ -1,42 +1,49 @@
 import React from "react";
 import "./about.css";
-import MyAvatar from "../../images/avatar2.png";
-import Slider from "react-slick";
+// import MyAvatar from "../../images/avatar2.png";
+// import Slider from "react-slick";
 import { Tag, Button } from "antd";
-import { FilePdfOutlined, LinkedinOutlined } from "@ant-design/icons";
+import {
+  FilePdfOutlined,
+  LinkedinOutlined,
+  GoogleOutlined,
+  GithubOutlined,
+  InstagramOutlined,
+} from "@ant-design/icons";
 
 import Resume from "../../files/my_resume.pdf";
+import Profile from "../../images/profile.png";
 
-class CustomSlide extends React.Component {
-  render() {
-    const { src } = this.props;
+// class CustomSlide extends React.Component {
+//   render() {
+//     const { src } = this.props;
 
-    // console.log(this.props);
-    return (
-      <div className="slickItem">
-        <img src={src} alt="item" style={{ width: "80%", height: "70%" }} />
-      </div>
-    );
-  }
-}
+//     // console.log(this.props);
+//     return (
+//       <div className="slickItem">
+//         <img src={src} alt="item" style={{ width: "80%", height: "70%" }} />
+//       </div>
+//     );
+//   }
+// }
 
-class CustomSlide2 extends React.Component {
-  render() {
-    const { src } = this.props;
+// class CustomSlide2 extends React.Component {
+//   render() {
+//     const { src } = this.props;
 
-    // console.log(this.props);
-    return (
-      <div className="slickItem-big">
-        {src ===
-        "https://seeklogo.com/images/P/puppeteer-logo-254C5F1692-seeklogo.com.png" ? (
-          <img src={src} alt="item" style={{ width: "30%", height: "40%" }} />
-        ) : (
-          <img src={src} alt="item" style={{ width: "50%", height: "40%" }} />
-        )}
-      </div>
-    );
-  }
-}
+//     // console.log(this.props);
+//     return (
+//       <div className="slickItem-big">
+//         {src ===
+//         "https://seeklogo.com/images/P/puppeteer-logo-254C5F1692-seeklogo.com.png" ? (
+//           <img src={src} alt="item" style={{ width: "30%", height: "40%" }} />
+//         ) : (
+//           <img src={src} alt="item" style={{ width: "50%", height: "40%" }} />
+//         )}
+//       </div>
+//     );
+//   }
+// }
 
 export default class About extends React.Component {
   constructor() {
@@ -97,23 +104,23 @@ export default class About extends React.Component {
   }
 
   render() {
-    const settings = {
-      arrows: false,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      speed: 2000,
-      autoplaySpeed: 2000,
-      cssEase: "linear",
-      className: "slickDiv2",
-    };
+    // const settings = {
+    //   arrows: false,
+    //   infinite: true,
+    //   slidesToShow: 3,
+    //   slidesToScroll: 1,
+    //   autoplay: true,
+    //   speed: 2000,
+    //   autoplaySpeed: 2000,
+    //   cssEase: "linear",
+    //   className: "slickDiv2",
+    // };
     return (
       <>
         <div className="mainAbout-div">
           <div className="mainAbout-inner">
             <div className="aboutInner-left">
-              <div className="aboutLeft-item">
+              {/* <div className="aboutLeft-item">
                 <div className="aboutLeft-avatar">
                   <span>
                     <img src={MyAvatar} alt="avatar" className="aboutAvatar" />
@@ -150,7 +157,74 @@ export default class About extends React.Component {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
+
+              {/* </div> */}
+
+              {
+                <div className="card">
+                  <div className="image">
+                    <img src={Profile} alt="profile" />
+                  </div>
+                  <div className="details">
+                    <div className="center">
+                      <h1>
+                        Daniel Nebreja
+                        <br></br>
+                        <span>Frontend Web Developer</span>
+                      </h1>
+                      <p>
+                        Hey, you can also review or reach me through these
+                        accounts.
+                      </p>
+                      <ul>
+                        <li>
+                          <a target="_blank" href={Resume}>
+                            <FilePdfOutlined />
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=daniel.nebreja29@gmail.com&su=LET'S WORK TOGETHER&body=I would like to inquire....."
+                          >
+                            <GoogleOutlined />
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://github.com/DanielNebreja?tab=repositories"
+                          >
+                            <GithubOutlined />
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://www.linkedin.com/in/danielcalisinnebreja/"
+                          >
+                            <LinkedinOutlined />
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://www.instagram.com/chickendinnel/"
+                          >
+                            <InstagramOutlined />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                // </div>
+              }
             </div>
             <div className="aboutInner-right">
               <div className="innerRight-line"></div>
