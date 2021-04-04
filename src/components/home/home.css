@@ -301,10 +301,13 @@
       width:100%;
       display: flex;
       justify-content: flex-end;
-      align-items: flex-start;
-      /* background: red;  */
-      position: fixed;   
-      z-index: 99 !important;  
+      align-items: flex-start;             
+  }
+
+  .mainHome-foot > span {
+    position: fixed;   
+    /* background: red;  */
+    z-index: 2 !important; 
   }
 
   .mainHome-foot span {
