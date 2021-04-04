@@ -2,7 +2,7 @@ import React from "react";
 import "./about.css";
 // import MyAvatar from "../../images/avatar2.png";
 // import Slider from "react-slick";
-import { Tag, Button } from "antd";
+import { Tag } from "antd";
 import {
   FilePdfOutlined,
   LinkedinOutlined,
@@ -13,37 +13,6 @@ import {
 
 import Resume from "../../files/my_resume.pdf";
 import Profile from "../../images/profile.png";
-
-// class CustomSlide extends React.Component {
-//   render() {
-//     const { src } = this.props;
-
-//     // console.log(this.props);
-//     return (
-//       <div className="slickItem">
-//         <img src={src} alt="item" style={{ width: "80%", height: "70%" }} />
-//       </div>
-//     );
-//   }
-// }
-
-// class CustomSlide2 extends React.Component {
-//   render() {
-//     const { src } = this.props;
-
-//     // console.log(this.props);
-//     return (
-//       <div className="slickItem-big">
-//         {src ===
-//         "https://seeklogo.com/images/P/puppeteer-logo-254C5F1692-seeklogo.com.png" ? (
-//           <img src={src} alt="item" style={{ width: "30%", height: "40%" }} />
-//         ) : (
-//           <img src={src} alt="item" style={{ width: "50%", height: "40%" }} />
-//         )}
-//       </div>
-//     );
-//   }
-// }
 
 export default class About extends React.Component {
   constructor() {
@@ -120,47 +89,6 @@ export default class About extends React.Component {
         <div className="mainAbout-div">
           <div className="mainAbout-inner">
             <div className="aboutInner-left">
-              {/* <div className="aboutLeft-item">
-                <div className="aboutLeft-avatar">
-                  <span>
-                    <img src={MyAvatar} alt="avatar" className="aboutAvatar" />
-                  </span>
-                </div>
-                <div className="aboutLeft-info">
-                  <div className="leftInfo-name">
-                    <span>Daniel Nebreja</span>
-                    <span>Frontend Web Developer</span>
-                  </div>
-                  <div className="leftInfo-skills">
-                    <div className="leftSkills-inner">
-                      <div className="leftSkills-slick">
-                        <Slider
-                          arrows={false}
-                          asNavFor={this.state.nav2}
-                          ref={(slider) => (this.slider1 = slider)}
-                          className="slickDiv"
-                        >
-                          {this.state.skills.map((item, i) => (
-                            <CustomSlide2 index={i + 1} key={i} src={item} />
-                          ))}
-                        </Slider>
-                        <Slider
-                          asNavFor={this.state.nav1}
-                          ref={(slider) => (this.slider2 = slider)}
-                          {...settings}
-                        >
-                          {this.state.skills.map((item, i) => (
-                            <CustomSlide index={i + 1} key={i} src={item} />
-                          ))}
-                        </Slider>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-
-              {/* </div> */}
-
               {
                 <div className="card">
                   <div className="image">
@@ -179,7 +107,7 @@ export default class About extends React.Component {
                       </p>
                       <ul>
                         <li>
-                          <a target="_blank" href={Resume}>
+                          <a rel="noreferrer" target="_blank" href={Resume}>
                             <FilePdfOutlined />
                           </a>
                         </li>
@@ -330,31 +258,22 @@ export default class About extends React.Component {
                     <span>Wanna check my profile,</span>
                   </div>
                   <div className="profileBtns">
-                    <Button
-                      // size="small"
-                      type="danger"
-                      href={Resume}
-                      target="_blank"
-                      icon={<FilePdfOutlined />}
-                    >
-                      Resume
-                    </Button>
-                    {/* <Button
-                      size="small"
-                      // type="primary"\
-                      style={{ backgroundColor: "#3b5999", color: "#fff" }}
-                      icon={<FacebookOutlined />}
-                    >
-                      Facebook
-                    </Button> */}
-                    <Button
-                      style={{ backgroundColor: "#55acee", color: "#fff" }}
-                      icon={<LinkedinOutlined />}
+                    <a rel="noreferrer" target="_blank" href={Resume}>
+                      <button className="btn">
+                        <FilePdfOutlined />
+                        &nbsp; Resume
+                      </button>
+                    </a>
+                    <a
+                      rel="noreferrer"
                       target="_blank"
                       href="https://www.linkedin.com/in/danielcalisinnebreja/"
                     >
-                      LinkedIn
-                    </Button>
+                      <button className="btn">
+                        <LinkedinOutlined />
+                        &nbsp; LinkedIn
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>

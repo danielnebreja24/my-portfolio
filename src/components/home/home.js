@@ -13,6 +13,11 @@ export default class Home extends React.Component {
     super();
     this.state = {
       position: "",
+      aboutClass: "",
+      introClass: "",
+      mentorClass: "",
+      projectClass: "",
+      contactClass: "",
     };
   }
 
@@ -21,11 +26,17 @@ export default class Home extends React.Component {
   }
 
   handleScroll = (e) => {
+    let scroll = window.pageYOffset;
     // console.log(window.pageYOffset);
     if (window.pageYOffset >= 50) {
       this.setState({ position: "fixed", margin: "130px" });
     } else {
       this.setState({ position: "", margin: "0px" });
+    }
+
+    if (scroll >= 600) {
+      console.log("yeah");
+      this.setState({ aboutClass: "is-active" });
     }
   };
 
@@ -35,6 +46,7 @@ export default class Home extends React.Component {
   };
 
   render() {
+    console.log(this.state.aboutClass);
     return (
       <>
         <div className="mainPage">
@@ -62,19 +74,33 @@ export default class Home extends React.Component {
                   >
                     <div className="mainHead-rightInner">
                       <span>
-                        <a href="#section_1">Introduction</a>
+                        <a href="#section_1" class={this.state.introClass}>
+                          Introduction
+                        </a>
                       </span>
                       <span>
                         <a href="#section_2">About me</a>
                       </span>
                       <span>
-                        <a href="#section_3">Projects</a>
+                        <a
+                          href="#section_3"
+                          className={this.state.projectClass}
+                        >
+                          Projects
+                        </a>
                       </span>
                       <span>
-                        <a href="#mentorship">Mentorship</a>
+                        <a
+                          href="#mentorship"
+                          className={this.state.mentorClass}
+                        >
+                          Mentorship
+                        </a>
                       </span>
                       <span>
-                        <a href="#contact">Let's talk</a>
+                        <a href="#contact" className={this.state.contactClass}>
+                          Let's talk
+                        </a>
                       </span>
                     </div>
                   </ScrollspyNav>
@@ -104,11 +130,9 @@ export default class Home extends React.Component {
                 </a>
               </div>
             </div>
-            <div
-              className="mainHome-foot"
-              style={{ marginTop: this.state.margin }}
-            >
-              <span>
+            <div className="mainHome-foot">
+              sad
+              <span style={{ marginTop: this.state.margin }}>
                 <Tooltip title="Let's have a talk" placement="top">
                   <Avatar
                     size={50}
