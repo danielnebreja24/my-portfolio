@@ -71,6 +71,16 @@ export default class Projects extends React.Component {
           img: [],
           view: ["github"],
         },
+        {
+          label: "PERSONAL PROJECT",
+          title: "IG Project",
+          tech:
+            "( React JS, Node JS, Express JS, PostgreSQL, Socket IO, Material-UI, Ant-design, CSS )",
+          desc:
+            "IG Project is my personal project. The main goal of this app is to clone the existing successfull Instagram UI and functions using the React JS and Node JS and intergrating the chat app by using the socket IO. I just made this project to practice my skills and experience using the technologies and for portfolio purposes. ",
+          img: [],
+          view: ["github"],
+        },
       ],
     };
   }
