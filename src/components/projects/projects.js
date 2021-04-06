@@ -108,8 +108,8 @@ export default class Projects extends React.Component {
                             <div className="imgLaptop">
                               <div className="laptopInner">
                                 <Slider {...settings}>
-                                  {item.img.map((img) => (
-                                    <div>
+                                  {item.img.map((img, index) => (
+                                    <div key={index}>
                                       <div className="carouselItem">
                                         <img
                                           src={img}
@@ -125,17 +125,17 @@ export default class Projects extends React.Component {
                             </div>
                             <div className="imgButtons">
                               {item.view.length
-                                ? item.view.map((view) => {
+                                ? item.view.map((view, i) => {
                                     if (view === "github") {
                                       return (
-                                        <button className="btn">
+                                        <button key={i} className="btn">
                                           <GithubOutlined />
                                           &nbsp; GitHub
                                         </button>
                                       );
                                     } else {
                                       return (
-                                        <button className="btn">
+                                        <button key={i} className="btn">
                                           <GlobalOutlined />
                                           &nbsp; View Site
                                         </button>
