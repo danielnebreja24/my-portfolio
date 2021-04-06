@@ -144,7 +144,7 @@ export default class Home extends React.Component {
                     </span>
                     <div
                       style={{
-                        height: !this.state.drawerState ? "0" : "200px",
+                        height: !this.state.drawerState ? "0" : "210px",
                       }}
                       className="drawerItem-div"
                     >
