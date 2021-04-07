@@ -8,7 +8,9 @@
 .mainPage {
     width: 100%;
     height: auto;
-    overflow: hidden;    
+    overflow: hidden;
+    /* background-color: #222;   */
+    /* z-index: -2 !important;   */
 }
 
 
@@ -17,25 +19,20 @@
     height: 112vh;
     min-height: 600px;    
     /* background-color: rgb(46, 44, 44); */
-    position: relative;
+    /* position: relative; */
     display: block;
 }
 
-.mainHome-div::after {
-    /* position: absolute; */
-    /* width: 100%;
-    height: 100%; */
-    /* background-color: red; */
+.mainHome-div::after {   
     content: "";
     background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)),url("../../images//home4.jpg");
     background-size: 100% 100%;
-    background-attachment: fixed;
-    /* opacity: 0.5; */
+    /* background-attachment: scroll; */
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    position: absolute;
+    position: fixed;
     z-index: -1;
 }
 
@@ -156,17 +153,19 @@
 }
 
 .mainBody-inner {
-    margin-top: 30px;
+    margin-top: 80px;
     width: 75%;
     height: 80%;
-    font-family: 'Kiwi Maru';
+    font-family: 'Kiwi Maru';  
+    /* align-items: center; */
     /* background-color:aquamarine */
 }
 
 
 .mainInner-one {
-    height: 30%;
+    /* height: 30%; */
     /* background-color: orange;     */
+    padding: 15px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,7 +205,8 @@
 
   .mainInner-two {
     /* background-color: red; */
-    height: 20%;
+    /* height: 20%; */
+    padding: 15px 0px;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -226,8 +226,9 @@
   }
 
   .mainInner-three {
-      height: 20%;
+      /* height: 20%; */
       /* background-color: orchid; */
+      padding: 10px 0px 15px 0px; 
       font-style: italic;
       font-size: 17px;
       display: flex;
@@ -238,7 +239,8 @@
   }
 
   .mainInner-four {
-      height: 29%;
+      /* height: 29%; */
+      padding: 15px 0px;
       color: #fff;
       display: flex;
       flex-direction: column;
@@ -306,13 +308,17 @@
       display: flex;
       justify-content: flex-end;
       align-items: flex-start;   
-      /* background-color: #222;           */
+      /* padding-bottom: 20px; */
+      /* background-color: #222;   */
+
   }
 
   .mainHome-foot > span {
     position: fixed;   
     /* background: red; */
-    margin-right: -10px !important; 
+    /* margin-top: -10px; */
+    bottom: 20px;
+    right: -40px;
     /* display: flex;
     align-items: flex-end;
     justify-content: flex-end; */
@@ -352,13 +358,15 @@
 
       .mainInner-three {
           font-size: 1.3vw;
-      }
+      }      
+
   }
 
   @media only screen and (max-width: 950px) {
 
     .mainHome-div {
-        max-height: 700px;
+        height: 100vh;
+        /* max-height: 700px; */
     }
 
       .mainHead-left {
@@ -433,7 +441,7 @@
         font-size: 1.6vw;
         text-align: center;
         align-items: flex-start;
-        height: 15%;
+        /* height: 15%; */
         /* background-color: lawngreen; */
     }
 
@@ -445,7 +453,7 @@
     .mainHome-body {
         height: 110vh;
         min-height: 450px;
-        max-height: 500px;
+        /* max-height: 500px; */
         padding-top: 80px;
         /* background-color: orchid; */
     }
@@ -488,7 +496,7 @@
 
     .drawerItem {
         width: 100%;
-        height: 210px;
+        height: 250px;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -534,14 +542,16 @@
 
     .mainHome-body {
         padding-top: 0px;
+        /* background-color: red; */
         /* background: rgb(148, 127, 11); */
     }
 
       .mainBody-inner {
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          /* justify-content: center; */
           /* background: red; */
+          padding-top: 100px;
           width: 90%;
           /* padding-left: 20px; */
       }
@@ -556,7 +566,9 @@
         animation: 
             typing 3.5s steps(30, end),
             blink-caret .5s step-end infinite;
+        padding-bottom: 5px;
         }
+        
 
         /* The typing effect */
         @keyframes typing {
@@ -572,8 +584,8 @@
       /* } */
 
       .mainInner-two {
-          height: auto;
-          padding: 10px 0;
+        height: auto;
+        padding-bottom: 7px;
         justify-content: flex-start;
           /* background: pink; */
       }
@@ -582,9 +594,9 @@
         justify-content: flex-start;
         text-align: left;
         height: auto;
-        padding: 5px 0 15px 0;
+        padding: 0px 0 15px 0;
         font-size: 8.5px;
-        font-style: unset;
+        font-style: italic;
           /* background: purple; */
       }
 
@@ -626,7 +638,7 @@
 
   @media only screen and (max-width: 420px) {
       .mainInner-one {
-          font-size: 3.7vw !important;
+          font-size: 3.5vw !important;
       }
 
       .mainInner-two {
@@ -640,6 +652,33 @@
       .mainInner-four > span {
           font-size: 9px !important;
       }
+
+      .mainHome-body {
+          height: 100vh;
+          justify-content: center;
+          /* background-color: green; */
+      }
+
+      .mainBody-inner {
+          /* background-color: orange; */
+      }
+  }
+
+  @media only screen and (max-width: 375px) {    
+
+      .mainInner-one {
+          font-size: 3vw !important;
+      }
+
+      /* .mainHome-foot {
+          position: fixed;
+          bottom: 0px;          
+          background-color: transparent;
+      }
+
+      .mainHome-foot > span {
+          z-index: 99 !important;
+      } */
   }
 
 

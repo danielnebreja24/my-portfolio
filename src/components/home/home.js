@@ -61,7 +61,7 @@ export default class Home extends React.Component {
     }
 
     if (scroll >= 600) {
-      console.log("yeah");
+      // console.log("yeah");
       this.setState({ aboutClass: "is-active" });
     }
   };
@@ -144,7 +144,7 @@ export default class Home extends React.Component {
                     </span>
                     <div
                       style={{
-                        height: !this.state.drawerState ? "0" : "210px",
+                        height: !this.state.drawerState ? "0" : "250px",
                       }}
                       className="drawerItem-div"
                     >
@@ -180,15 +180,20 @@ export default class Home extends React.Component {
               </div>
             )}
             <div className="mainHome-body">
-              <div className="mainBody-inner">
+              {/* {this.state.margin} */}
+              <div
+                className="mainBody-inner"
+                style={{
+                  marginTop: this.state.margin === "120px" ? "280px" : "",
+                }}
+              >
                 <div className="mainInner-one">
                   Hello there, my name is&nbsp;<a href="#section_1">Daniel</a>
                 </div>
                 <div className="mainInner-divider"></div>
                 <div className="mainInner-two">WEB DEVELOPER</div>
                 <div className="mainInner-three">
-                  I love designing and make web applications more beautiful in
-                  my simple ways.
+                  Love to make design ideas into reality.
                 </div>
                 <a href="#section_2" className="mainInner-four">
                   <span>Want to know more about me?</span>
