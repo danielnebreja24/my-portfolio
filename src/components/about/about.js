@@ -89,70 +89,67 @@ export default class About extends React.Component {
         <div className="mainAbout-div">
           <div className="mainAbout-inner">
             <div className="aboutInner-left">
-              {
-                <div className="card">
-                  <div className="image">
-                    <img src={Profile} alt="profile" />
-                  </div>
-                  <div className="details">
-                    <div className="center">
-                      <h1>
-                        Daniel Nebreja
-                        <br></br>
-                        <span>Frontend Web Developer</span>
-                      </h1>
-                      <p>
-                        Hey, you can also review or reach me through these
-                        accounts.
-                      </p>
-                      <ul>
-                        <li>
-                          <a rel="noreferrer" target="_blank" href={Resume}>
-                            <FilePdfOutlined />
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://mail.google.com/mail/?view=cm&fs=1&to=daniel.nebreja29@gmail.com&su=LET'S WORK TOGETHER&body=I would like to inquire....."
-                          >
-                            <GoogleOutlined />
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://github.com/DanielNebreja?tab=repositories"
-                          >
-                            <GithubOutlined />
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://www.linkedin.com/in/danielcalisinnebreja/"
-                          >
-                            <LinkedinOutlined />
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            rel="noreferrer"
-                            target="_blank"
-                            href="https://www.instagram.com/chickendinnel/"
-                          >
-                            <InstagramOutlined />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+              <div className="card">
+                <div className="image">
+                  <img src={Profile} alt="profile" />
+                </div>
+                <div className="details">
+                  <div className="center">
+                    <h1>
+                      Daniel Nebreja
+                      <br></br>
+                      <span>Frontend Web Developer</span>
+                    </h1>
+                    <p>
+                      Hey, you can also review or reach me through these
+                      accounts.
+                    </p>
+                    <ul>
+                      <li>
+                        <a rel="noreferrer" target="_blank" href={Resume}>
+                          <FilePdfOutlined />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          rel="noreferrer"
+                          target="_blank"
+                          href="https://mail.google.com/mail/?view=cm&fs=1&to=daniel.nebreja29@gmail.com&su=LET'S WORK TOGETHER&body=I would like to inquire....."
+                        >
+                          <GoogleOutlined />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          rel="noreferrer"
+                          target="_blank"
+                          href="https://github.com/DanielNebreja?tab=repositories"
+                        >
+                          <GithubOutlined />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          rel="noreferrer"
+                          target="_blank"
+                          href="https://www.linkedin.com/in/danielcalisinnebreja/"
+                        >
+                          <LinkedinOutlined />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          rel="noreferrer"
+                          target="_blank"
+                          href="https://www.instagram.com/chickendinnel/"
+                        >
+                          <InstagramOutlined />
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                // </div>
-              }
+              </div>
             </div>
             <div className="aboutInner-right">
               <div className="innerRight-line"></div>
@@ -178,7 +175,7 @@ export default class About extends React.Component {
                   </div>
                   <div className="aboutTwo-inner">
                     <div>
-                      <div>For frontend :</div>
+                      <div>For frontend </div>
                       <div>
                         {this.state.frontend.map((item, i) => (
                           <Tag
@@ -196,7 +193,7 @@ export default class About extends React.Component {
                       </div>
                     </div>
                     <div>
-                      <div>For backend :</div>
+                      <div>For backend </div>
                       <div>
                         {this.state.backend.map((item, i) => (
                           <Tag
@@ -214,7 +211,7 @@ export default class About extends React.Component {
                       </div>
                     </div>
                     <div>
-                      <div>For version control and others :</div>
+                      <div>For version control and others </div>
                       <div>
                         {this.state.versionControl.map((item, i) => (
                           <Tag
