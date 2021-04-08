@@ -12,7 +12,7 @@ import {
 } from "@ant-design/icons";
 
 import Resume from "../../files/my_resume.pdf";
-import Profile from "../../images/profile.png";
+import Profile from "../../images/profile4.png";
 
 export default class About extends React.Component {
   constructor() {
@@ -62,6 +62,7 @@ export default class About extends React.Component {
         "MySQL",
       ],
       versionControl: ["Git", "GitLab", "GitHub"],
+      web: true,
     };
   }
 
@@ -70,9 +71,19 @@ export default class About extends React.Component {
       nav1: this.slider1,
       nav2: this.slider2,
     });
+    if (
+      /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      this.setState({ web: false });
+    } else {
+      this.setState({ web: true });
+    }
   }
 
   render() {
+    console.log(this.state.web);
     // const settings = {
     //   arrows: false,
     //   infinite: true,
@@ -114,7 +125,11 @@ export default class About extends React.Component {
                         <a
                           rel="noreferrer"
                           target="_blank"
-                          href="https://mail.google.com/mail/?view=cm&fs=1&to=daniel.nebreja29@gmail.com&su=LET'S WORK TOGETHER&body=I would like to inquire....."
+                          href={
+                            this.state.web
+                              ? "https://mail.google.com/mail/?view=cm&fs=1&to=daniel.nebreja29@gmail.com&su=LET'S WORK TOGETHER&body=I would like to inquire....."
+                              : "mailto:daniel.nebreja29@gmail?subject=LET'S WORK TOGETHER&body=I would like to inquire....."
+                          }
                         >
                           <GoogleOutlined />
                         </a>

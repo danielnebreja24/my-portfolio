@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.css";
-import Logo from "../../images/dbl-logo.png";
+import Logo from "../../images/dlb-logo4.png";
 import {
   DownOutlined,
   PhoneTwoTone,
@@ -82,6 +82,7 @@ export default class Home extends React.Component {
                 style={{
                   position: this.state.position,
                   height: this.state.position === "fixed" ? "13%" : "20%",
+                  minHeight: "80px",
                   backgroundColor:
                     this.state.position === "fixed" ? "#111" : "transparent",
                 }}
@@ -111,7 +112,7 @@ export default class Home extends React.Component {
                           <a href="#section_2">About me</a>
                         </span>
                         <span>
-                          <a href="#section_3">Projects</a>
+                          <a href="#section_3">My works</a>
                         </span>
                         <span>
                           <a href="#mentorship">Mentorship</a>
@@ -164,7 +165,7 @@ export default class Home extends React.Component {
                             <a href="#section_2">About me</a>
                           </span>
                           <span>
-                            <a href="#section_3">Projects</a>
+                            <a href="#section_3">My works</a>
                           </span>
                           <span>
                             <a href="#mentorship">Mentorship</a>
@@ -184,7 +185,7 @@ export default class Home extends React.Component {
               <div
                 className="mainBody-inner"
                 style={{
-                  marginTop: this.state.margin === "120px" ? "280px" : "",
+                  marginTop: this.state.margin === "120px" ? "200px" : "",
                 }}
               >
                 <div className="mainInner-one">
@@ -193,7 +194,7 @@ export default class Home extends React.Component {
                 <div className="mainInner-divider"></div>
                 <div className="mainInner-two">WEB DEVELOPER</div>
                 <div className="mainInner-three">
-                  Love to make design ideas into reality.
+                  Love to turn design ideas into reality.
                 </div>
                 <a href="#section_2" className="mainInner-four">
                   <span>Want to know more about me?</span>
