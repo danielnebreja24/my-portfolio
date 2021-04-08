@@ -1,39 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
 
-* {
+/* * {
     color: #ddd;    
-}
+} */
 
 .mainProjects-div {
     /* height: 130vh; */
     width: 100%;
-    min-height: 900px;
+    /* min-height: 900px; */
     background-color: #222;
-    padding-bottom: 100px;
+    padding-bottom: 100px;    
+    /* display: flex;
+    justify-content: center;
+    align-items: center;     */
+    
 }
 
-.mainProject-title {
-    height: 100px;
+
+/* .mainProject-inner {
+    width: 97%;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 5px 10px 15px -8px #888;
+} */
+
+.mainProject-title  {
+    /* height: 100px; */
     width: 100%;
     /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Acme;
+    flex-direction: column;
+    color: #ddd !important;
+    
+    /* z-index: 99 !important; */    
+}
+
+.mainProject-title > span:first-child {
+    font-family: Kiwi Maru;
     letter-spacing: 3px;
     word-spacing: 10px;
     font-size: 2.4em;
-    /* z-index: 99 !important; */
-    
+    margin-bottom: 5px;
 }
 
-.mainProject-title > span {
+
+.mainProject-title > span:nth-child(2) {
+    font-family: Acme;
+    /* font-family: Kiwi Maru; */
+    letter-spacing: 2px;
+    font-size: 1.3em;
+}
+
+/* .mainProject-title > span {
     position: relative;
     z-index: 2;
-}
+} */
 
-.mainProject-title > span::after {
+/* .mainProject-title > span::after {
     content: '';
     position: absolute;
     bottom: 5px;
@@ -45,7 +71,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.7;
-}
+} */
 
 .mainProject-body {    
     
@@ -53,6 +79,7 @@
     display: flex;
     justify-content: center;
     padding: 0 20px;
+    
     /* align-items: center; */
     /* background-color: red; */
 }
@@ -70,6 +97,9 @@
     align-items: flex-start;
     /* background-color: orange; */
     font-family: Acme;
+    color: #ddd !important;
+    /* color: #111 !important; */
+
     /* font-size: 17px; */
 }
 
@@ -89,6 +119,7 @@
 .timeLine-body {
     height: 80%;
     display: flex;
+    color: #ddd !important;
     /* justify-content: center; */
     /* background-color: thistle; */
 }
@@ -118,21 +149,23 @@
     width: 77.1%;
     height: 87%;
     margin-top: 12px;
-    border-radius: 5px;
+    border-radius: 7px;
+    overflow: hidden;
     /* background-color: green; */
 }
 
 .timeLine-desc {
     width: 35%;
-    height: 100%;
+    /* height: 100%; */
     /* background-color: red; */
     overflow: auto;    
-    font-family: Acme;
+    font-family: Acme;    
     font-size: 16px;
     display: flex;
     text-align: left;
     padding: 0px 2px;
     padding-top: 30px;
+    word-spacing: 2px;
     /* align-items: center; */
 }
 
@@ -150,7 +183,7 @@
 
 .slickDiv {
     height: 195px;
-    width: 21.77vw;
+    width: 21.4vw;
     /* width: 60%; */
     /* background-color: palegreen; */
 }
@@ -175,5 +208,142 @@
 .btn:hover {
     transition: 0.7s;
     background-color: rgb(173, 150, 14);
+}
+
+@media only screen and (max-width: 970px) {
+    .timeLine-item {
+        height: auto;
+        /* background-color: red; */
+    }
+
+    .timeLine-title {
+        margin-bottom: 15px;
+    }
+
+    .timeLine-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeLine-img {
+        width: 350px;
+        /* background-color: orange; */
+    }
+
+    .slickDiv {
+        width: 100%;
+    }
+
+    .timeLine-title > span:nth-child(2) {
+        font-size: 1.5vw;
+        letter-spacing: 1.1px;
+    }
+
+    .timeLine-desc {
+        width: 100%;
+        padding: 10px 10px;
+        /* background-color: orchid; */
+    }
+
+    .imgButtons {
+        margin: 20px 0;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .timeLine-desc {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    .timeLine-title > span:nth-child(2) {
+        font-size: 14px;
+        letter-spacing: 1.1px;
+    }
+
+    .timeLine-title > span:nth-child(3) {
+        font-size: 12px;
+        letter-spacing: 1.1px;
+        font-family: Acme;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .mainProject-title > span:first-child {
+        font-size: 5.5vw;
+    }
+
+    .mainProject-title > span:nth-child(2) {
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .timeLine-title > span:nth-child(2) {
+        font-size: 12px;
+    }
+
+    .mainProject-title > span:first-child {
+        font-size: 5.3vw;
+    }
+
+    .mainProject-title > span:nth-child(2) {
+        font-size: 2.8vw;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .mainProject-title > span:first-child {
+        font-weight: bold !important;
+    }
+
+    .mainProject-title > span:nth-child(2) {
+        letter-spacing: 1px;
+        font-size: 13px !important;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .timeLine-img {
+        width: 320px;
+        height: 300px;
+        /* background-color: orange; */
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .mainProject-title > span:first-child {
+        font-size: 4.5vw;
+    }
+
+    .mainProject-title > span:nth-child(2) {
+        font-size: 12px !important;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .mainProject-title > span:nth-child(2) {
+        font-size: 11.5px !important;
+    }
+    .timeLine-img {
+        width: 300px;
+        height: 280px;
+        /* background-color: orange; */
+    }
+
+}
+
+@media only screen and (max-width: 345px) {
+    .timeLine-img {
+        width: 270px;
+        height: 250px;
+        /* background-color: orange; */
+    }
+
+    .mainProject-title > span:nth-child(2) {
+        font-size: 10.3px !important;
+    }
 }
 

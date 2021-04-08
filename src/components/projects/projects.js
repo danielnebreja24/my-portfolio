@@ -17,7 +17,7 @@ export default class Projects extends React.Component {
         {
           label: "PROJECT/COLLABORATED",
           title: "Make me up",
-          tech: "( HTML, CSS, Bootstrap, Node JS, MySQL, Firebase, AWS )",
+          tech: " HTML, CSS, Bootstrap, Node JS, MySQL, Firebase, AWS ",
           desc:
             "Make me up is an online shop and booking service. This app basically is made for buyers, sellers and other service providers. You can sell your products, order a product, book a service or offer a service.",
           img: [MakeMeUp1, MakeMeUp2, MakeMeUp3, MakeMeUp4, MakeMeUp5],
@@ -27,7 +27,7 @@ export default class Projects extends React.Component {
           label: "COLLABORATED",
           title: "Single traveller's profile",
           tech:
-            "( React JS, PHP, Laravel, Python Flask, Material-UI, Bootstrap )",
+            " React JS, PHP, Laravel, Python Flask, Material-UI, Bootstrap ",
           desc:
             "Single traveller's profile is a government project of Bureau of Immigration. Main goal of this project is to save and record all the immigrants or travellers who are going inside and outside of the Phillipines. Using the form or scanned passport of a single traveller it will record and save the information. The user can retrieve the information via name or passport number. There is also an embedded map that can track the traveller's location of previous stays.",
           img: [],
@@ -36,8 +36,7 @@ export default class Projects extends React.Component {
         {
           label: "PROJECT/COLLABORATED",
           title: "Doctor's call app",
-          tech:
-            "( React JS, AWS Amplify, GraphQL, DynamoDB, Material-UI, CSS )",
+          tech: " React JS, AWS Amplify, GraphQL, DynamoDB, Material-UI, CSS ",
           desc:
             "Doctor's call app is a web application created for the company who are selling their products to a certain doctor. The user can plan their schedule using the app and plot it to actual visit and record the time, important notes, products presented, signature of the doctor and the manager in-charge, etc. It covers also the inventory and records of the item, doctors, hospitals, etc. ",
           img: [],
@@ -46,7 +45,7 @@ export default class Projects extends React.Component {
         {
           label: "PROJECT/COLLABORATED",
           title: "PHP Course",
-          tech: "( React JS, Ant Design, Gatsby, Material-UI )",
+          tech: " React JS, Ant Design, Gatsby, Material-UI ",
           desc:
             "PHP Course is a application made for the student/mentees of BoomCamp. The lessons, activities, materials, grades and other stuffs regarding the PHP Course that the mentees and the mentor needed are saved in this web application for them to easily access it whenever and whereever.",
           img: [],
@@ -55,7 +54,7 @@ export default class Projects extends React.Component {
         {
           label: "PROJECT/COLLABORATED",
           title: "Frontend Boom Camp",
-          tech: "( React JS, Ant Design, Gatsby, Material-UI )",
+          tech: " React JS, Ant Design, Gatsby, Material-UI ",
           desc:
             "Frontend BoomCamp is a application made for the student/mentees of BoomCamp. The lessons, activities, grades and other stuffs that the mentees and the mentor needed are saved in this web application for them to easily access it whenever and whereever.",
           img: [],
@@ -65,7 +64,7 @@ export default class Projects extends React.Component {
           label: "PROJECT/COLLABORATED",
           title: "Handraiser",
           tech:
-            "( React JS, Node JS, Express JS, PostgreSQL, Socket IO, Material-UI, Ant-design, CSS )",
+            " React JS, Node JS, Express JS, PostgreSQL, Socket IO, Material-UI, Ant-design, CSS ",
           desc:
             "Handraiser is a project created for mentor and student realtime interaction. The student can communicate or ask assistance from mentor through this app. It is also useful for mentor for them to easily collaborate and check for their respective mentees/students.",
           img: [],
@@ -75,15 +74,37 @@ export default class Projects extends React.Component {
           label: "PERSONAL PROJECT",
           title: "IG Project",
           tech:
-            "( React JS, Node JS, Express JS, PostgreSQL, Socket IO, Material-UI, Ant-design, CSS )",
+            " React JS, Node JS, Express JS, PostgreSQL, Socket IO, Material-UI, Ant-design, CSS ",
           desc:
             "IG Project is my personal project. The main goal of this app is to clone the existing successfull Instagram UI and functions using the React JS and Node JS and intergrating the chat app by using the socket IO. I just made this project to practice my skills and experience using the technologies and for portfolio purposes. ",
           img: [],
           view: ["github"],
         },
       ],
+      mode: "alternate",
     };
   }
+
+  componentDidMount() {
+    if (window.innerWidth <= 730) {
+      this.setState({ mode: "left" });
+    } else {
+      this.setState({ mode: "alternate" });
+    }
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
+  }
+
+  updateDimensions = () => {
+    if (window.innerWidth <= 730) {
+      this.setState({ mode: "left" });
+    } else {
+      this.setState({ mode: "alternate" });
+    }
+  };
 
   render() {
     const settings = {
@@ -97,21 +118,35 @@ export default class Projects extends React.Component {
       speed: 3000,
       autoplaySpeed: 3000,
     };
+
+    console.log(this.state.mode);
     return (
       <>
         <div className="mainProjects-div">
           <div className="mainProject-title">
             <span>Projects and Collaboration</span>
+            <span>
+              Here are some of projects I've been worked/collaborated on.
+            </span>
           </div>
           <div className="mainProject-body">
-            <Timeline mode="alternate" style={{ marginTop: "70px" }}>
+            <Timeline mode={this.state.mode} style={{ marginTop: "70px" }}>
               {this.state.projects.length
                 ? this.state.projects.map((item, i) => (
-                    <Timeline.Item index={i} label={item.label}>
+                    <Timeline.Item
+                      label={
+                        this.state.mode === "alternate" ? item.label : null
+                      }
+                      index={i}
+                      style={{ color: "#ddd" }}
+                    >
                       <div className="timeLine-item">
                         <div className="timeLine-title">
                           <span>{item.title}</span>
                           <span>{item.tech}</span>
+                          {this.state.mode === "left" ? (
+                            <span>({item.label})</span>
+                          ) : null}
                         </div>
                         <div className="timeLine-body">
                           <div className="timeLine-img">
