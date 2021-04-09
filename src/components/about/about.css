@@ -15,8 +15,8 @@
   .mainAbout-div::before {    
     content: '';
     position: absolute;
-    margin-top: -167px;
-    border-top: 80px solid transparent;
+    margin-top: -90px;
+    border-top: 90px solid transparent;
     border-left: 100vw solid #222;  
     /* z-index: -99 !important; */
     

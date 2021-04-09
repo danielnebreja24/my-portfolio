@@ -3,11 +3,39 @@ import "./project.css";
 import { Timeline } from "antd";
 import { GithubOutlined, GlobalOutlined } from "@ant-design/icons";
 import Slider from "react-slick";
+
+//make me up project images
 import MakeMeUp1 from "../../images/make-me-up1.png";
 import MakeMeUp2 from "../../images/make-me-up2.png";
 import MakeMeUp3 from "../../images/make-me-up3.png";
 import MakeMeUp4 from "../../images/make-me-up4.png";
 import MakeMeUp5 from "../../images/make-me-up5.png";
+
+//bi project images
+import BI1 from "../../images/bi.jpg";
+import BI2 from "../../images/bi1.png";
+import BI3 from "../../images/bi2.png";
+import BI4 from "../../images/bi3.png";
+import BI5 from "../../images/bi4.png";
+import BI6 from "../../images/bi5.png";
+import BI7 from "../../images/bi6.png";
+
+//doctors-call project images
+import DoctorsCall1 from "../../images/doctors-call.png";
+import DoctorsCall2 from "../../images/doctors-call1.png";
+import DoctorsCall3 from "../../images/doctors-call2.png";
+import DoctorsCall4 from "../../images/doctors-call3.png";
+import DoctorsCall5 from "../../images/doctors-call4.png";
+import DoctorsCall6 from "../../images/doctors-call5.png";
+import DoctorsCall7 from "../../images/doctors-call6.png";
+
+//frontend-boomcamp project images
+import Frontend1 from "../../images/frontend-boomcamp.png";
+import Frontend2 from "../../images/frontend-boomcamp1.png";
+
+//allmyholidays project images
+import AllMyHolidays1 from "../../images/allmyholidays.png";
+import AllMyHolidays2 from "../../images/allmyholidays1.png";
 
 export default class Projects extends React.Component {
   constructor() {
@@ -22,6 +50,7 @@ export default class Projects extends React.Component {
             "Make me up is an online shop and booking service. This app basically is made for buyers, sellers and other service providers. You can sell your products, order a product, book a service or offer a service.",
           img: [MakeMeUp1, MakeMeUp2, MakeMeUp3, MakeMeUp4, MakeMeUp5],
           view: ["github", "site"],
+          links: { github: "", site: "" },
         },
         {
           label: "COLLABORATED",
@@ -30,8 +59,9 @@ export default class Projects extends React.Component {
             " React JS, PHP, Laravel, Python Flask, Material-UI, Bootstrap ",
           desc:
             "Single traveller's profile is a government project of Bureau of Immigration. Main goal of this project is to save and record all the immigrants or travellers who are going inside and outside of the Phillipines. Using the form or scanned passport of a single traveller it will record and save the information. The user can retrieve the information via name or passport number. There is also an embedded map that can track the traveller's location of previous stays.",
-          img: [],
+          img: [BI1, BI2, BI3, BI4, BI5, BI6, BI7],
           view: ["github"],
+          links: { github: "" },
         },
         {
           label: "PROJECT/COLLABORATED",
@@ -39,8 +69,27 @@ export default class Projects extends React.Component {
           tech: " React JS, AWS Amplify, GraphQL, DynamoDB, Material-UI, CSS ",
           desc:
             "Doctor's call app is a web application created for the company who are selling their products to a certain doctor. The user can plan their schedule using the app and plot it to actual visit and record the time, important notes, products presented, signature of the doctor and the manager in-charge, etc. It covers also the inventory and records of the item, doctors, hospitals, etc. ",
-          img: [],
+          img: [
+            DoctorsCall1,
+            DoctorsCall2,
+            DoctorsCall3,
+            DoctorsCall4,
+            DoctorsCall5,
+            DoctorsCall6,
+            DoctorsCall7,
+          ],
           view: ["github", "site"],
+          links: { github: "", site: "" },
+        },
+        {
+          label: "COLLABORATED",
+          title: "All my holidays",
+          tech: " HTML, Bootstrap, Javascript, JQuery, PHP ",
+          desc:
+            "All my holiday is a site build for clients who are looking for a destinations to spend. It is also a online booking of flight through airlines. ",
+          img: [AllMyHolidays1, AllMyHolidays2],
+          view: [],
+          links: {},
         },
         {
           label: "PROJECT/COLLABORATED",
@@ -50,6 +99,7 @@ export default class Projects extends React.Component {
             "PHP Course is a application made for the student/mentees of BoomCamp. The lessons, activities, materials, grades and other stuffs regarding the PHP Course that the mentees and the mentor needed are saved in this web application for them to easily access it whenever and whereever.",
           img: [],
           view: [],
+          links: {},
         },
         {
           label: "PROJECT/COLLABORATED",
@@ -57,8 +107,9 @@ export default class Projects extends React.Component {
           tech: " React JS, Ant Design, Gatsby, Material-UI ",
           desc:
             "Frontend BoomCamp is a application made for the student/mentees of BoomCamp. The lessons, activities, grades and other stuffs that the mentees and the mentor needed are saved in this web application for them to easily access it whenever and whereever.",
-          img: [],
+          img: [Frontend1, Frontend2],
           view: ["site"],
+          links: { site: "https://frontend.boom.camp/" },
         },
         {
           label: "PROJECT/COLLABORATED",
@@ -69,6 +120,7 @@ export default class Projects extends React.Component {
             "Handraiser is a project created for mentor and student realtime interaction. The student can communicate or ask assistance from mentor through this app. It is also useful for mentor for them to easily collaborate and check for their respective mentees/students.",
           img: [],
           view: ["github"],
+          links: { github: "" },
         },
         {
           label: "PERSONAL PROJECT",
@@ -79,6 +131,7 @@ export default class Projects extends React.Component {
             "IG Project is my personal project. The main goal of this app is to clone the existing successfull Instagram UI and functions using the React JS and Node JS and intergrating the chat app by using the socket IO. I just made this project to practice my skills and experience using the technologies and for portfolio purposes. ",
           img: [],
           view: ["github"],
+          links: { github: "https://github.com/DanielNebreja/ig-project" },
         },
       ],
       mode: "alternate",
@@ -119,7 +172,7 @@ export default class Projects extends React.Component {
       autoplaySpeed: 3000,
     };
 
-    console.log(this.state.mode);
+    // console.log(this.state.mode);
     return (
       <>
         <div className="mainProjects-div">
@@ -172,19 +225,49 @@ export default class Projects extends React.Component {
                               {item.view.length
                                 ? item.view.map((view, i) => {
                                     if (view === "github") {
-                                      return (
-                                        <button key={i} className="btn">
-                                          <GithubOutlined />
-                                          &nbsp; GitHub
-                                        </button>
-                                      );
+                                      if (item.links.github) {
+                                        return (
+                                          <a
+                                            href={item.links.github}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                          >
+                                            <button key={i} className="btn">
+                                              <GithubOutlined />
+                                              &nbsp; GitHub
+                                            </button>
+                                          </a>
+                                        );
+                                      } else {
+                                        return (
+                                          <button key={i} className="btn">
+                                            <GithubOutlined />
+                                            &nbsp; GitHub
+                                          </button>
+                                        );
+                                      }
                                     } else {
-                                      return (
-                                        <button key={i} className="btn">
-                                          <GlobalOutlined />
-                                          &nbsp; View Site
-                                        </button>
-                                      );
+                                      if (item.links.site) {
+                                        return (
+                                          <a
+                                            href={item.links.site}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                          >
+                                            <button key={i} className="btn">
+                                              <GlobalOutlined />
+                                              &nbsp; View Site
+                                            </button>
+                                          </a>
+                                        );
+                                      } else {
+                                        return (
+                                          <button key={i} className="btn">
+                                            <GlobalOutlined />
+                                            &nbsp; View Site
+                                          </button>
+                                        );
+                                      }
                                     }
                                   })
                                 : null}

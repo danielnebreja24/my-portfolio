@@ -83,7 +83,7 @@ export default class About extends React.Component {
   }
 
   render() {
-    console.log(this.state.web);
+    // console.log(this.state.web);
     // const settings = {
     //   arrows: false,
     //   infinite: true,
@@ -178,7 +178,7 @@ export default class About extends React.Component {
                     create web, mobile and user friendly applications. I love
                     designing web applications and making visualize designs into
                     reality. Though my passion is frontend developing I also
-                    have background in backend, in my previous and current jobs
+                    have background in backend, in my previous and current job
                     as a frontend developer. I am doing fullstack, working on
                     front and back end of the project to test every
                     functionalities of the app.{" "}
@@ -267,13 +267,13 @@ export default class About extends React.Component {
                     and graduated. After that the rest is history.
                   </div>
                   <div>
-                    <span>Wanna check my profile,</span>
+                    <span>Visit my profile here,</span>
                   </div>
                   <div className="profileBtns">
                     <a rel="noreferrer" target="_blank" href={Resume}>
                       <button className="btn">
                         <FilePdfOutlined />
-                        &nbsp; Resume
+                        &nbsp; My resume
                       </button>
                     </a>
                     <a
