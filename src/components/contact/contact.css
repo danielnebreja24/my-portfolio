@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+
+.mainContact-div {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: #222;
+}
+
+.mainContact-title {
+    font-family: Kiwi Maru;
+    font-size: 40px;
+    color: #fff;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.contactDiv-inner {
+    width: 100%;
+    display: inline-flex;
+}
+
+.contactInner-left {
+    width: 50%;
+    min-height: 520px;
+    color: #ddd;
+    /* background-color: orange; */
+}
+
+.innerLeft-top {
+    /* background-color: #111; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerLeft-top > div:first-child {
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: Kiwi Maru;
+    letter-spacing: 3px;
+    padding: 10px 0;
+}
+
+.innerLeft-top > div:nth-child(2) {
+    padding: 10px 0;
+    font-family: Acme;
+    font-size: 18px;
+    word-spacing: 3px;
+    letter-spacing: 1.5px;
+    /* background-color: red; */
+    color: #ccc;
+    width: 70%;
+    
+}
+
+.innerLeft-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    /* background-color: red; */
+    
+}
+
+.leftBottom-one,
+.leftBottom-two,
+.leftBottom-three {
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftBottom-one > span:first-child,
+.leftBottom-two > span:first-child,
+.leftBottom-three > span:first-child {
+    font-size: 18px;
+    padding: 3px;
+    font-family: Acme;
+    letter-spacing: 1.5px;
+    color: rgb(209, 183, 33)
+    /* background-color: red; */
+}
+
+
+.leftBottom-one > span:nth-child(2),
+.leftBottom-two > span:nth-child(2){
+    font-size: 15px;
+    /* padding: 3px; */
+    font-family: Acme;
+    letter-spacing: 1px;
+    /* color: rgb(209, 183, 33) */
+    /* background-color: red; */
+}
+
+.leftBottom-three > span:nth-child(2) {
+    /* color: rgb(209, 183, 33); */
+    font-size: 27px;
+}
+
+.leftBottom-three > span:nth-child(2) > * {
+    margin: 0 10px;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.leftBottom-three > span:nth-child(2) > *:hover {
+    color: rgb(173, 150, 11);
+}
+
+
+.contactInner-right {
+    width: 50%;
+    min-height: 520px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ddd;
+    /* background-color: aliceblue; */
+}
+
+.innerRight-card {
+    width: 85%;
+    height: 100%;
+    background-color: #2f2f2f;
+    border-radius: 5px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.15), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+.rightCard-title {
+    font-size: 33px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: Kiwi Maru;
+    letter-spacing: 3px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.rightCard-subTitle {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    font-family: Acme;
+    font-size: 20px;
+    word-spacing: 3px;
+    letter-spacing: 1.5px;
+    /* background-color: red; */
+    color: #ccc;
+    /* width: 70%; */
+}
+
+.rightCard-form {
+    width: 90%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.inputCard {
+    /* padding: 6px 10px;
+    width: 100%;
+    border: 1px solid #333;
+    outline: 1px solid #444;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: transparent; */
+
+    /* vertical-align: baseline; */
+    border: 0;
+    outline: 0;
+    color: #fff;
+    display: block;
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 8px 12px 10px 12px;
+    border: 1px solid rgba(0,0,0,.5);
+    border-radius: 7px;
+    background-color: rgba(0,0,0,.25);
+}
+
+.inputCard:focus {
+    border: 1px solid rgb(173, 150, 11);
+}
+
+.rightCard-button {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.btnCard {
+    /* margin: auto; */
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    padding: 5px 40px;
+}
+

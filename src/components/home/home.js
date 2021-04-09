@@ -11,7 +11,9 @@ import { Avatar, Tooltip } from "antd";
 import ScrollspyNav from "react-scrollspy-nav";
 
 import About from "../about/about";
-import Projects from "../projects/projects.js";
+import Projects from "../projects/projects";
+import Mentor from "../mentor/mentor";
+import Contact from "../contact/contact";
 
 export default class Home extends React.Component {
   constructor() {
@@ -95,9 +97,16 @@ export default class Home extends React.Component {
                   </div>
                   <div className="mainHead-right">
                     <ScrollspyNav
-                      scrollTargetIds={["section_1", "section_2", "section_3"]}
+                      scrollTargetIds={[
+                        "section_1",
+                        "section_2",
+                        "section_3",
+                        "section_4",
+                        "section_5",
+                      ]}
                       activeNavClass="is-active"
-                      // style={{ width: "100%" }}
+                      offset={-100}
+                      scrollDuration={this.state.showScrollspy ? "400" : "100"}
                     >
                       <div className="mainHead-rightInner">
                         <span>
@@ -115,10 +124,10 @@ export default class Home extends React.Component {
                           <a href="#section_3">My works</a>
                         </span>
                         <span>
-                          <a href="#mentorship">Mentorship</a>
+                          <a href="#section_4">Mentorship</a>
                         </span>
                         <span>
-                          <a href="#contact">Let's talk</a>
+                          <a href="#section_5">Let's talk</a>
                         </span>
                       </div>
                     </ScrollspyNav>
@@ -154,6 +163,8 @@ export default class Home extends React.Component {
                           "section_1",
                           "section_2",
                           "section_3",
+                          "section_4",
+                          "section_5",
                         ]}
                         activeNavClass="is-active"
                       >
@@ -168,10 +179,10 @@ export default class Home extends React.Component {
                             <a href="#section_3">My works</a>
                           </span>
                           <span>
-                            <a href="#mentorship">Mentorship</a>
+                            <a href="#section_4">Mentorship</a>
                           </span>
                           <span>
-                            <a href="#contact">Let's talk</a>
+                            <a href="#section_5">Let's talk</a>
                           </span>
                         </div>
                       </ScrollspyNav>
@@ -194,7 +205,7 @@ export default class Home extends React.Component {
                 <div className="mainInner-divider"></div>
                 <div className="mainInner-two">WEB DEVELOPER</div>
                 <div className="mainInner-three">
-                  Love to turn design ideas into reality.
+                  Love to turn your ideal designs into reality.
                 </div>
                 <a href="#section_2" className="mainInner-four">
                   <span>Want to know more about me?</span>
@@ -228,10 +239,18 @@ export default class Home extends React.Component {
               </span>
             </div>
           </div>
-          <div id="section_2" className="divider"></div>
+          <div id="section_2"></div>
           <About />
           <div id="section_3" className="divider"></div>
           <Projects />
+          <div id="section_4" className="divider"></div>
+          <Mentor />
+          <div
+            id="section_5"
+            className="divider"
+            style={{ height: "30px" }}
+          ></div>
+          <Contact />
         </div>
       </>
     );
