@@ -37,6 +37,11 @@ import Frontend2 from "../../images/frontend-boomcamp1.png";
 import AllMyHolidays1 from "../../images/allmyholidays.png";
 import AllMyHolidays2 from "../../images/allmyholidays1.png";
 
+//php-course project images
+import PHP1 from "../../images/php-course.png";
+import PHP2 from "../../images/php-course1.png";
+import PHP3 from "../../images/php-course2.png";
+
 export default class Projects extends React.Component {
   constructor() {
     super();
@@ -97,7 +102,7 @@ export default class Projects extends React.Component {
           tech: " React JS, Ant Design, Gatsby, Material-UI ",
           desc:
             "PHP Course is a application made for the student/mentees of BoomCamp. The lessons, activities, materials, grades and other stuffs regarding the PHP Course that the mentees and the mentor needed are saved in this web application for them to easily access it whenever and whereever.",
-          img: [],
+          img: [PHP1, PHP2, PHP3],
           view: [],
           links: {},
         },

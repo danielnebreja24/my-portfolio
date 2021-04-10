@@ -14,6 +14,7 @@ import About from "../about/about";
 import Projects from "../projects/projects";
 import Mentor from "../mentor/mentor";
 import Contact from "../contact/contact";
+import Footer from "../footer/footer";
 
 export default class Home extends React.Component {
   constructor() {
@@ -248,9 +249,10 @@ export default class Home extends React.Component {
           <div
             id="section_5"
             className="divider"
-            style={{ height: "30px" }}
+            style={{ height: "70px" }}
           ></div>
           <Contact />
+          <Footer />
         </div>
       </>
     );
