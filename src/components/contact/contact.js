@@ -96,6 +96,7 @@ export default class Contact extends React.Component {
                 />
                 <textarea
                   style={{ resize: "none" }}
+                  rows="3"
                   className="inputCard"
                   placeholder="Please enter your message"
                   name="message"
