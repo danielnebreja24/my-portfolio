@@ -6,6 +6,7 @@
     height: auto;
     min-height: 100vh;
     background-color: #222;
+    padding-bottom: 40px;
 }
 
 .mainContact-title {
@@ -124,14 +125,15 @@
     min-height: 520px;    
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     color: #ddd;
     /* background-color: aliceblue; */
 }
 
 .innerRight-card {
     width: 85%;
-    height: 100%;
+    height: auto;
+    padding-bottom: 40px;
     background-color: #2f2f2f;
     border-radius: 5px;
     box-shadow: 0 19px 38px rgba(0,0,0,0.15), 0 15px 12px rgba(0,0,0,0.22);
@@ -167,17 +169,7 @@
     padding-top: 30px;
 }
 
-.inputCard {
-    /* padding: 6px 10px;
-    width: 100%;
-    border: 1px solid #333;
-    outline: 1px solid #444;
-    border-radius: 5px;
-    border: none;
-    color: #fff;
-    background-color: transparent; */
-
-    /* vertical-align: baseline; */
+.inputCard {  
     border: 0;
     outline: 0;
     color: #fff;
@@ -205,5 +197,214 @@
     font-size: 18px;
     letter-spacing: 1.5px;
     padding: 5px 40px;
+}
+
+
+@media only screen and (max-width: 1060px) {
+    .innerLeft-top > div:first-child,
+    .rightCard-title {
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (max-width: 1010px) {
+    .innerLeft-top > div:nth-child(2)
+    /* ,    .rightCard-subTitle  */
+    {
+        /* font-size: 16px; */
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .innerLeft-top > div:nth-child(2)
+    
+    {
+        font-size: 16px;
+        width: 80%;
+    }
+
+    .innerRight-card {
+        /* width: 95%; */
+        /* margin-right: 10px; */
+        height: auto;
+    }
+
+    /* .rightCard-button {
+        padding-bottom: 40px;
+    } */
+}
+
+@media only screen and (max-width: 700px) {
+    .rightCard-subTitle {
+        font-size: 18px;
+    }
+
+    .rightCard-form {
+        padding-top: 10px;
+    }
+
+    .innerRight-card {
+        width: 95%;
+        margin-right: 10px;
+        /* height: auto; */
+    }
+
+    .innerLeft-top > div:nth-child(2)
+    
+    {
+        font-size: 14.5px;
+        word-spacing: 2px;
+        /* width: 80%; */
+    }
+
+    .inputCard {
+        padding: 5px 8px 6px 8px;
+    }
+
+    .leftBottom-one > span:nth-child(2),
+    .leftBottom-two > span:nth-child(2){
+        font-size: 14px;
+        /* padding: 3px; */
+        font-family: Acme;
+        letter-spacing: 1px;
+        /* color: rgb(209, 183, 33) */
+        /* background-color: red; */
+    }
+
+    .leftBottom-three > span:nth-child(2) {
+        /* color: rgb(209, 183, 33); */
+        font-size: 24px;
+    }
+
+    .leftBottom-one > span:nth-child(1),
+    .leftBottom-two > span:nth-child(1),
+    .leftBottom-three > span:nth-child(1) {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .innerLeft-bottom {
+        padding-top: 5px;
+    }
+
+    .innerLeft-top > div:nth-child(2)
+    
+    {
+        font-size: 14px;
+        /* background-color: red; */
+        width: 86%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .leftBottom-one > span:nth-child(2),
+    .leftBottom-two > span:nth-child(2){
+        font-size: 12.5px;
+        /* padding: 3px; */
+        font-family: Acme;
+        letter-spacing: 1px;
+        /* color: rgb(209, 183, 33) */
+        /* background-color: red; */
+    }
+
+    .leftBottom-three > span:nth-child(2) {
+        /* color: rgb(209, 183, 33); */
+        font-size: 22px;
+    }
+
+    .leftBottom-one > span:nth-child(1),
+    .leftBottom-two > span:nth-child(1),
+    .leftBottom-three > span:nth-child(1) {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .contactDiv-inner {
+        flex-direction: column;
+    }
+
+    .contactInner-left {
+        width: 100%;
+        /* background-color: orange; */
+        min-height: auto;
+    }
+    .contactInner-right {
+        width: 100%;
+        margin-top: 50px;
+        /* background-color: palegreen; */
+        
+        /* height: auto; */
+    }
+
+    .innerRight-card {
+        width: 75%;
+    }
+
+    .innerLeft-top > div:first-child,
+    .rightCard-title {
+        font-size: 25px;
+    }
+
+    .innerLeft-top > div:nth-child(2) {
+        font-size: 16px;
+    }
+
+    .leftBottom-one > span:nth-child(2),
+    .leftBottom-two > span:nth-child(2){
+        font-size: 14px;
+        /* padding: 3px; */
+        font-family: Acme;
+        letter-spacing: 1px;
+        /* color: rgb(209, 183, 33) */
+        /* background-color: red; */
+    }
+
+    .leftBottom-three > span:nth-child(2) {
+        /* color: rgb(209, 183, 33); */
+        font-size: 25px;
+    }
+
+    .leftBottom-one > span:nth-child(1),
+    .leftBottom-two > span:nth-child(1),
+    .leftBottom-three > span:nth-child(1) {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .innerLeft-top > div:first-child {
+        font-size: 6vw;
+    }
+    .rightCard-title {
+        font-size: 5vw;
+    }
+
+    .innerRight-card {
+        width: 80%;
+    }
+
+    .innerLeft-top > div:nth-child(2) {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 390px) {    
+
+    
+
+    .rightCard-title {
+        padding: 20px 0 5px 0;
+    }
+    .rightCard-subTitle {
+        font-size: 16px;
+        padding-top: 0;
+    }
+
+    .rightCard-button {
+        padding-bottom: 0;
+    }
 }
 
