@@ -671,7 +671,7 @@
     }
 
     .card {
-      margin-top: 0px !important;
+      margin-top: 50px !important;
       width: 350px !important;
       left: 0;
       transform: translate(0%,0%);

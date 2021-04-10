@@ -1,0 +1,18 @@
+
+
+.mainFoot-div {
+    /* height: 60px; */
+    background-color: #111;
+    /* border-radius: 20px 20px 0 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(209, 183, 33) !important;
+    font-family: Kiwi Maru;
+    font-size: 13px;
+    padding: 30px 0;
+    letter-spacing: 1.5px;
+    word-spacing: 2px;
+    /* padding-top: 100px; */
+    /* margin-top: 50px; */
+}
