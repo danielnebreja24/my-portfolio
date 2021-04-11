@@ -228,15 +228,17 @@ export default class Home extends React.Component {
                     : this.state.margin2,
                 }}
               >
-                <Tooltip title="Let's have a talk" placement="top">
-                  <Avatar
-                    size={50}
-                    style={{
-                      backgroundColor: "rgb(173, 150, 14)",
-                    }}
-                    icon={<PhoneTwoTone twoToneColor="#fff" />}
-                  />
-                </Tooltip>
+                <a href="#section_5">
+                  <Tooltip title="Let's have a talk" placement="top">
+                    <Avatar
+                      size={50}
+                      style={{
+                        backgroundColor: "rgb(173, 150, 14)",
+                      }}
+                      icon={<PhoneTwoTone twoToneColor="#fff" />}
+                    />
+                  </Tooltip>
+                </a>
               </span>
             </div>
           </div>
