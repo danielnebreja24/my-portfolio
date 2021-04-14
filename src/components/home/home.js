@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.css";
-import Logo from "../../images/dlb-logo4.png";
+import Logo from "../../images/dlb-logo7.png";
 import {
   DownOutlined,
   PhoneTwoTone,
@@ -12,7 +12,7 @@ import ScrollspyNav from "react-scrollspy-nav";
 
 import About from "../about/about";
 import Projects from "../projects/projects";
-import Mentor from "../mentor/mentor";
+// import Mentor from "../mentor/mentor";
 import Contact from "../contact/contact";
 import Footer from "../footer/footer";
 
@@ -102,7 +102,7 @@ export default class Home extends React.Component {
                         "section_1",
                         "section_2",
                         "section_3",
-                        "section_4",
+                        // "section_4",
                         "section_5",
                       ]}
                       activeNavClass="is-active"
@@ -124,9 +124,9 @@ export default class Home extends React.Component {
                         <span>
                           <a href="#section_3">My works</a>
                         </span>
-                        <span>
+                        {/* <span>
                           <a href="#section_4">Mentorship</a>
-                        </span>
+                        </span> */}
                         <span>
                           <a href="#section_5">Let's talk</a>
                         </span>
@@ -164,7 +164,7 @@ export default class Home extends React.Component {
                           "section_1",
                           "section_2",
                           "section_3",
-                          "section_4",
+                          // "section_4",
                           "section_5",
                         ]}
                         activeNavClass="is-active"
@@ -179,9 +179,9 @@ export default class Home extends React.Component {
                           <span>
                             <a href="#section_3">My works</a>
                           </span>
-                          <span>
+                          {/* <span>
                             <a href="#section_4">Mentorship</a>
-                          </span>
+                          </span> */}
                           <span>
                             <a href="#section_5">Let's talk</a>
                           </span>
@@ -246,8 +246,8 @@ export default class Home extends React.Component {
           <About />
           <div id="section_3" className="divider"></div>
           <Projects />
-          <div id="section_4" className="divider"></div>
-          <Mentor />
+          {/* <div id="section_4" className="divider"></div>
+          <Mentor /> */}
           <div
             id="section_5"
             className="divider"
