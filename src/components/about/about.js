@@ -12,7 +12,7 @@ import {
 } from "@ant-design/icons";
 
 import Resume from "../../files/my_resume.pdf";
-import Profile from "../../images/profile4.png";
+import Profile from "../../images/profile5.png";
 
 export default class About extends React.Component {
   constructor() {
