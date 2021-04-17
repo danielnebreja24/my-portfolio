@@ -12,15 +12,15 @@
     padding-bottom: 50px;
   }
 
-  .mainAbout-div::before {    
+  /* .mainAbout-div::before {    
     content: '';
     position: absolute;
     margin-top: -90px;
     border-top: 90px solid transparent;
     border-left: 100vw solid #222;  
-    /* z-index: -99 !important; */
+    z-index: -99 !important;
     
-  }
+  } */
 
   .mainAbout-inner {
       height: 100%;
