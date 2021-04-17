@@ -2,10 +2,13 @@ import React from "react";
 import "./home.css";
 import Logo from "../../images/dlb-logo7.png";
 import {
-  DownOutlined,
+  // DownOutlined,
   PhoneTwoTone,
   MenuOutlined,
   CloseOutlined,
+  FacebookOutlined,
+  InstagramOutlined,
+  LinkedinOutlined,
 } from "@ant-design/icons";
 import { Avatar, Tooltip } from "antd";
 import ScrollspyNav from "react-scrollspy-nav";
@@ -58,7 +61,10 @@ export default class Home extends React.Component {
     let scroll = window.pageYOffset;
     // console.log(window.pageYOffset);
     if (window.pageYOffset >= 30) {
-      this.setState({ position: "fixed", margin: "120px", margin2: "-10px" });
+      this.setState({ position: "fixed", margin2: "-10px" });
+      if (window.innerWidth > 630) {
+        this.setState({ margin: "120px" });
+      }
     } else {
       this.setState({ position: "", margin: "0px" });
     }
@@ -115,7 +121,7 @@ export default class Home extends React.Component {
                             href="#section_1"
                             className={this.state.introClass}
                           >
-                            Introduction
+                            Home
                           </a>
                         </span>
                         <span>
@@ -171,7 +177,7 @@ export default class Home extends React.Component {
                       >
                         <div className="drawerItem">
                           <span>
-                            <a href="#section_1">Introduction</a>
+                            <a href="#section_1">Home</a>
                           </span>
                           <span>
                             <a href="#section_2">About me</a>
@@ -197,10 +203,17 @@ export default class Home extends React.Component {
               <div
                 className="mainBody-inner"
                 style={{
-                  marginTop: this.state.margin === "120px" ? "200px" : "",
+                  marginTop: this.state.margin === "120px" ? "270px" : "",
                 }}
               >
-                <div className="mainInner-one">
+                <div className="mainInner-one">I AM</div>
+                <div className="mainInner-two">DANIEL</div>
+                <div className="mainInner-three">
+                  <span>
+                    A WEB <br></br>DEVELOPER
+                  </span>
+                </div>
+                {/* <div className="mainInner-one">
                   Hello there, my name is&nbsp;<a href="#section_1">Daniel</a>
                 </div>
                 <div className="mainInner-divider"></div>
@@ -216,8 +229,38 @@ export default class Home extends React.Component {
                       style={{ color: "rgb(173, 150, 14)", fontSize: "25px" }}
                     />
                   </span>
-                  {/* <DownCircleTwoTone className="dropdownIcon" /> */}
-                </a>
+                  <DownCircleTwoTone className="dropdownIcon" />
+                </a> */}
+              </div>
+              <div
+                className="mainBody-footer"
+                style={{
+                  marginTop: this.state.margin === "120px" ? "100px" : "",
+                }}
+              >
+                <div className="mainFoot-inner">
+                  <a
+                    href="https://www.facebook.com/danielcalisin.nebreja"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FacebookOutlined />
+                  </a>{" "}
+                  <a
+                    href="https://www.instagram.com/chickendinnel/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <InstagramOutlined />
+                  </a>{" "}
+                  <a
+                    href="https://www.linkedin.com/in/danielcalisinnebreja/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <LinkedinOutlined />
+                  </a>
+                </div>
               </div>
             </div>
             <div className="mainHome-foot">
