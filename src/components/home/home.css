@@ -8,6 +8,7 @@
 
 .mainPage {
     width: 100%;
+    /* max-width: 1700px; */
     height: auto;
     overflow: hidden;
     /* background-color: #222;   */
