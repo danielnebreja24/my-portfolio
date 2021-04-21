@@ -59,11 +59,11 @@ export default class Projects extends React.Component {
         },
         {
           label: "COLLABORATED",
-          title: "Single traveller's profile",
+          title: "Single traveler's profile",
           tech:
             " React JS, PHP, Laravel, Python Flask, Material-UI, Bootstrap ",
           desc:
-            "Single traveller's profile is a government project of Bureau of Immigration. Main goal of this project is to save and record all the immigrants or travellers who are going inside and outside of the Phillipines. Using the form or scanned passport of a single traveller it will record and save the information. The user can retrieve the information via name or passport number. There is also an embedded map that can track the traveller's location of previous stays.",
+            "Single traveler's profile is a government project of Bureau of Immigration. Main goal of this project is to save and record all the immigrants or travellers who are going inside and outside of the Phillipines. Using the form or scanned passport of a single traveller it will record and save the information. The user can retrieve the information via name or passport number. There is also an embedded map that can track the traveller's location of previous stays.",
           img: [BI1, BI2, BI3, BI4, BI5, BI6, BI7],
           view: ["github"],
           links: { github: "" },
