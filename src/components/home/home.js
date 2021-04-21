@@ -93,7 +93,7 @@ export default class Home extends React.Component {
                   height: this.state.position === "fixed" ? "13%" : "20%",
                   minHeight: "80px",
                   backgroundColor:
-                    this.state.position === "fixed" ? "#111" : "transparent",
+                    this.state.position === "fixed" ? "#222" : "transparent",
                 }}
               >
                 <div className="mainHead-inner">
@@ -113,7 +113,7 @@ export default class Home extends React.Component {
                       ]}
                       activeNavClass="is-active"
                       offset={-100}
-                      scrollDuration={this.state.showScrollspy ? "400" : "100"}
+                      scrollDuration={this.state.showScrollspy ? "200" : "100"}
                     >
                       <div className="mainHead-rightInner">
                         <span>

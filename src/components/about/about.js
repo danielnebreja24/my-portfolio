@@ -171,7 +171,7 @@ export default class About extends React.Component {
               <div className="innerRight-about">
                 <div className="rightAbout-one">
                   <div>
-                    <span>A little bit about me,</span>
+                    <span>Who am I?</span>
                   </div>
                   <div>
                     My name is Daniel Nebreja, a frontend developer who loves to
@@ -181,12 +181,21 @@ export default class About extends React.Component {
                     have background in backend, in my previous and current job
                     as a frontend developer. I am doing fullstack, working on
                     front and back end of the project to test every
-                    functionalities of the app.{" "}
+                    functionalities of the app. I am also a photographer. I love
+                    capturing nature and portrait some things that I find
+                    beautiful. Wanna see my shots? Visit my web page here &nbsp;
+                    <a
+                      href="https://www.linkedin.com/in/danielcalisinnebreja/"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Some Link
+                    </a>
                   </div>
                 </div>
                 <div className="rightAbout-two">
                   <div className="aboutTwo-title">
-                    <span>Some languages and technologies that I use,</span>
+                    <span>What are the technologies I use?</span>
                   </div>
                   <div className="aboutTwo-inner">
                     <div>
@@ -245,49 +254,48 @@ export default class About extends React.Component {
                     </div>
                   </div>
                 </div>
-                <div className="rightAbout-three">
-                  <div>
-                    <span>A little bit of my experience,</span>
-                  </div>
-                  <div>
-                    I started to learn programming way back 2016 when I was on
-                    college. Before learning about it I had to struggle first on
-                    my studies and failed on my subject. One day a teacher
-                    assured that me and my team in thesis will going to fail, I
-                    made that as a motivation to learn how to code. Though it's
-                    really hard for me to catch up but I am eager to prove not
-                    just for my teacher but to my groupmates that we will going
-                    to pass that subject no matter what. Little by little I
-                    started to understand the basics of the system that we're
-                    going to develop, the first language that I learned is PHP
-                    on backend and HTML, CSS on frontend. In God's help and
-                    through hard work we manage to pass that subject. On my
-                    succeeding years as an IT I can say that I and my team
-                    succeeded in terms of learnings and challenges, we passed
-                    and graduated. After that the rest is history.
-                  </div>
-                  <div>
-                    <span>Visit my profile here,</span>
-                  </div>
-                  <div className="profileBtns">
-                    <a rel="noreferrer" target="_blank" href={Resume}>
-                      <button className="btn">
-                        <FilePdfOutlined />
-                        &nbsp; My resume
-                      </button>
-                    </a>
-                    <a
-                      rel="noreferrer"
-                      target="_blank"
-                      href="https://www.linkedin.com/in/danielcalisinnebreja/"
-                    >
-                      <button className="btn">
-                        <LinkedinOutlined />
-                        &nbsp; LinkedIn
-                      </button>
-                    </a>
-                  </div>
-                </div>
+              </div>
+            </div>
+            <div className="aboutInner-bottom">
+              <div>
+                <span>About my professional experience</span>
+              </div>
+              <div>
+                I started to learn programming way back 2016 when I was on
+                college. Before learning about it I had to struggle first on my
+                studies and failed on my subject. One day a teacher assured that
+                me and my team in thesis will going to fail, I made that as a
+                motivation to learn how to code. Though it's really hard for me
+                to catch up but I am eager to prove not just for my teacher but
+                to my groupmates that we will going to pass that subject no
+                matter what. Little by little I started to understand the basics
+                of the system that we're going to develop, the first language
+                that I learned is PHP on backend and HTML, CSS on frontend. In
+                God's help and through hard work we manage to pass that subject.
+                On my succeeding years as an IT I can say that I and my team
+                succeeded in terms of learnings and challenges, we passed and
+                graduated. After that the rest is history.
+              </div>
+              <div>
+                <span>Visit my profile here,</span>
+              </div>
+              <div className="profileBtns">
+                <a rel="noreferrer" target="_blank" href={Resume}>
+                  <button className="btn">
+                    <FilePdfOutlined />
+                    &nbsp; My resume
+                  </button>
+                </a>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href="https://www.linkedin.com/in/danielcalisinnebreja/"
+                >
+                  <button className="btn">
+                    <LinkedinOutlined />
+                    &nbsp; LinkedIn
+                  </button>
+                </a>
               </div>
             </div>
           </div>
