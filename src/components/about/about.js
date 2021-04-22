@@ -167,7 +167,7 @@ export default class About extends React.Component {
               </div>
             </div>
             <div className="aboutInner-right">
-              <div className="innerRight-line"></div>
+              {/* <div className="innerRight-line"></div> */}
               <div className="innerRight-about">
                 <div className="rightAbout-one">
                   <div>
@@ -258,10 +258,11 @@ export default class About extends React.Component {
             </div>
             <div className="aboutInner-bottom">
               <div>
-                <span>About my professional experience</span>
+                {/* <span>About my professional experience</span> */}
+                <span>How about professional experience?</span>
               </div>
               <div>
-                I started to learn programming way back 2016 when I was on
+                {/* I started to learn programming way back 2016 when I was on
                 college. Before learning about it I had to struggle first on my
                 studies and failed on my subject. One day a teacher assured that
                 me and my team in thesis will going to fail, I made that as a
@@ -274,28 +275,54 @@ export default class About extends React.Component {
                 God's help and through hard work we manage to pass that subject.
                 On my succeeding years as an IT I can say that I and my team
                 succeeded in terms of learnings and challenges, we passed and
-                graduated. After that the rest is history.
+                graduated. After that the rest is history. */}
+                I started to learn programming when I was in college way back
+                2016. The first languages/technologies that I used are PHP,
+                HTML, CSS, Bootstrap, Javascript, JQuery and Ajax. The first
+                system that I develop is Inventory with point of sale system for
+                our client. On my OJT days I collaborated to develop a systems
+                using the technologies that I learned. After I graduated from
+                college on 2019 I started working as a Jr. Frontend Developer at
+                BoomSourcing, a BPO company located in Legazpi, Albay. I worked
+                as a JR. Frontend Developer for almost 6 months where I learned
+                new technologies like React JS, Node JS, ExpressJS, PostgreSQL
+                and many more, and after that I promoted as a Frontend Mentor
+                for almost 5 months. On March 2020 when pandemic happens
+                unfortunately we lost our job. After few months I started to
+                work as Data Encoder at Department of Health Bicol. As a data
+                encoder my job is to manage the database and also develop a
+                system that will help to convert data written in papers into
+                system. After 6 months I finished my contract and moved from
+                Bicol to Manila. I also started to apply and fortunately I was
+                hired as a Frontend Developer in Sparksoft Solutions INC. that
+                is based in Quezon. I am currently working in that company and
+                also learned some new technologies and web services like
+                AWS-Amplify. I like working on competitive and user-friendly
+                system and e-commerce web application that can run in different
+                platforms.
               </div>
               <div>
-                <span>Visit my profile here,</span>
-              </div>
-              <div className="profileBtns">
-                <a rel="noreferrer" target="_blank" href={Resume}>
-                  <button className="btn">
-                    <FilePdfOutlined />
-                    &nbsp; My resume
-                  </button>
-                </a>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  href="https://www.linkedin.com/in/danielcalisinnebreja/"
+                <span>Hey, visit my profile here,</span>
+                <div
+                // className="profileBtns"
                 >
-                  <button className="btn">
-                    <LinkedinOutlined />
-                    &nbsp; LinkedIn
-                  </button>
-                </a>
+                  <a rel="noreferrer" target="_blank" href={Resume}>
+                    <button className="btn">
+                      <FilePdfOutlined />
+                      &nbsp; My resume
+                    </button>
+                  </a>
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://www.linkedin.com/in/danielcalisinnebreja/"
+                  >
+                    <button className="btn">
+                      <LinkedinOutlined />
+                      &nbsp; LinkedIn
+                    </button>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

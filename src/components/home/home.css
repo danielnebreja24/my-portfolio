@@ -524,7 +524,14 @@
 
     .mainBody-footer {
         padding-left: 20px;
+        /* background-color: red; */
     }
+
+    .mainBody-inner {
+        height: 60%;
+        /* background-color: orange; */
+    }
+
 
     /* .mainInner-three {
         font-size: 1.6vw;
