@@ -25,72 +25,91 @@ export default class Contact extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(e);
-    var token = "daniel.nebreja29@gmail.com:Dane222714@";
-    let converted = btoa(token).trim();
-    this.setState({ disabled: true });
+
     axios({
+      method: "get",
       url:
-        "https://cors-anywhere.herokuapp.com/https://rest.clicksend.com/v3/sms/send",
-      method: "post",
+        "https://cors-anywhere.herokuapp.com/https://api.kvstore.io/collections",
       headers: {
-        "Content-type": "application/json",
-        Authorization: `Basic ${converted}`,
+        "Content-type": "*/*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": true,
+        "Access-Control-Allow-Methods": "POST, PUT, GET, OPTIONS, DELETE",
+        "Access-Control-Allow-Headers": "*",
+        // kvstoreio_api_key:
+        kvstoreio_api_key:
+          "b4dc4cfc09c112435eb2401eb13accf0530d2b1e91a702baaf1274e053252582",
       },
-      data: {
-        messages: [
-          {
-            body:
-              "name:" +
-              this.state.fullname +
-              ",email:" +
-              this.state.email +
-              ",phone:" +
-              this.state.phone +
-              ",msg:" +
-              this.state.message,
-            to: "+639351749597",
-            from: this.state.phone,
-          },
-        ],
-      },
-    })
-      .then((res) => {
-        console.log(res.data);
-        if (res.data.response_code === "SUCCESS") {
-          this.setState({
-            showAlert: true,
-            msg: "Success",
-            type: "info",
-            desc: "Thank you for reaching out. I'll respond as soon as I can.",
-          });
-          setTimeout(() => {
-            this.setState({ showAlert: false, disabled: false });
-          }, 4000);
-        } else {
-          this.setState({
-            showAlert: true,
-            msg: "Sorry",
-            type: "error",
-            desc: "Message not sent. Please try again later.",
-          });
-          setTimeout(() => {
-            this.setState({ showAlert: false, disabled: false });
-          }, 4000);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-        // this.setState({ disabled: true });
-        this.setState({
-          showAlert: true,
-          msg: "Sorry",
-          type: "error",
-          desc: "Message not sent. Please try again later.",
-        });
-        setTimeout(() => {
-          this.setState({ showAlert: false, disabled: false });
-        }, 4000);
-      });
+    }).then((res) => {
+      console.log(res.data);
+    });
+
+    // var token = "daniel.nebreja29@gmail.com:Dane222714@";
+    // let converted = btoa(token).trim();
+    // this.setState({ disabled: true });
+    // axios({
+    //   url:
+    //     "https://cors-anywhere.herokuapp.com/https://rest.clicksend.com/v3/sms/send",
+    //   method: "post",
+    //   headers: {
+    //     "Content-type": "application/json",
+    //     Authorization: `Basic ${converted}`,
+    //   },
+    //   data: {
+    //     messages: [
+    //       {
+    //         body:
+    //           "name:" +
+    //           this.state.fullname +
+    //           ",email:" +
+    //           this.state.email +
+    //           ",phone:" +
+    //           this.state.phone +
+    //           ",msg:" +
+    //           this.state.message,
+    //         to: "+639351749597",
+    //         from: this.state.phone,
+    //       },
+    //     ],
+    //   },
+    // })
+    //   .then((res) => {
+    //     console.log(res.data);
+    //     if (res.data.response_code === "SUCCESS") {
+    //       this.setState({
+    //         showAlert: true,
+    //         msg: "Success",
+    //         type: "info",
+    //         desc: "Thank you for reaching out. I'll respond as soon as I can.",
+    //       });
+    //       setTimeout(() => {
+    //         this.setState({ showAlert: false, disabled: false });
+    //       }, 4000);
+    //     } else {
+    //       this.setState({
+    //         showAlert: true,
+    //         msg: "Sorry",
+    //         type: "error",
+    //         desc: "Message not sent. Please try again later.",
+    //       });
+    //       setTimeout(() => {
+    //         this.setState({ showAlert: false, disabled: false });
+    //       }, 4000);
+    //     }
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //     // this.setState({ disabled: true });
+    //     this.setState({
+    //       showAlert: true,
+    //       msg: "Sorry",
+    //       type: "error",
+    //       desc: "Message not sent. Please try again later.",
+    //     });
+    //     setTimeout(() => {
+    //       this.setState({ showAlert: false, disabled: false });
+    //     }, 4000);
+    //   });
   };
 
   render() {

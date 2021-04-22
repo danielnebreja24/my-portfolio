@@ -550,7 +550,7 @@
   }
 
   .aboutInner-bottom {
-    padding: 40px 50px;
+    padding: 30px 40px;
     /* background-color: red; */
   }
 
@@ -558,10 +558,40 @@
     /* background-color: red; */
     /* font-size: 20px; */
     font-family: Acme;
-    font-size: 1.5em;
+    font-size: 1.8em;
     word-spacing: 3px;
     letter-spacing: 1.5px;
     color: rgb(173, 150, 14);
+    padding: 10px 0;
+  }
+
+  .aboutInner-bottom > div:nth-child(2){
+    font-size: 17px;
+    font-family: Acme;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+  }
+
+  .aboutInner-bottom > div:nth-child(3) {
+    /* background-color: red; */
+    margin-top: 30px;
+    width: 100% !important;
+    display: inline-flex;
+  }
+
+  .aboutInner-bottom > div:nth-child(3) > span {
+    font-family: Acme;
+    font-size: 1.4em;
+    word-spacing: 3px;
+    letter-spacing: 1.5px;
+    color: rgb(173, 150, 14);
+    margin-right: 20px;
+    /* padding: 10px 0; */
+  }
+
+  .aboutInner-bottom > div:nth-child(3) > div > * {
+    margin-right: 20px;
+    /* margin-bottom: 10px; */
   }
 
   .aboutTwo-inner > div:first-child > div:nth-child(2) > *,
@@ -591,13 +621,13 @@
     .aboutInner-left {
       /* height: 500px; */
       display: flex;
-      align-items: center;
-      justify-content: center;
+      /* align-items: center; */
+      /* justify-content: center; */
       /* background-color: #fff; */
     }
 
     .card {
-      margin-top: 100px;
+      margin-top: 20px;
       width: 90%;
       height: 500px;
       transform: translate(-50%,0);
@@ -634,6 +664,7 @@
 
     .rightAbout-three > div:nth-child(3) {
       padding-top: 20px;
+      /* background-color: red; */
     }    
 
     
@@ -645,11 +676,26 @@
     }
   }
 
+  @media only screen and (max-width: 950px) {
+    .aboutInner-left {
+      /* background-color: orange; */
+      width: 40%;
+    }
+
+    .aboutInner-right {
+      /* background-color: red; */
+      width: 60%;
+    }
+  }
+
   @media only screen and (max-width: 900px) {
     .aboutTwo-inner > div:nth-child(3) > div:first-child {
       text-align: center;
     }
-  }
+
+    
+    
+  }  
 
   @media only screen and (max-width: 850px) {   
 
@@ -675,7 +721,8 @@
     }
 
    .aboutInner-left {
-     width: 38%;
+     width: 40%;
+     /* background-color: red; */
    }
 
    .aboutInner-right {
@@ -684,7 +731,7 @@
   }
 
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 810px) {
     .mainAbout-inner {
       /* background-color: red; */
       padding: 0 15px;
@@ -694,10 +741,12 @@
     .aboutInner-right {
       width: 100%;
       margin-top: 30px;
+      padding-left: 20px;
     }
 
     .aboutInner-left {
       width: 100%;
+      padding-right: 0;
       /* background-color: orange; */
     }
 
@@ -724,11 +773,37 @@
     
   }
 
+  @media only screen and (max-width: 660px) {
+    .aboutInner-bottom > div:nth-child(3)  {
+      /* background-color: red; */
+      flex-direction: column;
+    }
+
+    .aboutInner-bottom > div:nth-child(3) > span {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 510px) {
+    .aboutInner-bottom > div:nth-child(1) {
+      font-size: 4.5vw;
+    }
+
+    .aboutInner-bottom > div:nth-child(2) {
+      font-size: 15.5px;
+    }
+
+    .aboutInner-bottom > div:nth-child(3) > span {
+      font-size: 1.3em;
+    }
+  }
+
   @media only screen and (max-width: 480px) {
     .rightAbout-one > div:first-child > span, 
     .rightAbout-two > div:first-child, 
     .rightAbout-three > div:first-child > span {
-      font-size: 4.8vw !important;
+      margin-top: 20px;
+      font-size: 5.5vw !important;
     }
   }
 
@@ -737,12 +812,16 @@
       flex-direction: column;
       /* background-color: orange; */
     }
+
+    .aboutInner-bottom {
+      padding: 0 15px;
+    }
     
 
     .rightAbout-one > div:first-child > span, 
     .rightAbout-two > div:first-child, 
     .rightAbout-three > div:first-child > span {
-      font-size: 4.6vw !important;
+      font-size: 5.2vw !important;
     }
 
     .aboutTwo-inner > div:nth-child(3) > div:first-child {
@@ -754,7 +833,11 @@
   @media only screen and (max-width: 425px) {
     .rightAbout-one > div:nth-child(2),
     .rightAbout-three > div:nth-child(2) {
-      font-size: 14px;
+      font-size: 15.5px;
+    }
+
+    .aboutInner-bottom > div:nth-child(2) {
+      font-size: 15px;
     }
   }
   
@@ -762,6 +845,10 @@
   @media only screen and (max-width: 375px) {
     .card .details {
       width: 90% !important;
+    }
+
+    .aboutInner-bottom > div:nth-child(2) {
+      font-size: 14.5px
     }
   }
 
