@@ -196,7 +196,9 @@
     /* margin: auto; */
     font-size: 18px;
     letter-spacing: 1.5px;
-    padding: 5px 40px;
+    /* padding: 5px 40px; */
+    width: 140px;
+    height: 45px;
 }
 
 .btnCard:disabled {

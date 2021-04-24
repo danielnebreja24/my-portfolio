@@ -195,10 +195,10 @@ export default class Projects extends React.Component {
                       label={
                         this.state.mode === "alternate" ? item.label : null
                       }
-                      index={i}
+                      key={i}
                       style={{ color: "#ddd" }}
                     >
-                      <div className="timeLine-item">
+                      <div className="timeLine-item" key={i}>
                         <div className="timeLine-title">
                           <span>{item.title}</span>
                           <span>{item.tech}</span>
@@ -236,6 +236,7 @@ export default class Projects extends React.Component {
                                             href={item.links.github}
                                             target="_blank"
                                             rel="noreferrer"
+                                            key={i}
                                           >
                                             <button key={i} className="btn">
                                               <GithubOutlined />
