@@ -22,94 +22,98 @@ export default class Contact extends React.Component {
     };
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
+    this.setState({ disabled: true });
     e.preventDefault();
-    console.log(e);
 
-    axios({
-      method: "get",
-      url:
-        "https://cors-anywhere.herokuapp.com/https://api.kvstore.io/collections",
-      headers: {
-        "Content-type": "*/*",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Credentials": true,
-        "Access-Control-Allow-Methods": "POST, PUT, GET, OPTIONS, DELETE",
-        "Access-Control-Allow-Headers": "*",
-        // kvstoreio_api_key:
-        kvstoreio_api_key:
-          "b4dc4cfc09c112435eb2401eb13accf0530d2b1e91a702baaf1274e053252582",
-      },
-    }).then((res) => {
-      console.log(res.data);
-    });
+    //For date
+    var date = new Date();
+    var month = date.getMonth() + 1;
+    var finalMonth = month.toString().length === 1 ? `0${month}` : month;
+    var day =
+      date.getDate().length === 1 ? `0${date.getDate()}` : date.getDate();
+    var year = date.getFullYear();
+    var fullDate = `${finalMonth}-${day}-${year}`;
 
-    // var token = "daniel.nebreja29@gmail.com:Dane222714@";
-    // let converted = btoa(token).trim();
-    // this.setState({ disabled: true });
-    // axios({
-    //   url:
-    //     "https://cors-anywhere.herokuapp.com/https://rest.clicksend.com/v3/sms/send",
-    //   method: "post",
-    //   headers: {
-    //     "Content-type": "application/json",
-    //     Authorization: `Basic ${converted}`,
-    //   },
-    //   data: {
-    //     messages: [
-    //       {
-    //         body:
-    //           "name:" +
-    //           this.state.fullname +
-    //           ",email:" +
-    //           this.state.email +
-    //           ",phone:" +
-    //           this.state.phone +
-    //           ",msg:" +
-    //           this.state.message,
-    //         to: "+639351749597",
-    //         from: this.state.phone,
-    //       },
-    //     ],
-    //   },
-    // })
-    //   .then((res) => {
-    //     console.log(res.data);
-    //     if (res.data.response_code === "SUCCESS") {
-    //       this.setState({
-    //         showAlert: true,
-    //         msg: "Success",
-    //         type: "info",
-    //         desc: "Thank you for reaching out. I'll respond as soon as I can.",
-    //       });
-    //       setTimeout(() => {
-    //         this.setState({ showAlert: false, disabled: false });
-    //       }, 4000);
-    //     } else {
-    //       this.setState({
-    //         showAlert: true,
-    //         msg: "Sorry",
-    //         type: "error",
-    //         desc: "Message not sent. Please try again later.",
-    //       });
-    //       setTimeout(() => {
-    //         this.setState({ showAlert: false, disabled: false });
-    //       }, 4000);
-    //     }
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //     // this.setState({ disabled: true });
-    //     this.setState({
-    //       showAlert: true,
-    //       msg: "Sorry",
-    //       type: "error",
-    //       desc: "Message not sent. Please try again later.",
-    //     });
-    //     setTimeout(() => {
-    //       this.setState({ showAlert: false, disabled: false });
-    //     }, 4000);
-    //   });
+    //For data to be send to api
+    var jsondata = {
+      name: this.state.fullname,
+      email: this.state.email,
+      contact: this.state.phone,
+      message: this.state.message,
+      date: fullDate,
+    };
+
+    //For times the user send a message
+    var times = localStorage.getItem("times")
+      ? localStorage.getItem("times")
+      : 0;
+
+    if (parseInt(times) >= 5) {
+      this.setState({
+        showAlert: true,
+        msg: "Sorry",
+        type: "error",
+        desc: "You exceeded the maximum message sent. Please try again later",
+      });
+      setTimeout(() => {
+        this.setState({ disabled: false });
+      }, 1000);
+      setTimeout(() => {
+        this.setState({ showAlert: false });
+      }, 4000);
+    } else {
+      // alert("success");
+      localStorage.setItem("times", parseInt(times) + 1);
+      axios({
+        async: true,
+        crossDomain: true,
+        url: "https://daniel-9dca.restdb.io/rest/messages",
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-apikey": "608402fe28bf9b609975a617",
+          "cache-control": "no-cache",
+        },
+        processData: false,
+        data: JSON.stringify(jsondata),
+      })
+        .then((res) => {
+          if (res.data) {
+            this.setState({
+              showAlert: true,
+              msg: "Success",
+              type: "info",
+              desc:
+                "Thank you for reaching out. I'll respond as soon as I can.",
+            });
+            // localStorage.setItem("times");
+          }
+          setTimeout(() => {
+            this.setState({ disabled: false });
+          }, 1000);
+          setTimeout(() => {
+            this.setState({ showAlert: false });
+          }, 4000);
+        })
+        .catch((err) => {
+          console.log(err);
+          this.setState({
+            showAlert: true,
+            msg: "Sorry",
+            type: "error",
+            desc: "Message not sent. Please try again later.",
+          });
+          setTimeout(() => {
+            this.setState({ disabled: false });
+          }, 1000);
+          setTimeout(() => {
+            this.setState({ showAlert: false });
+          }, 4000);
+        });
+    }
+
+    console.log(times);
   };
 
   render() {
@@ -199,7 +203,7 @@ export default class Contact extends React.Component {
                       className="inputCard"
                       placeholder="Please enter your name"
                       name="fullname"
-                      maxLength="30"
+                      maxLength="40"
                       onChange={(e) =>
                         this.setState({ [e.target.name]: e.target.value })
                       }
@@ -209,7 +213,7 @@ export default class Contact extends React.Component {
                       className="inputCard"
                       placeholder="Please enter your contact number"
                       name="phone"
-                      maxLength="15"
+                      maxLength="20"
                       onChange={(e) =>
                         this.setState({ [e.target.name]: e.target.value })
                       }
@@ -220,7 +224,7 @@ export default class Contact extends React.Component {
                       placeholder="Please enter your email address"
                       name="email"
                       type="email"
-                      maxLength="40"
+                      maxLength="50"
                       onChange={(e) =>
                         this.setState({ [e.target.name]: e.target.value })
                       }
@@ -235,7 +239,7 @@ export default class Contact extends React.Component {
                       onChange={(e) =>
                         this.setState({ [e.target.name]: e.target.value })
                       }
-                      maxLength="75"
+                      maxLength="150"
                       required
                     />
                   </div>
