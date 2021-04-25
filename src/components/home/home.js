@@ -42,6 +42,10 @@ export default class Home extends React.Component {
     }
     window.addEventListener("scroll", (e) => this.handleScroll(), true);
     window.addEventListener("resize", this.updateDimensions);
+
+    // if(this.props.history.location.pathname === "dashnow"){
+
+    // }
   }
 
   componentWillUnmount() {
