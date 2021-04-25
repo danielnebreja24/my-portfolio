@@ -1,0 +1,72 @@
+
+
+
+.mainDiv-dash {
+    /* background-color: red; */
+    height: 100vh;
+}
+
+.mainDiv-head {
+    height: 70px;
+    background-color: #001529;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px; 
+    align-items: center;
+}
+
+.mainDiv-side {
+    /* width: 250px; */
+    /* min-height: 100vh; */
+    background-color: orange;
+}
+
+.logo {
+    height: 60px;
+    /* width: 200px; */
+    margin: 10px;
+    /* background: rgba(255, 255, 255, 0.3); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo > img {
+      width: 60px;
+      /* max-height: 70%; */
+  }
+  
+  
+  .site-layout-background {
+    height: 80px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 10px; 
+    justify-content: space-between;
+  }
+
+  .site-layout-content {
+      margin: 10px;
+      /* background-color: red; */
+  }
+
+  .contentBody {
+      height: 90%;
+      padding: 10px;
+      overflow: auto;
+      /* background-color: orange; */
+  }
+
+  .contentFoot {
+      height: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #111 !important;
+      font-family: Kiwi Maru;
+      font-size: 13px;
+    /* padding: 20px 0; */
+      letter-spacing: 1.5px;
+      word-spacing: 2px;
+  }
