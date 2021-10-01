@@ -4,6 +4,54 @@ import { Timeline } from "antd";
 import { GithubOutlined, GlobalOutlined } from "@ant-design/icons";
 import Slider from "react-slick";
 
+// aeloop brokers
+import A1 from "../../images/a1.png";
+import A2 from "../../images/a2.png";
+import A3 from "../../images/a3.png";
+import A4 from "../../images/a4.png";
+import A5 from "../../images/a5.png";
+import A6 from "../../images/a6.png";
+import A7 from "../../images/a7.png";
+import A8 from "../../images/a8.png";
+import A9 from "../../images/a9.png";
+import A10 from "../../images/a10.png";
+import A11 from "../../images/a11.png";
+import A12 from "../../images/a12.png";
+import A13 from "../../images/a13.png";
+import A14 from "../../images/a14.png";
+import A15 from "../../images/a15.png";
+import A16 from "../../images/a16.png";
+import A17 from "../../images/a17.png";
+import A18 from "../../images/a18.png";
+import A19 from "../../images/a19.png";
+import A20 from "../../images/a20.png";
+import A21 from "../../images/a21.png";
+import A22 from "../../images/a22.png";
+import A23 from "../../images/a23.png";
+import A24 from "../../images/a24.png";
+import A25 from "../../images/a25.png";
+import A26 from "../../images/a26.png";
+import A27 from "../../images/a27.png";
+import A28 from "../../images/a28.png";
+import A29 from "../../images/a29.png";
+import A30 from "../../images/a30.png";
+import A31 from "../../images/a31.png";
+import A32 from "../../images/a32.png";
+import A33 from "../../images/a33.png";
+import A34 from "../../images/a34.png";
+
+// sparkfost-vax
+import SparkVax from "../../images/sparksoftvax.png";
+
+// qc-vax
+import QC1 from "../../images/qc1.jpg";
+import QC2 from "../../images/qc2.jpg";
+import QC3 from "../../images/qc3.jpg";
+import QC4 from "../../images/qc4.jpg";
+import QC5 from "../../images/qc5.jpg";
+import QC6 from "../../images/qc6.jpg";
+import QC7 from "../../images/qc7.jpg";
+
 //make me up project images
 import MakeMeUp1 from "../../images/make-me-up1.png";
 import MakeMeUp2 from "../../images/make-me-up2.png";
@@ -48,11 +96,75 @@ export default class Projects extends React.Component {
     this.state = {
       projects: [
         {
+          label: "PROJECT",
+          title: "Aeloop Brokers",
+          tech: " ReactJS, AWS-Amplify, GraphQL, FB Developer, Google Console, Google API's (Map, Places, etc.) ",
+          desc: "Aeloop brokers is a real estate e-commerce site. Broker and agent can list their property (Condo, House, Lot, etc.) in this site, it also consist of an appointment system where client can schedule their visit thru online or in-person. It's a full functional real estate system/e-commerce site with the following roles: Admin, Broker, Agent and Client. ",
+          img: [
+            A1,
+            A2,
+            A3,
+            A4,
+            A5,
+            A6,
+            A7,
+            A8,
+            A9,
+            A10,
+            A11,
+            A12,
+            A13,
+            A14,
+            A15,
+            A16,
+            A17,
+            A18,
+            A19,
+            A20,
+            A21,
+            A22,
+            A23,
+            A24,
+            A25,
+            A26,
+            A27,
+            A28,
+            A29,
+            A30,
+            A31,
+            A32,
+            A33,
+            A34,
+          ],
+          view: ["site"],
+          links: {
+            github: "",
+            site: "https://master.djb8ojd4r627f.amplifyapp.com/",
+          },
+        },
+        {
+          label: "PROJECT",
+          title: "Sparksoft Vax",
+          tech: " Form IO, ReactJS, AWS-Amplify, GraphQL, FB Developer, Google Console ",
+          desc: "Sparksoft Vax is a vaccination app made for the company private clients. It is a replication of the QC Vax, I just made some changes in terms of frontend.",
+          img: [SparkVax, QC2, QC3, QC4, QC5, QC6, QC7],
+          view: [],
+          links: { github: "", site: "" },
+        },
+        {
+          label: "PROJECT/COLLABORATED",
+          title: "QC Vax",
+          tech: " Form IO, ReactJS, AWS-Amplify, GraphQL, FB Developer, Google Console ",
+          desc: "QC Vax is an online vaccination site used by Quezon City citizens to make an appointment thru their mobile or web. They can register their account and after that, they have to fill in a form used by the Health Office. After they filled out they can now make an appointment on time, date, and location that are available and where they are comfortable.",
+          img: [QC1, QC2, QC3, QC4, QC5, QC6, QC7],
+          view: [],
+          links: { github: "", site: "" },
+        },
+        {
           label: "PROJECT/COLLABORATED",
           title: "Make me up",
           tech: " HTML, CSS, Bootstrap, Node JS, MySQL, Firebase, AWS ",
-          desc:
-            "Make me up is an online shop and booking service. This app basically is made for buyers, sellers and other service providers. You can sell your products, order a product, book a service or offer a service.",
+          desc: "Make me up is an online shop and booking service. This app basically is made for buyers, sellers and other service providers. You can sell your products, order a product, book a service or offer a service.",
           img: [MakeMeUp1, MakeMeUp2, MakeMeUp3, MakeMeUp4, MakeMeUp5],
           view: ["github", "site"],
           links: { github: "", site: "" },
@@ -60,10 +172,8 @@ export default class Projects extends React.Component {
         {
           label: "COLLABORATED",
           title: "Single traveler's profile",
-          tech:
-            " React JS, PHP, Laravel, Python Flask, Material-UI, Bootstrap ",
-          desc:
-            "Single traveler's profile is a government project of Bureau of Immigration. Main goal of this project is to save and record all the immigrants or travellers who are going inside and outside of the Phillipines. Using the form or scanned passport of a single traveller it will record and save the information. The user can retrieve the information via name or passport number. There is also an embedded map that can track the traveller's location of previous stays.",
+          tech: " React JS, PHP, Laravel, Python Flask, Material-UI, Bootstrap ",
+          desc: "Single traveler's profile is a government project of Bureau of Immigration. Main goal of this project is to save and record all the immigrants or travellers who are going inside and outside of the Phillipines. Using the form or scanned passport of a single traveller it will record and save the information. The user can retrieve the information via name or passport number. There is also an embedded map that can track the traveller's location of previous stays.",
           img: [BI1, BI2, BI3, BI4, BI5, BI6, BI7],
           view: ["github"],
           links: { github: "" },
@@ -72,8 +182,7 @@ export default class Projects extends React.Component {
           label: "PROJECT/COLLABORATED",
           title: "Doctor's call app",
           tech: " React JS, AWS Amplify, GraphQL, DynamoDB, Material-UI, CSS ",
-          desc:
-            "Doctor's call app is a web application created for the company who are selling their products to a certain doctor. The user can plan their schedule using the app and plot it to actual visit and record the time, important notes, products presented, signature of the doctor and the manager in-charge, etc. It covers also the inventory and records of the item, doctors, hospitals, etc. ",
+          desc: "Doctor's call app is a web application created for the company who are selling their products to a certain doctor. The user can plan their schedule using the app and plot it to actual visit and record the time, important notes, products presented, signature of the doctor and the manager in-charge, etc. It covers also the inventory and records of the item, doctors, hospitals, etc. ",
           img: [
             DoctorsCall1,
             DoctorsCall2,
@@ -90,8 +199,7 @@ export default class Projects extends React.Component {
           label: "COLLABORATED",
           title: "All my holidays",
           tech: " HTML, Bootstrap, Javascript, JQuery, PHP ",
-          desc:
-            "All my holiday is a site build for clients who are looking for a destinations to spend. It is also a online booking of flight through airlines. ",
+          desc: "All my holiday is a site build for clients who are looking for a destinations to spend. It is also a online booking of flight through airlines. ",
           img: [AllMyHolidays1, AllMyHolidays2],
           view: [],
           links: {},
@@ -100,8 +208,7 @@ export default class Projects extends React.Component {
           label: "PROJECT/COLLABORATED",
           title: "PHP Course",
           tech: " React JS, Ant Design, Gatsby, Material-UI ",
-          desc:
-            "PHP Course is a application made for the student/mentees of BoomCamp. The lessons, activities, materials, grades and other stuffs regarding the PHP Course that the mentees and the mentor needed are saved in this web application for them to easily access it whenever and whereever.",
+          desc: "PHP Course is a application made for the student/mentees of BoomCamp. The lessons, activities, materials, grades and other stuffs regarding the PHP Course that the mentees and the mentor needed are saved in this web application for them to easily access it whenever and whereever.",
           img: [PHP1, PHP2, PHP3],
           view: [],
           links: {},
@@ -110,8 +217,7 @@ export default class Projects extends React.Component {
           label: "PROJECT/COLLABORATED",
           title: "Frontend Boom Camp",
           tech: " React JS, Ant Design, Gatsby, Material-UI ",
-          desc:
-            "Frontend BoomCamp is a application made for the student/mentees of BoomCamp. The lessons, activities, grades and other stuffs that the mentees and the mentor needed are saved in this web application for them to easily access it whenever and whereever.",
+          desc: "Frontend BoomCamp is a application made for the student/mentees of BoomCamp. The lessons, activities, grades and other stuffs that the mentees and the mentor needed are saved in this web application for them to easily access it whenever and whereever.",
           img: [Frontend1, Frontend2],
           view: ["site"],
           links: { site: "https://frontend.boom.camp/" },
@@ -119,10 +225,8 @@ export default class Projects extends React.Component {
         {
           label: "PROJECT/COLLABORATED",
           title: "Handraiser",
-          tech:
-            " React JS, Node JS, Express JS, PostgreSQL, Socket IO, Material-UI, Ant-design, CSS ",
-          desc:
-            "Handraiser is a project created for mentor and student realtime interaction. The student can communicate or ask assistance from mentor through this app. It is also useful for mentor for them to easily collaborate and check for their respective mentees/students.",
+          tech: " React JS, Node JS, Express JS, PostgreSQL, Socket IO, Material-UI, Ant-design, CSS ",
+          desc: "Handraiser is a project created for mentor and student realtime interaction. The student can communicate or ask assistance from mentor through this app. It is also useful for mentor for them to easily collaborate and check for their respective mentees/students.",
           img: [],
           view: ["github"],
           links: { github: "" },
@@ -130,10 +234,8 @@ export default class Projects extends React.Component {
         {
           label: "PERSONAL PROJECT",
           title: "IG Project",
-          tech:
-            " React JS, Node JS, Express JS, PostgreSQL, Socket IO, Material-UI, Ant-design, CSS ",
-          desc:
-            "IG Project is my personal project. The main goal of this app is to clone the existing successfull Instagram UI and functions using the React JS and Node JS and intergrating the chat app by using the socket IO. I just made this project to practice my skills and experience using the technologies and for portfolio purposes. ",
+          tech: " React JS, Node JS, Express JS, PostgreSQL, Socket IO, Material-UI, Ant-design, CSS ",
+          desc: "IG Project is my personal project. The main goal of this app is to clone the existing successfull Instagram UI and functions using the React JS and Node JS and intergrating the chat app by using the socket IO. I just made this project to practice my skills and experience using the technologies and for portfolio purposes. ",
           img: [],
           view: ["github"],
           links: { github: "https://github.com/DanielNebreja/ig-project" },
