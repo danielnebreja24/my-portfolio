@@ -4,6 +4,28 @@ import { Timeline } from "antd";
 import { GithubOutlined, GlobalOutlined } from "@ant-design/icons";
 import Slider from "react-slick";
 
+// CFEI
+import CF1 from "../../images/cfei1.png";
+import CF2 from "../../images/cfei2.png";
+import CF3 from "../../images/cfei3.png";
+import CF4 from "../../images/cfei4.png";
+import CF5 from "../../images/cfei5.png";
+
+// DBO-Admin
+import DA from "../../images/dbo-admin.png";
+import DA1 from "../../images/dbo-admin2.png";
+import DA2 from "../../images/dbo-admin3.png";
+import DA3 from "../../images/dbo-admin4.png";
+import DA4 from "../../images/dbo-admin5.png";
+
+// QC-SSDD (4 apps)
+import SF1 from "../../images/4ssdd1.png";
+import SF2 from "../../images/4ssdd2.png";
+import SF3 from "../../images/4ssdd3.png";
+import SF4 from "../../images/4ssdd4.png";
+import SF5 from "../../images/4ssdd5.png";
+import SF6 from "../../images/4ssdd6.png";
+
 // aeloop brokers
 import A1 from "../../images/a1.png";
 import A2 from "../../images/a2.png";
@@ -95,6 +117,33 @@ export default class Projects extends React.Component {
     super();
     this.state = {
       projects: [
+        {
+          label: "PROJECT/COLLABORATED",
+          title: "DBO Application (ADMIN PANEL)",
+          tech: " ReactJS, AWS-Amplify, GraphQL, S3-Buckets, AppSync, DynamoDB, Ant-Design ",
+          desc: "DBO Admin is a separate and stand alone app of DBO Main Application, the purpose of this app is to update the status of a pending building application and also to upload the necessary documents/files that the applicant needed for his/her application to be approved by the City Engineering's Office.",
+          img: [DA, DA1, DA2, DA3, DA4],
+          view: [],
+          links: { github: "", site: "" },
+        },
+        {
+          label: "PROJECT/COLLABORATED",
+          title: "QC-SSDD (4 Application)",
+          tech: " ReactJS, AWS-Amplify, GraphQL, FormIO, NodeJS, AppSync, DynamoDB, API integration ",
+          desc: "QC SSDD app is the user management and dashboard that is used by the SSDD admin/employee to access the 4 application including the Appointment System, Benefit Tracker, Document Management System and the Queueing System.",
+          img: [SF1, SF2, SF3, SF4, SF5, SF6],
+          view: [],
+          links: { github: "", site: "" },
+        },
+        {
+          label: "PROJECT/COLLABORATED",
+          title: "QC-CFEI",
+          tech: " ReactJS, AWS-Amplify, GraphQL, AppSync, DynamoDB, Ant-Design, API Integration ",
+          desc: "QC CFEI (Certificate of Final Electrical Inspection) is a separate and stand alone application of DBO Main Application, it is made for the DBO Admin (Electrical Inspector) to access the applicant who applied for CFEI and his/her current status.",
+          img: [CF1, CF2, CF3, CF4, CF5],
+          view: [],
+          links: { github: "", site: "" },
+        },
         {
           label: "PROJECT",
           title: "Aeloop Brokers",

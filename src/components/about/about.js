@@ -11,7 +11,7 @@ import {
   InstagramOutlined,
 } from "@ant-design/icons";
 
-import Resume from "../../files/my_resume.pdf";
+import Resume from "../../files/my_resume(1).pdf";
 import Profile from "../../images/profile5.png";
 
 export default class About extends React.Component {
@@ -45,6 +45,7 @@ export default class About extends React.Component {
         "Javascript",
         "JQuery",
         "HTML",
+        "FormIO",
         "CSS",
         "Material-UI",
         "Ant Design",
@@ -58,8 +59,12 @@ export default class About extends React.Component {
         "Puppeteer",
         "Express JS",
         "GraphQL",
+        "REST API",
+        "API Development",
         "AJAX",
         "MySQL",
+        "MongoDB",
+        "DynamoDB",
       ],
       versionControl: ["Git", "GitLab", "GitHub"],
       web: true,
