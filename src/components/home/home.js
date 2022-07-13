@@ -96,8 +96,7 @@ export default class Home extends React.Component {
                   position: this.state.position,
                   height: this.state.position === "fixed" ? "13%" : "20%",
                   minHeight: "80px",
-                  backgroundColor:
-                    this.state.position === "fixed" ? "#222" : "transparent",
+                  backgroundColor: this.state.position === "fixed" ? "#222" : "transparent",
                 }}
               >
                 <div className="mainHead-inner">
@@ -117,14 +116,11 @@ export default class Home extends React.Component {
                       ]}
                       activeNavClass="is-active"
                       offset={-100}
-                      scrollDuration={this.state.showScrollspy ? "200" : "100"}
+                      scrollDuration={this.state.showScrollspy ? "80" : "100"}
                     >
                       <div className="mainHead-rightInner">
                         <span>
-                          <a
-                            href="#section_1"
-                            className={this.state.introClass}
-                          >
+                          <a href="#section_1" className={this.state.introClass}>
                             Home
                           </a>
                         </span>
@@ -156,13 +152,7 @@ export default class Home extends React.Component {
                   <div className="mainHead-right"></div>
                   <div className="responsiveDrawer">
                     <img src={Logo} alt="logo" className="mainHead-logo" />
-                    <span className="menuDiv">
-                      {!this.state.drawerState ? (
-                        <MenuOutlined onClick={() => this.handleDrawer()} />
-                      ) : (
-                        <CloseOutlined onClick={() => this.handleDrawer()} />
-                      )}
-                    </span>
+                    <span className="menuDiv">{!this.state.drawerState ? <MenuOutlined onClick={() => this.handleDrawer()} /> : <CloseOutlined onClick={() => this.handleDrawer()} />}</span>
                     <div
                       style={{
                         height: !this.state.drawerState ? "0" : "250px",
@@ -243,25 +233,13 @@ export default class Home extends React.Component {
                 }}
               >
                 <div className="mainFoot-inner">
-                  <a
-                    href="https://www.facebook.com/danielcalisin.nebreja"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href="https://www.facebook.com/danielcalisin.nebreja" target="_blank" rel="noreferrer">
                     <FacebookOutlined />
                   </a>{" "}
-                  <a
-                    href="https://www.instagram.com/chickendinnel/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href="https://www.instagram.com/chickendinnel/" target="_blank" rel="noreferrer">
                     <InstagramOutlined />
                   </a>{" "}
-                  <a
-                    href="https://www.linkedin.com/in/danielcalisinnebreja/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a href="https://www.linkedin.com/in/danielcalisinnebreja/" target="_blank" rel="noreferrer">
                     <LinkedinOutlined />
                   </a>
                 </div>
@@ -270,9 +248,7 @@ export default class Home extends React.Component {
             <div className="mainHome-foot">
               <span
                 style={{
-                  marginTop: this.state.showScrollspy
-                    ? this.state.margin
-                    : this.state.margin2,
+                  marginTop: this.state.showScrollspy ? this.state.margin : this.state.margin2,
                 }}
               >
                 <a href="#section_5">
@@ -295,11 +271,7 @@ export default class Home extends React.Component {
           <Projects />
           {/* <div id="section_4" className="divider"></div>
           <Mentor /> */}
-          <div
-            id="section_5"
-            className="divider"
-            style={{ height: "70px" }}
-          ></div>
+          <div id="section_5" className="divider" style={{ height: "70px" }}></div>
           <Contact />
           <Footer />
         </div>
