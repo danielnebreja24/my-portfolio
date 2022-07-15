@@ -11,7 +11,7 @@ import {
   InstagramOutlined,
 } from "@ant-design/icons";
 
-import Resume from "../../files/my_resume(1).pdf";
+import Resume from "../../files/danielresume2022.pdf";
 import Profile from "../../images/profile5.png";
 
 export default class About extends React.Component {

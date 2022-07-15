@@ -27,40 +27,40 @@ import SF5 from "../../images/4ssdd5.png";
 import SF6 from "../../images/4ssdd6.png";
 
 // aeloop brokers
-// import A1 from "../../images/a1.png";
-// import A2 from "../../images/a2.png";
-// import A3 from "../../images/a3.png";
-// import A4 from "../../images/a4.png";
-// import A5 from "../../images/a5.png";
-// import A6 from "../../images/a6.png";
-// import A7 from "../../images/a7.png";
-// import A8 from "../../images/a8.png";
-// import A9 from "../../images/a9.png";
-// import A10 from "../../images/a10.png";
-// import A11 from "../../images/a11.png";
-// import A12 from "../../images/a12.png";
-// import A13 from "../../images/a13.png";
-// import A14 from "../../images/a14.png";
-// import A15 from "../../images/a15.png";
-// import A16 from "../../images/a16.png";
-// import A17 from "../../images/a17.png";
-// import A18 from "../../images/a18.png";
-// import A19 from "../../images/a19.png";
-// import A20 from "../../images/a20.png";
-// import A21 from "../../images/a21.png";
-// import A22 from "../../images/a22.png";
-// import A23 from "../../images/a23.png";
-// import A24 from "../../images/a24.png";
-// import A25 from "../../images/a25.png";
-// import A26 from "../../images/a26.png";
-// import A27 from "../../images/a27.png";
-// import A28 from "../../images/a28.png";
-// import A29 from "../../images/a29.png";
-// import A30 from "../../images/a30.png";
-// import A31 from "../../images/a31.png";
-// import A32 from "../../images/a32.png";
-// import A33 from "../../images/a33.png";
-// import A34 from "../../images/a34.png";
+import A1 from "../../images/a1.png";
+import A2 from "../../images/a2.png";
+import A3 from "../../images/a3.png";
+import A4 from "../../images/a4.png";
+import A5 from "../../images/a5.png";
+import A6 from "../../images/a6.png";
+import A7 from "../../images/a7.png";
+import A8 from "../../images/a8.png";
+import A9 from "../../images/a9.png";
+import A10 from "../../images/a10.png";
+import A11 from "../../images/a11.png";
+import A12 from "../../images/a12.png";
+import A13 from "../../images/a13.png";
+import A14 from "../../images/a14.png";
+import A15 from "../../images/a15.png";
+import A16 from "../../images/a16.png";
+import A17 from "../../images/a17.png";
+import A18 from "../../images/a18.png";
+import A19 from "../../images/a19.png";
+import A20 from "../../images/a20.png";
+import A21 from "../../images/a21.png";
+import A22 from "../../images/a22.png";
+import A23 from "../../images/a23.png";
+import A24 from "../../images/a24.png";
+import A25 from "../../images/a25.png";
+import A26 from "../../images/a26.png";
+import A27 from "../../images/a27.png";
+import A28 from "../../images/a28.png";
+import A29 from "../../images/a29.png";
+import A30 from "../../images/a30.png";
+import A31 from "../../images/a31.png";
+import A32 from "../../images/a32.png";
+import A33 from "../../images/a33.png";
+import A34 from "../../images/a34.png";
 
 // sparkfost-vax
 import SparkVax from "../../images/sparksoftvax.png";
@@ -120,6 +120,7 @@ export default class Projects extends React.Component {
       // console.log(i)
       aeloopImg.push(`A${i}`);
     }
+    console.log(aeloopImg);
     this.state = {
       projects: [
         {
@@ -154,7 +155,42 @@ export default class Projects extends React.Component {
           title: "Aeloop Brokers",
           tech: " ReactJS, AWS-Amplify, GraphQL, FB Developer, Google Console, Google API's (Map, Places, etc.) ",
           desc: "Aeloop brokers is a real estate e-commerce site. Broker and agent can list their property (Condo, House, Lot, etc.) in this site, it also consist of an appointment system where client can schedule their visit thru online or in-person. It's a full functional real estate system/e-commerce site with the following roles: Admin, Broker, Agent and Client. ",
-          img: aeloopImg,
+          img: [
+            A1,
+            A2,
+            A3,
+            A4,
+            A5,
+            A6,
+            A7,
+            A8,
+            A9,
+            A10,
+            A11,
+            A12,
+            A13,
+            A14,
+            A15,
+            A16,
+            A17,
+            A18,
+            A19,
+            A20,
+            A21,
+            A22,
+            A23,
+            A24,
+            A25,
+            A26,
+            A27,
+            A28,
+            A29,
+            A30,
+            A31,
+            A32,
+            A33,
+            A34,
+          ],
           view: ["site"],
           links: {
             github: "",
@@ -202,7 +238,15 @@ export default class Projects extends React.Component {
           title: "Doctor's call app",
           tech: " React JS, AWS Amplify, GraphQL, DynamoDB, Material-UI, CSS ",
           desc: "Doctor's call app is a web application created for the company who are selling their products to a certain doctor. The user can plan their schedule using the app and plot it to actual visit and record the time, important notes, products presented, signature of the doctor and the manager in-charge, etc. It covers also the inventory and records of the item, doctors, hospitals, etc. ",
-          img: [DoctorsCall1, DoctorsCall2, DoctorsCall3, DoctorsCall4, DoctorsCall5, DoctorsCall6, DoctorsCall7],
+          img: [
+            DoctorsCall1,
+            DoctorsCall2,
+            DoctorsCall3,
+            DoctorsCall4,
+            DoctorsCall5,
+            DoctorsCall6,
+            DoctorsCall7,
+          ],
           view: ["github", "site"],
           links: { github: "", site: "" },
         },
@@ -296,18 +340,28 @@ export default class Projects extends React.Component {
         <div className="mainProjects-div">
           <div className="mainProject-title">
             <span>Projects and Collaboration</span>
-            <span>Here are some of projects I've been worked/collaborated on.</span>
+            <span>
+              Here are some of projects I've been worked/collaborated on.
+            </span>
           </div>
           <div className="mainProject-body">
             <Timeline mode={this.state.mode} style={{ marginTop: "70px" }}>
               {this.state.projects.length
                 ? this.state.projects.map((item, i) => (
-                    <Timeline.Item label={this.state.mode === "alternate" ? item.label : null} key={i} style={{ color: "#ddd" }}>
+                    <Timeline.Item
+                      label={
+                        this.state.mode === "alternate" ? item.label : null
+                      }
+                      key={i}
+                      style={{ color: "#ddd" }}
+                    >
                       <div className="timeLine-item" key={i}>
                         <div className="timeLine-title">
                           <span>{item.title}</span>
                           <span>{item.tech}</span>
-                          {this.state.mode === "left" ? <span>({item.label})</span> : null}
+                          {this.state.mode === "left" ? (
+                            <span>({item.label})</span>
+                          ) : null}
                         </div>
                         <div className="timeLine-body">
                           <div className="timeLine-img">
@@ -317,7 +371,11 @@ export default class Projects extends React.Component {
                                   {item.img.map((img, index) => (
                                     <div key={index}>
                                       <div className="carouselItem">
-                                        <img src={img} className="carouselImg" alt="carousel" />
+                                        <img
+                                          src={img}
+                                          className="carouselImg"
+                                          alt="carousel"
+                                        />
                                       </div>
                                     </div>
                                   ))}
@@ -331,7 +389,12 @@ export default class Projects extends React.Component {
                                     if (view === "github") {
                                       if (item.links.github) {
                                         return (
-                                          <a href={item.links.github} target="_blank" rel="noreferrer" key={i}>
+                                          <a
+                                            href={item.links.github}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            key={i}
+                                          >
                                             <button key={i} className="btn">
                                               <GithubOutlined />
                                               &nbsp; GitHub
@@ -349,7 +412,11 @@ export default class Projects extends React.Component {
                                     } else {
                                       if (item.links.site) {
                                         return (
-                                          <a href={item.links.site} target="_blank" rel="noreferrer">
+                                          <a
+                                            href={item.links.site}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                          >
                                             <button key={i} className="btn">
                                               <GlobalOutlined />
                                               &nbsp; View Site
