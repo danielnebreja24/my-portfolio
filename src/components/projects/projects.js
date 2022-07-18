@@ -115,12 +115,12 @@ import PHP3 from "../../images/php-course2.png";
 export default class Projects extends React.Component {
   constructor() {
     super();
-    let aeloopImg = [];
-    for (let i = 1; i <= 34; i++) {
-      // console.log(i)
-      aeloopImg.push(`A${i}`);
-    }
-    console.log(aeloopImg);
+    // let aeloopImg = [];
+    // for (let i = 1; i <= 34; i++) {
+    //   // console.log(i)
+    //   aeloopImg.push(`A${i}`);
+    // }
+    // // console.log(aeloopImg);
     this.state = {
       projects: [
         {
@@ -194,7 +194,7 @@ export default class Projects extends React.Component {
           view: ["site"],
           links: {
             github: "",
-            site: "https://master.djb8ojd4r627f.amplifyapp.com/",
+            site: "https://master.d3g2vr1xtedbix.amplifyapp.com/",
           },
         },
         {
