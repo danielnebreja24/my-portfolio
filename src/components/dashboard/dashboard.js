@@ -27,7 +27,8 @@ export default class Dashboard extends React.Component {
 
   componentDidMount() {
     if (localStorage.getItem("loglog") !== "laLyka") {
-      this.props.history.push("/lognow");
+      // this.props.history.push("/lognow");
+      window.location.pathname = "/lognow";
     }
   }
 
@@ -45,7 +46,8 @@ export default class Dashboard extends React.Component {
 
   handleLogout = () => {
     localStorage.clear();
-    this.props.history.push("/lognow");
+    // this.props.history.push("/lognow");
+    window.location.pathname = "/lognow";
   };
 
   render() {

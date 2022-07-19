@@ -22,10 +22,10 @@ function App() {
     // </Router>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
-          <Route path="/dashnow" element={<Dashboard />} />
-          <Route path="lognow" element={<Login />}></Route>
-        </Route>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/dashnow" element={<Dashboard />} />
+        <Route path="/lognow" element={<Login />} />
+        {/* </Route> */}
       </Routes>
     </BrowserRouter>
   );

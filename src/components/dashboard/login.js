@@ -24,7 +24,8 @@ export default class Login extends React.Component {
     this.setState({ year: year });
 
     if (localStorage.getItem("loglog") === "laLyka") {
-      this.props.history.push("/dashnow");
+      // this.props.history.push("/dashnow");
+      window.location.pathname = "/dashnow";
     }
 
     // console.log(REACT_APP_UNAME, REACT_APP_PWD);
@@ -48,7 +49,8 @@ export default class Login extends React.Component {
       setTimeout(() => {
         this.setState({ disabled: false });
         localStorage.setItem("loglog", "laLyka");
-        this.props.history.push("/dashnow");
+        // this.props.history.push("/dashnow");
+        window.location.pathname = "/dashnow";
       }, 2000);
     } else {
       //   console.log("boplaks");
@@ -86,7 +88,7 @@ export default class Login extends React.Component {
             <img
               src={Logo}
               alt="logo"
-              onClick={() => this.props.history.push("/")}
+              onClick={() => (window.location.pathname = "/")}
             />
           </div>
           <div className="mainLogin-body">
