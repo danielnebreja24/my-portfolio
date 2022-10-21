@@ -44,12 +44,14 @@ export default class About extends React.Component {
         "React JS",
         "Javascript",
         "JQuery",
-        "HTML",
+        "HTML 5",
         "FormIO",
-        "CSS",
+        "CSS 3",
+        "Sass",
         "Material-UI",
         "Ant Design",
         "Bootstrap",
+        "HandlebarJS"
       ],
       backend: [
         "PHP",
@@ -65,6 +67,8 @@ export default class About extends React.Component {
         "MySQL",
         "MongoDB",
         "DynamoDB",
+        "WebSocket",
+        "Socket.io"
       ],
       versionControl: ["Git", "GitLab", "GitHub"],
       web: true,
