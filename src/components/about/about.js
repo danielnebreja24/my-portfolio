@@ -57,7 +57,7 @@ export default class About extends React.Component {
         "Monaco",
         "Google Console",
         "FB Developer",
-        "Google API's (maps,, places, etc.)",
+        "Google API's (maps, places, etc.)",
         "S3 Buckets"
         
       ],
