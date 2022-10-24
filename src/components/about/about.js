@@ -41,9 +41,10 @@ export default class About extends React.Component {
       nav1: null,
       nav2: null,
       frontend: [
-        "React JS",
+        "React JS",        
         "Javascript",
         "JQuery",
+        "Redux",
         "HTML 5",
         "FormIO",
         "CSS 3",
@@ -51,7 +52,14 @@ export default class About extends React.Component {
         "Material-UI",
         "Ant Design",
         "Bootstrap",
-        "HandlebarJS"
+        "HandlebarJS",
+        "Gulp",
+        "Monaco",
+        "Google Console",
+        "FB Developer",
+        "Google API's (maps,, places, etc.)",
+        "S3 Buckets"
+        
       ],
       backend: [
         "PHP",
@@ -61,6 +69,7 @@ export default class About extends React.Component {
         "Puppeteer",
         "Express JS",
         "GraphQL",
+        "AppSync",
         "REST API",
         "API Development",
         "AJAX",
