@@ -3,7 +3,7 @@ import "./App.css";
 // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import "antd/dist/antd.css";
-import "antd/dist/antd.min.css";
+// import "antd/dist/antd.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

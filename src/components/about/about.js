@@ -3,15 +3,9 @@ import "./about.css";
 // import MyAvatar from "../../images/avatar2.png";
 // import Slider from "react-slick";
 import { Tag } from "antd";
-import {
-  FilePdfOutlined,
-  LinkedinOutlined,
-  GoogleOutlined,
-  GithubOutlined,
-  InstagramOutlined,
-} from "@ant-design/icons";
+import { FilePdfOutlined, LinkedinOutlined, GoogleOutlined, GithubOutlined, InstagramOutlined } from "@ant-design/icons";
 
-import Resume from "../../files/danielresume2022.pdf";
+import Resume from "../../files/DANIEL_RESUME(2023).pdf";
 import Profile from "../../images/profile5.png";
 
 export default class About extends React.Component {
@@ -36,12 +30,14 @@ export default class About extends React.Component {
         "https://seeklogo.com/images/P/puppeteer-logo-254C5F1692-seeklogo.com.png",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png",
         "https://freepikpsd.com/wp-content/uploads/2019/10/bootstrap-logo-png-1-Transparent-Images-Free.png",
-        "https://www.pngitem.com/pimgs/m/385-3850895_graphql-logo-svg-hd-png-download.png",
+        "https://www.pngitem.com/pimgs/m/385-3850895_graphql-logo-svg-hd-png-download.png"
       ],
       nav1: null,
       nav2: null,
       frontend: [
-        "React JS",        
+        "React JS",
+        "Next JS",
+        "APi Context",
         "Javascript",
         "JQuery",
         "Redux",
@@ -59,7 +55,6 @@ export default class About extends React.Component {
         "FB Developer",
         "Google API's (maps, places, etc.)",
         "S3 Buckets"
-        
       ],
       backend: [
         "PHP",
@@ -79,21 +74,17 @@ export default class About extends React.Component {
         "WebSocket",
         "Socket.io"
       ],
-      versionControl: ["Git", "GitLab", "GitHub"],
-      web: true,
+      versionControl: ["Git", "GitLab", "GitHub", "Cypress", "Jest"],
+      web: true
     };
   }
 
   componentDidMount() {
     this.setState({
       nav1: this.slider1,
-      nav2: this.slider2,
+      nav2: this.slider2
     });
-    if (
-      /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      )
-    ) {
+    if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
       this.setState({ web: false });
     } else {
       this.setState({ web: true });
@@ -101,18 +92,6 @@ export default class About extends React.Component {
   }
 
   render() {
-    // console.log(this.state.web);
-    // const settings = {
-    //   arrows: false,
-    //   infinite: true,
-    //   slidesToShow: 3,
-    //   slidesToScroll: 1,
-    //   autoplay: true,
-    //   speed: 2000,
-    //   autoplaySpeed: 2000,
-    //   cssEase: "linear",
-    //   className: "slickDiv2",
-    // };
     return (
       <>
         <div className="mainAbout-div">
@@ -129,10 +108,7 @@ export default class About extends React.Component {
                       <br></br>
                       <span>Frontend Web Developer</span>
                     </h1>
-                    <p>
-                      Hey, you can also review or reach me through these
-                      accounts.
-                    </p>
+                    <p>Hey, you can also review or reach me through these accounts.</p>
                     <ul>
                       <li>
                         <a rel="noreferrer" target="_blank" href={Resume}>
@@ -153,29 +129,17 @@ export default class About extends React.Component {
                         </a>
                       </li>
                       <li>
-                        <a
-                          rel="noreferrer"
-                          target="_blank"
-                          href="https://github.com/DanielNebreja?tab=repositories"
-                        >
+                        <a rel="noreferrer" target="_blank" href="https://github.com/DanielNebreja?tab=repositories">
                           <GithubOutlined />
                         </a>
                       </li>
                       <li>
-                        <a
-                          rel="noreferrer"
-                          target="_blank"
-                          href="https://www.linkedin.com/in/danielcalisinnebreja/"
-                        >
+                        <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/danielcalisinnebreja/">
                           <LinkedinOutlined />
                         </a>
                       </li>
                       <li>
-                        <a
-                          rel="noreferrer"
-                          target="_blank"
-                          href="https://www.instagram.com/chickendinnel/"
-                        >
+                        <a rel="noreferrer" target="_blank" href="https://www.instagram.com/chickendinnel/">
                           <InstagramOutlined />
                         </a>
                       </li>
@@ -185,30 +149,15 @@ export default class About extends React.Component {
               </div>
             </div>
             <div className="aboutInner-right">
-              {/* <div className="innerRight-line"></div> */}
               <div className="innerRight-about">
                 <div className="rightAbout-one">
                   <div>
                     <span>Who am I?</span>
                   </div>
                   <div>
-                    My name is Daniel Nebreja, a frontend developer who loves to
-                    create web, mobile and user friendly applications. I love
-                    designing web applications and making visualize designs into
-                    reality. Though my passion is frontend developing I also
-                    have background in backend, in my previous and current job
-                    as a frontend developer. I am doing fullstack, working on
-                    front and back end of the project to test every
-                    functionalities of the app. I am also a photographer. I love
-                    capturing nature and portrait some things that I find
-                    beautiful. Wanna see my shots? Visit my web page here &nbsp;
-                    <a
-                      href="https://www.linkedin.com/in/danielcalisinnebreja/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      Some Link
-                    </a>
+                    Experienced software engineer and freelancer with a strong passion for creating top-notch apps that can be used on both the web and mobile platforms. Any business may develop
+                    challenging initiatives with the aid of my abilities, experiences, and zeal. I can handle any project alone or in a team because of my combination of front-end and back-end
+                    expertise. And carrying out software jobs from beginning to end, including testing.
                   </div>
                 </div>
                 <div className="rightAbout-two">
@@ -226,7 +175,7 @@ export default class About extends React.Component {
                             style={{
                               borderRadius: "5px",
                               fontSize: "16px",
-                              padding: "3px 6px",
+                              padding: "3px 6px"
                             }}
                           >
                             {item}
@@ -244,7 +193,7 @@ export default class About extends React.Component {
                             style={{
                               borderRadius: "5px",
                               fontSize: "16px",
-                              padding: "3px 6px",
+                              padding: "3px 6px"
                             }}
                           >
                             {item}
@@ -262,7 +211,7 @@ export default class About extends React.Component {
                             style={{
                               borderRadius: "5px",
                               fontSize: "16px",
-                              padding: "3px 6px",
+                              padding: "3px 6px"
                             }}
                           >
                             {item}
@@ -276,65 +225,30 @@ export default class About extends React.Component {
             </div>
             <div className="aboutInner-bottom">
               <div>
-                {/* <span>About my professional experience</span> */}
                 <span>How about professional experience?</span>
               </div>
               <div>
-                {/* I started to learn programming way back 2016 when I was on
-                college. Before learning about it I had to struggle first on my
-                studies and failed on my subject. One day a teacher assured that
-                me and my team in thesis will going to fail, I made that as a
-                motivation to learn how to code. Though it's really hard for me
-                to catch up but I am eager to prove not just for my teacher but
-                to my groupmates that we will going to pass that subject no
-                matter what. Little by little I started to understand the basics
-                of the system that we're going to develop, the first language
-                that I learned is PHP on backend and HTML, CSS on frontend. In
-                God's help and through hard work we manage to pass that subject.
-                On my succeeding years as an IT I can say that I and my team
-                succeeded in terms of learnings and challenges, we passed and
-                graduated. After that the rest is history. */}
-                I started to learn programming when I was in college way back
-                2016. The first languages/technologies that I used are PHP,
-                HTML, CSS, Bootstrap, Javascript, JQuery and Ajax. The first
-                system that I develop is Inventory with point of sale system for
-                our client. On my OJT days I collaborated to develop a systems
-                using the technologies that I learned. After I graduated from
-                college on 2019 I started working as a Jr. Frontend Developer at
-                BoomSourcing, a BPO company located in Legazpi, Albay. I worked
-                as a JR. Frontend Developer for almost 6 months where I learned
-                new technologies like React JS, Node JS, ExpressJS, PostgreSQL
-                and many more, and after that I promoted as a Frontend Mentor
-                for almost 5 months. On March 2020 when pandemic happens
-                unfortunately we lost our job. After few months I started to
-                work as Data Encoder at Department of Health Bicol. As a data
-                encoder my job is to manage the database and also develop a
-                system that will help to convert data written in papers into
-                system. After 6 months I finished my contract and moved from
-                Bicol to Manila. I also started to apply and fortunately I was
-                hired as a Frontend Developer in Sparksoft Solutions INC. that
-                is based in Quezon. I am currently working in that company and
-                also learned some new technologies and web services like
-                AWS-Amplify. I like working on competitive and user-friendly
-                system and e-commerce web application that can run in different
-                platforms.
+                I started to learn programming when I was in college, way back in 2016, when I built an Inventory system with Point of sale using HTML and CSS, Bootstrap, Javascript, JQuery, AJAX,
+                PHP, and MySql. After I graduated, I started working for a BPO company in our province as a Jr. Frontend Developer, where I learned and used new technologies in projects such as React
+                JS, Node JS, Web Socket, Express, and many more. After a few months, I got promoted to the Mentor where I teach these technologies to our mentees. I worked there for almost a year.
+                After that, I started working in the Department of Health in our province as an IT specialist, where I managed to create a system to ease the process of our daily paperwork. After 6
+                months, I decided to pursue my career in Manila, where I worked as a full-stack developer for an IT solutions Company (Sparksoft Solutions). I handled multiple projects here, such as
+                government, e-commerce, private clients, real estate projects, and many more. After a few months, I got promoted to Team Lead Developer, where I manage a team of developers to build
+                different projects as well. As I'm working full time, I'm also working as a freelancer, and I got a chance to work with multiple clients abroad, where I collaborated to build projects
+                such as Online sabong, an air ticketing app, a knowledgebase system, company websites, and many more. After 2 years, I got a chance to be offered by one of my clients abroad to work
+                for their company full time, and they offered me the position of software engineer. I started working here on some projects, such as the company website, knowledgebase app, and many
+                more. After a year, I was offered a new job path as a frontend software engineer by a firm abroard as well, and I'm currently working here constructing a crypto trading platform.
               </div>
               <div>
                 <span>Hey, visit my profile here,</span>
-                <div
-                // className="profileBtns"
-                >
+                <div>
                   <a rel="noreferrer" target="_blank" href={Resume}>
                     <button className="btn">
                       <FilePdfOutlined />
                       &nbsp; My resume
                     </button>
                   </a>
-                  <a
-                    rel="noreferrer"
-                    target="_blank"
-                    href="https://www.linkedin.com/in/danielcalisinnebreja/"
-                  >
+                  <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/danielcalisinnebreja/">
                     <button className="btn">
                       <LinkedinOutlined />
                       &nbsp; LinkedIn

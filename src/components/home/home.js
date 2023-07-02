@@ -8,7 +8,7 @@ import {
   CloseOutlined,
   FacebookOutlined,
   InstagramOutlined,
-  LinkedinOutlined,
+  LinkedinOutlined
 } from "@ant-design/icons";
 import { Avatar, Tooltip } from "antd";
 import ScrollspyNav from "react-scrollspy-nav";
@@ -30,7 +30,7 @@ export default class Home extends React.Component {
       introClass: "",
       mentorClass: "",
       projectClass: "",
-      contactClass: "",
+      contactClass: ""
     };
   }
 
@@ -94,9 +94,9 @@ export default class Home extends React.Component {
                 className="mainHome-header"
                 style={{
                   position: this.state.position,
-                  height: this.state.position === "fixed" ? "13%" : "20%",
+                  height: this.state.position === "fixed" ? "80px" : "20%",
                   minHeight: "80px",
-                  backgroundColor: this.state.position === "fixed" ? "#222" : "transparent",
+                  backgroundColor: this.state.position === "fixed" ? "#222" : "transparent"
                 }}
               >
                 <div className="mainHead-inner">
@@ -112,7 +112,7 @@ export default class Home extends React.Component {
                         "section_2",
                         "section_3",
                         // "section_4",
-                        "section_5",
+                        "section_5"
                       ]}
                       activeNavClass="is-active"
                       offset={-100}
@@ -155,7 +155,7 @@ export default class Home extends React.Component {
                     <span className="menuDiv">{!this.state.drawerState ? <MenuOutlined onClick={() => this.handleDrawer()} /> : <CloseOutlined onClick={() => this.handleDrawer()} />}</span>
                     <div
                       style={{
-                        height: !this.state.drawerState ? "0" : "250px",
+                        height: !this.state.drawerState ? "0" : "250px"
                       }}
                       className="drawerItem-div"
                     >
@@ -165,7 +165,7 @@ export default class Home extends React.Component {
                           "section_2",
                           "section_3",
                           // "section_4",
-                          "section_5",
+                          "section_5"
                         ]}
                         activeNavClass="is-active"
                       >
@@ -197,7 +197,7 @@ export default class Home extends React.Component {
               <div
                 className="mainBody-inner"
                 style={{
-                  marginTop: this.state.margin === "120px" ? "270px" : "",
+                  marginTop: this.state.margin === "120px" ? "270px" : ""
                 }}
               >
                 <div className="mainInner-one">I AM</div>
@@ -229,7 +229,7 @@ export default class Home extends React.Component {
               <div
                 className="mainBody-footer"
                 style={{
-                  marginTop: this.state.margin === "120px" ? "100px" : "",
+                  marginTop: this.state.margin === "120px" ? "100px" : ""
                 }}
               >
                 <div className="mainFoot-inner">
@@ -248,7 +248,7 @@ export default class Home extends React.Component {
             <div className="mainHome-foot">
               <span
                 style={{
-                  marginTop: this.state.showScrollspy ? this.state.margin : this.state.margin2,
+                  marginTop: this.state.showScrollspy ? this.state.margin : this.state.margin2
                 }}
               >
                 <a href="#section_5">
@@ -256,7 +256,7 @@ export default class Home extends React.Component {
                     <Avatar
                       size={50}
                       style={{
-                        backgroundColor: "rgb(173, 150, 14)",
+                        backgroundColor: "rgb(173, 150, 14)"
                       }}
                       icon={<PhoneTwoTone twoToneColor="#fff" />}
                     />
