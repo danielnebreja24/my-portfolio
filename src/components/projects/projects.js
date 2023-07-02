@@ -112,6 +112,18 @@ import PHP1 from "../../images/php-course.png";
 import PHP2 from "../../images/php-course1.png";
 import PHP3 from "../../images/php-course2.png";
 
+import KB1 from "../../images/kb1.png";
+import KB2 from "../../images/kb2.png";
+import KB3 from "../../images/kb3.png";
+
+import CN1 from "../../images/cn1.png";
+import CN2 from "../../images/cn2.png";
+import CN3 from "../../images/cn3.png";
+import CN4 from "../../images/cn4.png";
+import CN5 from "../../images/cn5.png";
+import CN6 from "../../images/cn6.png";
+import CN7 from "../../images/cn7.png";
+
 export default class Projects extends React.Component {
   constructor() {
     super();
@@ -124,13 +136,33 @@ export default class Projects extends React.Component {
     this.state = {
       projects: [
         {
+          label: "PROJECT",
+          title: "Convrs Company Website",
+          tech: " HTML, CSS, SASS, Node JS, S3 buckets, Bootstrap, Express JS, MongoDB, Gulp, Handlebar JS ",
+          desc: "Convrs' main website is a serverless app that operates via script in Node.js with the assistance of gulp.",
+          img: [CN1, CN2, CN3, CN4, CN5, CN6, CN7],
+          view: ["site"],
+          links: { github: "", site: "https://convrs.io" }
+        },
+
+        {
+          label: "PROJECT",
+          title: "Knowledge Base System",
+          tech: " HTML, CSS, SASS, S3 buckets, Node JS, Bootstrap, Express JS, MongoDB, Gulp, Handlebar JS ",
+          desc: "The knowledge base system is an application designed for the main Convrs website. It was designed to give website visitors the ability to search for answers to their questions immediately.",
+          img: [KB1, KB2, KB3],
+          view: ["site"],
+          links: { github: "", site: "https://convrs.io/docs" }
+        },
+
+        {
           label: "PROJECT/COLLABORATED",
           title: "DBO Application (ADMIN PANEL)",
           tech: " ReactJS, AWS-Amplify, GraphQL, S3-Buckets, AppSync, DynamoDB, Ant-Design ",
           desc: "DBO Admin is a separate and stand alone app of DBO Main Application, the purpose of this app is to update the status of a pending building application and also to upload the necessary documents/files that the applicant needed for his/her application to be approved by the City Engineering's Office.",
           img: [DA, DA1, DA2, DA3, DA4],
           view: [],
-          links: { github: "", site: "" },
+          links: { github: "", site: "" }
         },
         {
           label: "PROJECT/COLLABORATED",
@@ -139,7 +171,7 @@ export default class Projects extends React.Component {
           desc: "QC SSDD app is the user management and dashboard that is used by the SSDD admin/employee to access the 4 application including the Appointment System, Benefit Tracker, Document Management System and the Queueing System.",
           img: [SF1, SF2, SF3, SF4, SF5, SF6],
           view: [],
-          links: { github: "", site: "" },
+          links: { github: "", site: "" }
         },
         {
           label: "PROJECT/COLLABORATED",
@@ -148,54 +180,19 @@ export default class Projects extends React.Component {
           desc: "QC CFEI (Certificate of Final Electrical Inspection) is a separate and stand alone application of DBO Main Application, it is made for the DBO Admin (Electrical Inspector) to access the applicant who applied for CFEI and his/her current status.",
           img: [CF1, CF2, CF3, CF4, CF5],
           view: [],
-          links: { github: "", site: "" },
+          links: { github: "", site: "" }
         },
         {
           label: "PROJECT",
           title: "Aeloop Brokers",
           tech: " ReactJS, AWS-Amplify, GraphQL, FB Developer, Google Console, Google API's (Map, Places, etc.) ",
           desc: "Aeloop brokers is a real estate e-commerce site. Broker and agent can list their property (Condo, House, Lot, etc.) in this site, it also consist of an appointment system where client can schedule their visit thru online or in-person. It's a full functional real estate system/e-commerce site with the following roles: Admin, Broker, Agent and Client. ",
-          img: [
-            A1,
-            A2,
-            A3,
-            A4,
-            A5,
-            A6,
-            A7,
-            A8,
-            A9,
-            A10,
-            A11,
-            A12,
-            A13,
-            A14,
-            A15,
-            A16,
-            A17,
-            A18,
-            A19,
-            A20,
-            A21,
-            A22,
-            A23,
-            A24,
-            A25,
-            A26,
-            A27,
-            A28,
-            A29,
-            A30,
-            A31,
-            A32,
-            A33,
-            A34,
-          ],
+          img: [A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17, A18, A19, A20, A21, A22, A23, A24, A25, A26, A27, A28, A29, A30, A31, A32, A33, A34],
           view: ["site"],
           links: {
             github: "",
-            site: "https://master.d3g2vr1xtedbix.amplifyapp.com/",
-          },
+            site: "https://master.d3g2vr1xtedbix.amplifyapp.com/"
+          }
         },
         {
           label: "PROJECT",
@@ -204,7 +201,7 @@ export default class Projects extends React.Component {
           desc: "Sparksoft Vax is a vaccination app made for the company private clients. It is a replication of the QC Vax, I just made some changes in terms of frontend.",
           img: [SparkVax, QC2, QC3, QC4, QC5, QC6, QC7],
           view: [],
-          links: { github: "", site: "" },
+          links: { github: "", site: "" }
         },
         {
           label: "PROJECT/COLLABORATED",
@@ -213,7 +210,7 @@ export default class Projects extends React.Component {
           desc: "QC Vax is an online vaccination site used by Quezon City citizens to make an appointment thru their mobile or web. They can register their account and after that, they have to fill in a form used by the Health Office. After they filled out they can now make an appointment on time, date, and location that are available and where they are comfortable.",
           img: [QC1, QC2, QC3, QC4, QC5, QC6, QC7],
           view: [],
-          links: { github: "", site: "" },
+          links: { github: "", site: "" }
         },
         {
           label: "PROJECT/COLLABORATED",
@@ -221,8 +218,8 @@ export default class Projects extends React.Component {
           tech: " HTML, CSS, Bootstrap, Node JS, MySQL, Firebase, AWS ",
           desc: "Make me up is an online shop and booking service. This app basically is made for buyers, sellers and other service providers. You can sell your products, order a product, book a service or offer a service.",
           img: [MakeMeUp1, MakeMeUp2, MakeMeUp3, MakeMeUp4, MakeMeUp5],
-          view: ["github", "site"],
-          links: { github: "", site: "" },
+          view: [],
+          links: { github: "", site: "" }
         },
         {
           label: "COLLABORATED",
@@ -230,25 +227,17 @@ export default class Projects extends React.Component {
           tech: " React JS, PHP, Laravel, Python Flask, Material-UI, Bootstrap ",
           desc: "Single traveler's profile is a government project of Bureau of Immigration. Main goal of this project is to save and record all the immigrants or travellers who are going inside and outside of the Phillipines. Using the form or scanned passport of a single traveller it will record and save the information. The user can retrieve the information via name or passport number. There is also an embedded map that can track the traveller's location of previous stays.",
           img: [BI1, BI2, BI3, BI4, BI5, BI6, BI7],
-          view: ["github"],
-          links: { github: "" },
+          view: [],
+          links: { github: "" }
         },
         {
           label: "PROJECT/COLLABORATED",
           title: "Doctor's call app",
           tech: " React JS, AWS Amplify, GraphQL, DynamoDB, Material-UI, CSS ",
           desc: "Doctor's call app is a web application created for the company who are selling their products to a certain doctor. The user can plan their schedule using the app and plot it to actual visit and record the time, important notes, products presented, signature of the doctor and the manager in-charge, etc. It covers also the inventory and records of the item, doctors, hospitals, etc. ",
-          img: [
-            DoctorsCall1,
-            DoctorsCall2,
-            DoctorsCall3,
-            DoctorsCall4,
-            DoctorsCall5,
-            DoctorsCall6,
-            DoctorsCall7,
-          ],
-          view: ["github", "site"],
-          links: { github: "", site: "" },
+          img: [DoctorsCall1, DoctorsCall2, DoctorsCall3, DoctorsCall4, DoctorsCall5, DoctorsCall6, DoctorsCall7],
+          view: [],
+          links: { github: "", site: "" }
         },
         {
           label: "COLLABORATED",
@@ -257,7 +246,7 @@ export default class Projects extends React.Component {
           desc: "All my holiday is a site build for clients who are looking for a destinations to spend. It is also a online booking of flight through airlines. ",
           img: [AllMyHolidays1, AllMyHolidays2],
           view: [],
-          links: {},
+          links: {}
         },
         {
           label: "PROJECT/COLLABORATED",
@@ -266,7 +255,7 @@ export default class Projects extends React.Component {
           desc: "PHP Course is a application made for the student/mentees of BoomCamp. The lessons, activities, materials, grades and other stuffs regarding the PHP Course that the mentees and the mentor needed are saved in this web application for them to easily access it whenever and whereever.",
           img: [PHP1, PHP2, PHP3],
           view: [],
-          links: {},
+          links: {}
         },
         {
           label: "PROJECT/COLLABORATED",
@@ -275,28 +264,28 @@ export default class Projects extends React.Component {
           desc: "Frontend BoomCamp is a application made for the student/mentees of BoomCamp. The lessons, activities, grades and other stuffs that the mentees and the mentor needed are saved in this web application for them to easily access it whenever and whereever.",
           img: [Frontend1, Frontend2],
           view: ["site"],
-          links: { site: "https://frontend.boom.camp/" },
-        },
-        {
-          label: "PROJECT/COLLABORATED",
-          title: "Handraiser",
-          tech: " React JS, Node JS, Express JS, PostgreSQL, Socket IO, Material-UI, Ant-design, CSS ",
-          desc: "Handraiser is a project created for mentor and student realtime interaction. The student can communicate or ask assistance from mentor through this app. It is also useful for mentor for them to easily collaborate and check for their respective mentees/students.",
-          img: [],
-          view: ["github"],
-          links: { github: "" },
-        },
-        {
-          label: "PERSONAL PROJECT",
-          title: "IG Project",
-          tech: " React JS, Node JS, Express JS, PostgreSQL, Socket IO, Material-UI, Ant-design, CSS ",
-          desc: "IG Project is my personal project. The main goal of this app is to clone the existing successfull Instagram UI and functions using the React JS and Node JS and intergrating the chat app by using the socket IO. I just made this project to practice my skills and experience using the technologies and for portfolio purposes. ",
-          img: [],
-          view: ["github"],
-          links: { github: "https://github.com/DanielNebreja/ig-project" },
-        },
+          links: { site: "https://frontend.boom.camp/" }
+        }
+        // {
+        //   label: "PROJECT/COLLABORATED",
+        //   title: "Handraiser",
+        //   tech: " React JS, Node JS, Express JS, PostgreSQL, Socket IO, Material-UI, Ant-design, CSS ",
+        //   desc: "Handraiser is a project created for mentor and student realtime interaction. The student can communicate or ask assistance from mentor through this app. It is also useful for mentor for them to easily collaborate and check for their respective mentees/students.",
+        //   img: [],
+        //   view: ["github"],
+        //   links: { github: "" },
+        // },
+        // {
+        //   label: "PERSONAL PROJECT",
+        //   title: "IG Project",
+        //   tech: " React JS, Node JS, Express JS, PostgreSQL, Socket IO, Material-UI, Ant-design, CSS ",
+        //   desc: "IG Project is my personal project. The main goal of this app is to clone the existing successfull Instagram UI and functions using the React JS and Node JS and intergrating the chat app by using the socket IO. I just made this project to practice my skills and experience using the technologies and for portfolio purposes. ",
+        //   img: [],
+        //   view: ["github"],
+        //   links: { github: "https://github.com/DanielNebreja/ig-project" },
+        // },
       ],
-      mode: "alternate",
+      mode: "alternate"
     };
   }
 
@@ -331,37 +320,26 @@ export default class Projects extends React.Component {
       className: "slickDiv",
       autoplay: true,
       speed: 3000,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 3000
     };
 
-    // console.log(this.state.mode);
     return (
       <>
         <div className="mainProjects-div">
           <div className="mainProject-title">
             <span>Projects and Collaboration</span>
-            <span>
-              Here are some of projects I've been worked/collaborated on.
-            </span>
+            <span>Here are some of projects I've been worked/collaborated on.</span>
           </div>
           <div className="mainProject-body">
             <Timeline mode={this.state.mode} style={{ marginTop: "70px" }}>
               {this.state.projects.length
                 ? this.state.projects.map((item, i) => (
-                    <Timeline.Item
-                      label={
-                        this.state.mode === "alternate" ? item.label : null
-                      }
-                      key={i}
-                      style={{ color: "#ddd" }}
-                    >
+                    <Timeline.Item label={this.state.mode === "alternate" ? item.label : null} key={i} style={{ color: "#ddd" }}>
                       <div className="timeLine-item" key={i}>
                         <div className="timeLine-title">
                           <span>{item.title}</span>
                           <span>{item.tech}</span>
-                          {this.state.mode === "left" ? (
-                            <span>({item.label})</span>
-                          ) : null}
+                          {this.state.mode === "left" ? <span>({item.label})</span> : null}
                         </div>
                         <div className="timeLine-body">
                           <div className="timeLine-img">
@@ -371,11 +349,7 @@ export default class Projects extends React.Component {
                                   {item.img.map((img, index) => (
                                     <div key={index}>
                                       <div className="carouselItem">
-                                        <img
-                                          src={img}
-                                          className="carouselImg"
-                                          alt="carousel"
-                                        />
+                                        <img src={img} className="carouselImg" alt="carousel" />
                                       </div>
                                     </div>
                                   ))}
@@ -389,12 +363,7 @@ export default class Projects extends React.Component {
                                     if (view === "github") {
                                       if (item.links.github) {
                                         return (
-                                          <a
-                                            href={item.links.github}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            key={i}
-                                          >
+                                          <a href={item.links.github} target="_blank" rel="noreferrer" key={i}>
                                             <button key={i} className="btn">
                                               <GithubOutlined />
                                               &nbsp; GitHub
@@ -412,11 +381,7 @@ export default class Projects extends React.Component {
                                     } else {
                                       if (item.links.site) {
                                         return (
-                                          <a
-                                            href={item.links.site}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                          >
+                                          <a href={item.links.site} target="_blank" rel="noreferrer">
                                             <button key={i} className="btn">
                                               <GlobalOutlined />
                                               &nbsp; View Site
