@@ -3,7 +3,13 @@ import "./about.css";
 // import MyAvatar from "../../images/avatar2.png";
 // import Slider from "react-slick";
 import { Tag } from "antd";
-import { FilePdfOutlined, LinkedinOutlined, GoogleOutlined, GithubOutlined, InstagramOutlined } from "@ant-design/icons";
+import {
+  FilePdfOutlined,
+  LinkedinOutlined,
+  GoogleOutlined,
+  GithubOutlined,
+  InstagramOutlined,
+} from "@ant-design/icons";
 
 import Resume from "../../files/DANIEL_RESUME(2023).pdf";
 import Profile from "../../images/profile5.png";
@@ -30,17 +36,18 @@ export default class About extends React.Component {
         "https://seeklogo.com/images/P/puppeteer-logo-254C5F1692-seeklogo.com.png",
         "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1280px-Git-logo.svg.png",
         "https://freepikpsd.com/wp-content/uploads/2019/10/bootstrap-logo-png-1-Transparent-Images-Free.png",
-        "https://www.pngitem.com/pimgs/m/385-3850895_graphql-logo-svg-hd-png-download.png"
+        "https://www.pngitem.com/pimgs/m/385-3850895_graphql-logo-svg-hd-png-download.png",
       ],
       nav1: null,
       nav2: null,
       frontend: [
         "React JS",
         "Next JS",
+        "Typescript",
         "APi Context",
         "Javascript",
         "JQuery",
-        "Redux",
+        "Tailwind CSS",
         "HTML 5",
         "FormIO",
         "CSS 3",
@@ -54,7 +61,7 @@ export default class About extends React.Component {
         "Google Console",
         "FB Developer",
         "Google API's (maps, places, etc.)",
-        "S3 Buckets"
+        "S3 Buckets",
       ],
       backend: [
         "PHP",
@@ -72,19 +79,23 @@ export default class About extends React.Component {
         "MongoDB",
         "DynamoDB",
         "WebSocket",
-        "Socket.io"
+        "Socket.io",
       ],
       versionControl: ["Git", "GitLab", "GitHub", "Cypress", "Jest"],
-      web: true
+      web: true,
     };
   }
 
   componentDidMount() {
     this.setState({
       nav1: this.slider1,
-      nav2: this.slider2
+      nav2: this.slider2,
     });
-    if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    if (
+      /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
       this.setState({ web: false });
     } else {
       this.setState({ web: true });
@@ -108,7 +119,10 @@ export default class About extends React.Component {
                       <br></br>
                       <span>Frontend Web Developer</span>
                     </h1>
-                    <p>Hey, you can also review or reach me through these accounts.</p>
+                    <p>
+                      Hey, you can also review or reach me through these
+                      accounts.
+                    </p>
                     <ul>
                       <li>
                         <a rel="noreferrer" target="_blank" href={Resume}>
@@ -129,17 +143,29 @@ export default class About extends React.Component {
                         </a>
                       </li>
                       <li>
-                        <a rel="noreferrer" target="_blank" href="https://github.com/DanielNebreja?tab=repositories">
+                        <a
+                          rel="noreferrer"
+                          target="_blank"
+                          href="https://github.com/DanielNebreja?tab=repositories"
+                        >
                           <GithubOutlined />
                         </a>
                       </li>
                       <li>
-                        <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/danielcalisinnebreja/">
+                        <a
+                          rel="noreferrer"
+                          target="_blank"
+                          href="https://www.linkedin.com/in/danielcalisinnebreja/"
+                        >
                           <LinkedinOutlined />
                         </a>
                       </li>
                       <li>
-                        <a rel="noreferrer" target="_blank" href="https://www.instagram.com/chickendinnel/">
+                        <a
+                          rel="noreferrer"
+                          target="_blank"
+                          href="https://www.instagram.com/chickendinnel/"
+                        >
                           <InstagramOutlined />
                         </a>
                       </li>
@@ -155,9 +181,11 @@ export default class About extends React.Component {
                     <span>Who am I?</span>
                   </div>
                   <div>
-                    Experienced software engineer and freelancer with a strong passion for creating top-notch apps that can be used on both the web and mobile platforms. Any business may develop
-                    challenging initiatives with the aid of my abilities, experiences, and zeal. I can handle any project alone or in a team because of my combination of front-end and back-end
-                    expertise. And carrying out software jobs from beginning to end, including testing.
+                    Experienced software engineer and freelancer passionate
+                    about crafting high-quality web and mobile apps. Proficient
+                    in both front-end and back-end development, capable of
+                    handling projects solo or in teams. Skilled in full software
+                    lifecycle management, including testing.
                   </div>
                 </div>
                 <div className="rightAbout-two">
@@ -175,7 +203,7 @@ export default class About extends React.Component {
                             style={{
                               borderRadius: "5px",
                               fontSize: "16px",
-                              padding: "3px 6px"
+                              padding: "3px 6px",
                             }}
                           >
                             {item}
@@ -193,7 +221,7 @@ export default class About extends React.Component {
                             style={{
                               borderRadius: "5px",
                               fontSize: "16px",
-                              padding: "3px 6px"
+                              padding: "3px 6px",
                             }}
                           >
                             {item}
@@ -211,7 +239,7 @@ export default class About extends React.Component {
                             style={{
                               borderRadius: "5px",
                               fontSize: "16px",
-                              padding: "3px 6px"
+                              padding: "3px 6px",
                             }}
                           >
                             {item}
@@ -228,16 +256,18 @@ export default class About extends React.Component {
                 <span>How about professional experience?</span>
               </div>
               <div>
-                I started to learn programming when I was in college, way back in 2016, when I built an Inventory system with Point of sale using HTML and CSS, Bootstrap, Javascript, JQuery, AJAX,
-                PHP, and MySql. After I graduated, I started working for a BPO company in our province as a Jr. Frontend Developer, where I learned and used new technologies in projects such as React
-                JS, Node JS, Web Socket, Express, and many more. After a few months, I got promoted to the Mentor where I teach these technologies to our mentees. I worked there for almost a year.
-                After that, I started working in the Department of Health in our province as an IT specialist, where I managed to create a system to ease the process of our daily paperwork. After 6
-                months, I decided to pursue my career in Manila, where I worked as a full-stack developer for an IT solutions Company (Sparksoft Solutions). I handled multiple projects here, such as
-                government, e-commerce, private clients, real estate projects, and many more. After a few months, I got promoted to Team Lead Developer, where I manage a team of developers to build
-                different projects as well. As I'm working full time, I'm also working as a freelancer, and I got a chance to work with multiple clients abroad, where I collaborated to build projects
-                such as Online sabong, an air ticketing app, a knowledgebase system, company websites, and many more. After 2 years, I got a chance to be offered by one of my clients abroad to work
-                for their company full time, and they offered me the position of software engineer. I started working here on some projects, such as the company website, knowledgebase app, and many
-                more. After a year, I was offered a new job path as a frontend software engineer by a firm abroard as well, and I'm currently working here constructing a crypto trading platform.
+                Started learning programming in college in 2016. Developed an
+                Inventory system with Point of Sale using HTML, CSS, Bootstrap,
+                JavaScript, jQuery, AJAX, PHP, and MySQL. Worked as Jr. Frontend
+                Developer, then promoted to Mentor. Became IT specialist for
+                Department of Health, streamlining paperwork. Transitioned to
+                Sparksoft Solutions as full-stack developer, handling
+                government, e-commerce, and real estate projects. Promoted to
+                Team Lead Developer. Freelanced on projects like Online sabong
+                and airline ticketing apps. Accepted full-time offer abroad as
+                software engineer, focusing on company websites and
+                knowledgebase apps. Transitioned to frontend software engineer
+                role, currently building crypto trading platform.
               </div>
               <div>
                 <span>Hey, visit my profile here,</span>
@@ -248,7 +278,11 @@ export default class About extends React.Component {
                       &nbsp; My resume
                     </button>
                   </a>
-                  <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/danielcalisinnebreja/">
+                  <a
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://www.linkedin.com/in/danielcalisinnebreja/"
+                  >
                     <button className="btn">
                       <LinkedinOutlined />
                       &nbsp; LinkedIn
