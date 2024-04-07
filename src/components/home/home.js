@@ -218,24 +218,6 @@ export default class Home extends React.Component {
                     <span className="ml-4"> ENGINEER</span>
                   </span>
                 </div>
-                {/* <div className="mainInner-one">
-                  Hello there, my name is&nbsp;<a href="#section_1">Daniel</a>
-                </div>
-                <div className="mainInner-divider"></div>
-                <div className="mainInner-two">WEB DEVELOPER</div>
-                <div className="mainInner-three">
-                  Love to turn your ideal designs into reality.
-                </div>
-                <a href="#section_2" className="mainInner-four">
-                  <span>Want to know more about me?</span>
-                  <span className="dropDownIcon">
-                    <DownOutlined
-                      className="dropdownIcon"
-                      style={{ color: "rgb(173, 150, 14)", fontSize: "25px" }}
-                    />
-                  </span>
-                  <DownCircleTwoTone className="dropdownIcon" />
-                </a> */}
               </div>
               <div
                 className="mainBody-footer"
