@@ -1,7 +1,5 @@
 import React from "react";
 import "./about.css";
-// import MyAvatar from "../../images/avatar2.png";
-// import Slider from "react-slick";
 import { Tag } from "antd";
 import {
   FilePdfOutlined,
@@ -11,7 +9,7 @@ import {
   InstagramOutlined,
 } from "@ant-design/icons";
 
-import Resume from "../../files/DANIEL_RESUME(2023).pdf";
+import Resume from "../../files/daniel_resume(04-2024).pdf";
 import Profile from "../../images/profile5.png";
 
 export default class About extends React.Component {
