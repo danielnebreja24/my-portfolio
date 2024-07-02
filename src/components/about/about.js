@@ -9,7 +9,7 @@ import {
   InstagramOutlined,
 } from "@ant-design/icons";
 
-import Resume from "../../files/daniel_resume(04-2024).pdf";
+import Resume from "../../files/DANIEL_RESUME(2023).pdf";
 import Profile from "../../images/profile5.png";
 
 export default class About extends React.Component {

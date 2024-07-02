@@ -127,42 +127,42 @@ import CN6 from "../../images/cn6.png";
 import CN7 from "../../images/cn7.png";
 
 // whale.fish project images
-import Whale1 from "../../images/whale.fish1.png";
-import Whale2 from "../../images/whale.fish2.png";
-import Whale3 from "../../images/whale.fish3.png";
-import Whale4 from "../../images/whale.fish4.png";
-import Whale5 from "../../images/whale.fish5.png";
+// import Whale1 from "../../images/whale.fish1.png";
+// import Whale2 from "../../images/whale.fish2.png";
+// import Whale3 from "../../images/whale.fish3.png";
+// import Whale4 from "../../images/whale.fish4.png";
+// import Whale5 from "../../images/whale.fish5.png";
 
 // whale.fish app project images
-import WhaleApp1 from "../../images/whale-app1.png";
-import WhaleApp2 from "../../images/whale-app2.png";
-import WhaleApp3 from "../../images/whale-app3.png";
-import WhaleApp4 from "../../images/whale-app4.png";
-import WhaleApp5 from "../../images/whale-app5.png";
+// import WhaleApp1 from "../../images/whale-app1.png";
+// import WhaleApp2 from "../../images/whale-app2.png";
+// import WhaleApp3 from "../../images/whale-app3.png";
+// import WhaleApp4 from "../../images/whale-app4.png";
+// import WhaleApp5 from "../../images/whale-app5.png";
 
 export default class Projects extends React.Component {
   constructor() {
     super();
     this.state = {
       projects: [
-        {
-          label: "PROJECT",
-          title: "Whale.Fish App Web App",
-          tech: " React JS, Next JS, Typescript, Tailwind, Python, Prisma, Ant Design, Material UI, ApexCharts, SWR, React Grid Layout, Other react dependencies",
-          desc: "The Whale.fish App is a trading platform enabling users to create their trading strategies and backtest them on historical data. The app also includes the Risk Monitor feature, enabling users to track their risk exposure in real-time, and an Analytics page displaying the user's trading performance.",
-          img: [WhaleApp1, WhaleApp2, WhaleApp3, WhaleApp4, WhaleApp5],
-          view: ["site"],
-          links: { github: "", site: "https://app.whale.fish" },
-        },
-        {
-          label: "PROJECT",
-          title: "Whale.Fish Company Website",
-          tech: " React JS, Next JS, Typescript, Tailwind, Headless UI, Material UI",
-          desc: "The Whale.fish main website is a web application designed for customers seeking a company to assist them in creating real-time trading or tracking applications for Funding, Staking, and Total Return rates.",
-          img: [Whale1, Whale2, Whale3, Whale4, Whale5],
-          view: ["site"],
-          links: { github: "", site: "https://whale.fish" },
-        },
+        // {
+        //   label: "PROJECT",
+        //   title: "Whale.Fish App Web App",
+        //   tech: " React JS, Next JS, Typescript, Tailwind, Python, Prisma, Ant Design, Material UI, ApexCharts, SWR, React Grid Layout, Other react dependencies",
+        //   desc: "The Whale.fish App is a trading platform enabling users to create their trading strategies and backtest them on historical data. The app also includes the Risk Monitor feature, enabling users to track their risk exposure in real-time, and an Analytics page displaying the user's trading performance.",
+        //   img: [WhaleApp1, WhaleApp2, WhaleApp3, WhaleApp4, WhaleApp5],
+        //   view: ["site"],
+        //   links: { github: "", site: "https://app.whale.fish" },
+        // },
+        // {
+        //   label: "PROJECT",
+        //   title: "Whale.Fish Company Website",
+        //   tech: " React JS, Next JS, Typescript, Tailwind, Headless UI, Material UI",
+        //   desc: "The Whale.fish main website is a web application designed for customers seeking a company to assist them in creating real-time trading or tracking applications for Funding, Staking, and Total Return rates.",
+        //   img: [Whale1, Whale2, Whale3, Whale4, Whale5],
+        //   view: ["site"],
+        //   links: { github: "", site: "https://whale.fish" },
+        // },
         {
           label: "PROJECT",
           title: "Convrs Company Website",
